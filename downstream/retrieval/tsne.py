@@ -1,15 +1,18 @@
 # -*- coding: utf-8 -*-
 # clip_tsne_color.py
 """
-读取 train/ 及其所有子目录的图片，
-用 OpenAI 官方 CLIP 抽特征（backbone/proj），PCA+ t-SNE，
-并把 parent dir == 'shared_1120' 的点画成一种颜色，其它目录画成另一种颜色。
+Reads images from the training directory and its subdirectories.
+Extracts features using OpenAI's official CLIP model (either backbone or projection),
+performs PCA followed by t-SNE for dimensionality reduction, and visualizes the results.
 
-依赖：
-  pip install "git+https://github.com/openai/CLIP.git" torch torchvision pillow scikit-learn matplotlib tqdm packaging
+Images with the parent directory name 'shared_1120' are plotted in a distinct color
+to distinguish them from other directories.
+
+Dependencies:
+    pip install "git+https://github.com/openai/CLIP.git" torch torchvision pillow scikit-learn matplotlib tqdm packaging
 """
 
-# —— 避免 OpenBLAS 超线程抽风（大核机器建议保留）——
+# -- Prevent OpenBLAS thread oversubscription (Recommended for high-core-count machines) --
 import os
 os.environ.setdefault("OPENBLAS_NUM_THREADS", "32")
 os.environ.setdefault("OMP_NUM_THREADS", "32")
@@ -43,19 +46,23 @@ class ImagePathDataset(Dataset):
     def __init__(self, img_dir: str, preprocess, exts=(".jpg", ".jpeg", ".png", ".webp")):
         paths = []
         for e in exts:
+            # Search recursively
             paths += glob.glob(os.path.join(img_dir, f"*{e}"))
             paths += glob.glob(os.path.join(img_dir, "*", f"*{e}"))
             paths += glob.glob(os.path.join(img_dir, "*", "*", f"*{e}"))
         self.paths = sorted(list(set(paths)))
         if not self.paths:
-            raise FileNotFoundError(f"在 {img_dir} 没找到图片（支持 {exts}）")
+            raise FileNotFoundError(f"No images found in {img_dir} (supported extensions: {exts})")
         self.preprocess = preprocess
 
-    def __len__(self): return len(self.paths)
+    def __len__(self):
+        return len(self.paths)
+
     def __getitem__(self, idx):
         p = self.paths[idx]
         img = Image.open(p).convert("RGB")
-        # 取父目录名作为“组”标签（只用来区分 shared_1120 与其他）
+        # Extract the parent directory name as a "group" label
+        # (Used specifically to distinguish 'shared_1120' from others)
         parent = os.path.basename(os.path.dirname(p))
         label = 1 if parent == "shared_1120" else 0
         return self.preprocess(img), p, label
@@ -72,7 +79,7 @@ def l2norm(x: np.ndarray, eps=1e-8) -> np.ndarray:
 def extract_features(
     train_dir: str,
     model_name: str = "ViT-B/32",
-    feature_type: str = "backbone",   # 'backbone' 或 'proj'
+    feature_type: str = "backbone",   # 'backbone' or 'proj'
     batch_size: int = 256,
     num_workers: int = 8,
     use_fp16: bool = False,
@@ -82,7 +89,7 @@ def extract_features(
     model, preprocess = clip.load(model_name, device=device, jit=False)
     model.eval()
 
-    # 统一 dtype 策略，避免半精度/单精度不一致
+    # Unify data type strategy to avoid inconsistencies between half and single precision
     if device == "cuda":
         if use_fp16:
             model.half()
@@ -104,13 +111,14 @@ def extract_features(
     for imgs, paths, labs in pbar:
         imgs = imgs.to(device, non_blocking=True).to(dtype=target_dtype)
         if feature_type == "proj":
-            emb = model.encode_image(imgs)  # 投影后语义特征
+            emb = model.encode_image(imgs)  # Semantic features after projection
         else:
-            emb = model.visual(imgs)        # backbone pooled（投影前）
+            emb = model.visual(imgs)        # Backbone pooled features (before projection)
+        
         emb = torch.nn.functional.normalize(emb, dim=-1).cpu().numpy()
         feats.append(emb); names += list(paths); labels.append(labs.numpy())
 
-    feats = np.concatenate(feats, axis=0)        # (N,D)
+    feats = np.concatenate(feats, axis=0)        # (N, D)
     labels = np.concatenate(labels, axis=0)      # (N,)
     return feats, names, labels
 
@@ -138,6 +146,8 @@ def run_tsne(
         Xp = X
 
     print(f"[t-SNE] N={N}, dim={Xp.shape[1]}, perplexity={tsne_perplexity}, iters={tsne_iter}, metric={metric}")
+    
+    # Handle scikit-learn version compatibility
     ver = V(sklearn.__version__)
     base_kwargs = dict(
         n_components=2,
@@ -151,19 +161,21 @@ def run_tsne(
         base_kwargs["max_iter"] = tsne_iter
     else:
         base_kwargs["n_iter"] = tsne_iter
+        
     if ver >= V("1.2"):
         base_kwargs["learning_rate"] = "auto"
         base_kwargs["square_distances"] = True
     else:
         base_kwargs["learning_rate"] = 200
+        
     sig = inspect.signature(TSNE.__init__)
     if "n_jobs" in sig.parameters:
         base_kwargs["n_jobs"] = 1
     tsne_kwargs = {k: v for k, v in base_kwargs.items() if k in sig.parameters}
 
-    Y = TSNE(**tsne_kwargs).fit_transform(Xp)  # (N,2)
+    Y = TSNE(**tsne_kwargs).fit_transform(Xp)  # (N, 2)
 
-    # —— 保存数表 —— #
+    # -- Save Data Tables -- #
     np.save(f"{out_prefix}_feats.npy", X)
     with open(f"{out_prefix}_paths.csv", "w", newline="") as f:
         w = csv.writer(f); w.writerow(["path","label"])
@@ -173,7 +185,7 @@ def run_tsne(
         for (x,y), lb, p in zip(Y, labels, names):
             w.writerow([float(x), float(y), int(lb), p])
 
-    # —— 画两色散点 —— #
+    # -- Plot Scatter (Two Colors) -- #
     idx_shared = labels == 1
     idx_other  = ~idx_shared
     plt.figure(figsize=(8,8), dpi=160)
@@ -183,19 +195,19 @@ def run_tsne(
     plt.title("t-SNE (CLIP features): shared_1120 vs others")
     plt.tight_layout()
     plt.savefig(f"{out_prefix}_2d.png"); plt.close()
-    print(f"✅ 保存：{out_prefix}_2d.png / {out_prefix}_2d.csv / {out_prefix}_paths.csv / {out_prefix}_feats.npy")
+    print(f"✅ Saved: {out_prefix}_2d.png / {out_prefix}_2d.csv / {out_prefix}_paths.csv / {out_prefix}_feats.npy")
 
 
 # ========== Main ==========
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--train-dir", required=True, help="train 根目录（含子目录）")
-    ap.add_argument("--model", default="ViT-B/32", help="CLIP 官方模型名：ViT-B/32, ViT-L/14, RN50 等")
+    ap.add_argument("--train-dir", required=True, help="Root directory of training images (includes subdirectories)")
+    ap.add_argument("--model", default="ViT-B/32", help="OpenAI CLIP model name: ViT-B/32, ViT-L/14, RN50, etc.")
     ap.add_argument("--feature-type", default="backbone", choices=["backbone","proj"])
     ap.add_argument("--batch-size", type=int, default=256)
     ap.add_argument("--num-workers", type=int, default=8)
     ap.add_argument("--use-fp16", action="store_true")
-    ap.add_argument("--max-images", type=int, default=0, help="仅抽前N张做可视化；0=不限制")
+    ap.add_argument("--max-images", type=int, default=0, help="Extract features for only the first N images for visualization; 0 = no limit")
     ap.add_argument("--pca-dim", type=int, default=50)
     ap.add_argument("--perplexity", type=float, default=20.0)
     ap.add_argument("--tsne-iter", type=int, default=1500)
