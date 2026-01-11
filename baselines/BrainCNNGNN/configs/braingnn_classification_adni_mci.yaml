@@ -1,0 +1,51 @@
+# Configuration for BrainGNNVanilla Classification
+# uid: 'braingnnvanilla_adhd_mass_cls_experiment'
+downstream_dataset: 'adni'  # 'abide' or 'adhd'
+upstream_model: 'mass' # jepa, mass or lm
+n_roi: 100
+unique_collect_str: 'adni_MCI'
+
+uid: 'braingnnvanilla_${upstream_model}_${unique_collect_str}_cls_exp'
+
+# Random seed for reproducibility
+seed: 42
+
+# Data configuration
+data:
+  dataset_class: 'FMRIGraphDataset'
+  data_dir: 'data/${downstream_dataset}_graph/${upstream_model}'
+  train_paths_txt: '${data.data_dir}/00_${upstream_model}_MCI_train_npy_paths.txt'
+  train_labels_csv: '${data.data_dir}/00_${upstream_model}_MCI_train_matched_labels.csv'
+  val_paths_txt: '${data.data_dir}/00_${upstream_model}_MCI_val_npy_paths.txt'
+  val_labels_csv: '${data.data_dir}/00_${upstream_model}_MCI_val_matched_labels.csv'
+  test_paths_txt: '${data.data_dir}/00_${upstream_model}_MCI_test_npy_paths.txt'
+  test_labels_csv: '${data.data_dir}/00_${upstream_model}_MCI_test_matched_labels.csv'
+  path_col: 'npy_file'
+  label_col: 'MCI_vs_CN_label' # uniform, label column is 'DX_GROUP'
+  use_adj_as_x: true
+
+# Model configuration
+model:
+  name: 'BrainGNNVanilla'
+  params:
+    indim: ${n_roi}
+    ratio: 0.5
+    nclass: 2
+    R: ${n_roi}  # Added model parameter 'R'
+
+
+# Task configuration
+task:
+  name: 'graph_classification'
+  params:
+    batch_size: 128
+    num_epochs: 100
+    learning_rate: 0.01
+    weight_decay: 0.005
+    num_workers: 8
+
+# Logging
+log_every: 10
+experiment_name: '${uid}-lr_${task.params.learning_rate}-wd_${task.params.weight_decay}-bs_${task.params.batch_size}-ep_${task.params.num_epochs}-sd_${seed}'
+log_dir: './checkpoints/checkpoints/${experiment_name}/logs'
+checkpoint_dir: './checkpoints/checkpoints/${experiment_name}'

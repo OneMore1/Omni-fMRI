@@ -1,0 +1,51 @@
+# Configuration for BrainNetCNN Classification
+# uid: 'brainnetcnn_abide_mass_cls_experiment'
+downstream_dataset: 'abide'  # 'abide' or 'adhd'
+upstream_model: 'mass' # jepa, mass or lm
+n_roi: 100
+
+uid: 'brainnetcnn_${upstream_model}_${downstream_dataset}_cls_exp'
+
+# Random seed for reproducibility
+seed: 42
+
+# Data configuration
+data:
+  # data_dir: './data'
+  dataset_class: 'FMRIAdjDataset'
+  # # num_nodes: 100  # Number of ROIs in brain network
+  data_dir: 'data/${downstream_dataset}_adj/${upstream_model}'
+  train_paths_txt: '${data.data_dir}/00_${upstream_model}_train_npy_paths.txt'
+  train_labels_csv: '${data.data_dir}/00_${upstream_model}_train_matched_labels.csv'
+  val_paths_txt: '${data.data_dir}/00_${upstream_model}_val_npy_paths.txt'
+  val_labels_csv: '${data.data_dir}/00_${upstream_model}_val_matched_labels.csv'
+  test_paths_txt: '${data.data_dir}/00_${upstream_model}_test_npy_paths.txt'
+  test_labels_csv: '${data.data_dir}/00_${upstream_model}_test_matched_labels.csv'
+  path_col: 'npy_file'
+  # label_col: 'dx_cls_group'  # For ABIDE dataset, label column is 'dx_cls_group'
+  label_col: 'DX_GROUP' # For ADHD dataset, label column is 'DX_GROUP'
+
+# Model configuration
+model:
+  name: 'BrainNetCNN'
+  params:
+    num_nodes: ${n_roi}  # Adjust according to dataset
+    num_features: 1
+    num_classes: 2
+    dropout: 0.5
+
+# Task configuration
+task:
+  name: 'classification'
+  params:
+    batch_size: 64  # better than 128
+    num_epochs: 100
+    learning_rate: 0.001
+    weight_decay: 0.0005
+    num_workers: 8
+
+# Logging
+log_every: 10
+experiment_name: '${uid}-lr_${task.params.learning_rate}-wd_${task.params.weight_decay}-bs_${task.params.batch_size}-ep_${task.params.num_epochs}-sd_${seed}'
+log_dir: './checkpoints/checkpoints/${experiment_name}/logs'
+checkpoint_dir: './checkpoints/checkpoints/${experiment_name}'
