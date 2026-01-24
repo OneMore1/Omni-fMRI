@@ -1,4 +1,4 @@
-# 
+# Omni-fMRI: A Universal Atlas-Free fMRI Foundation Model
 
 This repository contains the official implementation of Omni-fMRI: A Universal Atlas-Free fMRI Foundation Model, which introduces a dynamic patching mechanism that significantly reduces computational costs while preserving informative spatial structures.
 
