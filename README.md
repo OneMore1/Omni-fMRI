@@ -19,9 +19,21 @@ Setting up the environment requires Python 3.13 and CUDA-compatible PyTorch for 
 The codebase is organized into modular components for easy navigation and extension:
 
 ```
-
+├── configs/                # Configuration files
+│   ├── finetune.yaml       # Configuration for the fine-tuning phase
+│   └── pretrain.yaml       # Configuration for the pre-training phase
+├── scripts/                # Shell scripts for automated execution
+│   ├── finetune.sh         
+│   └── pretrain.sh         
+├── src/                    # Source code core
+│   ├── data/               # Data loadind
+│   ├── models/             # Models Architecture 
+│   └── utils/              # Helper functions (Logging, metrics, checkpoints)
+├── finetune.py             # Main entry point for model fine-tuning
+├── heatmap_visualize.py    # Visualization tool for generating heatmaps
+├── pretrain.py             # Main entry point for model pre-training
+└── visual_3d.py            # Visualization tool
 ```
-
 
 ## Data Preparation
 
