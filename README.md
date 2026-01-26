@@ -1,3 +1,5 @@
+<div align="center">
+
 # Omni-fMRI: A Universal Atlas-Free fMRI Foundation Model
 
 This repository contains the official implementation of Omni-fMRI: A Universal Atlas-Free fMRI Foundation Model, which introduces a dynamic patching mechanism that significantly reduces computational costs while preserving informative spatial structures.
@@ -6,12 +8,19 @@ This repository contains the official implementation of Omni-fMRI: A Universal A
   <img src="pipeline.png" width="800" alt="framework">
 </p>
 
----
+</div>
 
 ## Installation
 
-Setting up the environment requires Python 3.13 and CUDA-compatible PyTorch for GPU acceleration:
+Setting up the environment requires Python 3.10 and CUDA-compatible PyTorch for GPU acceleration:
 
+```
+conda create -n omnifmri python=3.10
+
+pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+
+pip install -r requirements.txt
+```
 
 
 ## Project Structure
@@ -41,72 +50,83 @@ The codebase is organized into modular components for easy navigation and extens
 
 We provide the end-to-end data preparation pipeline under ```data_preparation/```. Volumes were resampled with cubic spline interpolation to a $96\times96\times96$ grid at 2 mm isotropic resolution in MNI space. Time series with TR outside 0.7–0.8 s were voxel-wise resampled to 0.72 s with cubic splines, and signals were globally z-scored within the brain mask. We followed the preprocessing settings in [Swift](https://github.com/Transconnectome/SwiFT).
 
-### Test Data Structure
-
-The repository includes randomly generated placeholder data provided only for structural reference:
-
-```
-test_data/
-├── 100001__REST1_LR_hp2000_clean/  # 10 synthetic subjects
-├── train_list.txt                  # Training split
-├── val_list.txt                    # Validation split  
-├── test_list.txt                   # Test split
-├── fake_labels.csv                 # Synthetic labels
-└── fake_checkpoint.pth             # Placeholder checkpoint
-```
-
 ## Training
 
 ### Pre-training
 
-Self-supervised pre-training learns general representations from unlabeled fMRI data using masked prediction tasks:
+1. Ensure your pre-train data structure as follow:
 
-```bash
-# Basic training with default settings and test data
-./run_training.sh
-
-# Custom configuration with specific parameters
-./run_training.sh --batch-size 8 --num-epochs 200 --save-dir ./checkpoints/my_experiment
-
-# Resume training from a previous checkpoint
-./run_training.sh --resume ./checkpoints/my_experiment/checkpoint.pth
-
-# Training with specific GPU
-CUDA_VISIBLE_DEVICES=1 ./run_training.sh --batch-size 4
-
-# Debug mode with reduced epochs for testing
-./run_training.sh --debug --num-epochs 5
+```
+data_root/
+├── ABIDE_train/                
+├── ABIDE_val/                  
+├── HCP_val/              
+└── HCP_train/              
+    ├── 0010001/                # Subject ID
+    └── 0010002/                
+        ├── 0010002_run-1_0000-0199_1.npz  # Data chunk 1 
+        ├── 0010002_run-1_0000-0199_2.npz  # Data chunk 2
 ```
 
-### Downstream Tasks
+2. Edit `configs/pretrain.yaml` and update the `data_root` and `datasets`
 
-Fine-tune or Linear probe pre-trained models on specific neuroimaging classification tasks or extract features for custom analysis:
-
-#### Available Tasks
-
-The framework supports several standard neuroimaging prediction tasks:
-
-```bash
-# Gender classification (binary classification)
-./run_downstream.sh --task gender
-
-# Age group classification (multi-class classification)
-./run_downstream.sh --task age_group
+```yaml
+data:
+  data_root: /path/to/data_root
+  datasets: ["HCP", "ABIDE"]
 ```
 
-#### Feature Extraction
-
-Extract learned representations for custom downstream analysis:
+3. Start pre-training from unlabeled fMRI data using multi-scale masked prediction tasks:
 
 ```bash
-# Extract features for all data splits
-./run_downstream.sh --extract-features
+# running pretrain
+sh scripts/pretrain.sh
+```
 
-# Extract features for specific split only
-./run_downstream.sh --extract-features --task gender
+### Downstream evaluation
 
-# Alternative: Direct Python execution
-python downstream.py --task gender --extract_feature
+We have provided serval downstream dataloader as follow:
+
+1. Loading downstream datasets as pre-training data structure:
+
+```yaml
+task:
+  csv: "/path/to/data_csv"
+
+data:
+  data_root: /path/to/data_root
+  datasets: ["HCP"]
+  mode: "directory"
+```
+
+2. Loading dowwnstream datasets with txt:
+
+```yaml
+task:
+  csv: "/path/to/data_csv"
+
+data:
+  train_txt: /path/to/train_txt
+  val_txt: /path/to/val_txt
+  test_txt: /path/to/test_txt
+  mode: "txt"
+```
+
+3. Loading downstream datasets with txt and directory mapping:
+
+```yaml
+data:
+  train_txt: /path/to/train_txt
+  val_txt: /path/to/val_txt
+  test_txt: /path/to/test_txt
+  mode: "txt_mapping"
+```
+
+Start downstream training:
+
+```bash
+# running downstream training
+sh scripts/finetune.sh
 ```
 
 #### Model Checkpoints
