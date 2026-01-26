@@ -1,0 +1,100 @@
+experiment:
+  seed: 23
+  resume: null # Path to checkpoint to resume from
+  pretrained_checkpoint: null
+
+task:
+  task_type: "regression"  # "classification" or "regression"
+  num_classes: 1  
+  csv: ""  
+  mean: 22.395441
+  std: 23.620272
+
+
+data:
+  data_root: null
+  datasets: ["ABIDE"]
+  train_split_suffixes: ["train"]
+  val_split_suffixes: ["val"]
+  test_split_suffixes: ["test"]
+  input_seq_len: 40  
+  mode: "emo"
+
+  train_txt: null
+  val_txt: null
+  test_txt: null
+
+  spatial_dims: [96, 96, 96]  # D, H, W
+
+  batch_size: 16  
+  num_workers: 4
+  pin_memory: true
+  prefetch_factor: 2
+
+model:
+  img_size: [96, 96, 96]  
+  patch_size: 4  
+  in_chans: 40 
+  embed_dim: 768
+  depth: 12
+  num_heads: 12
+  mlp_ratio: 4.0
+  qkv_bias: true
+  drop_rate: 0.0
+  attn_drop_rate: 0.0
+  drop_path_rate: 0.1
+  num_scales: 2
+  thresholds: [0.23]
+  method: "std"
+  mean: 0.0
+  std: 1.0
+  downstream: true
+  fusion_mode: "none"
+  global_pool: "token"
+  gate_attention: "elementwise"
+
+training:
+  # Optimization
+  optimizer: "adamw" # adamw or sgd
+  learning_rate: 5.0e-5  
+  head_lr: 2.0e-4  
+  weight_decay: 0.05
+  layer_decay: 0.75
+  betas: [0.9, 0.999]
+
+  lr_scheduler: "cosine"
+  warmup_epochs: 2  
+
+  freeze_encoder: false  
+  min_lr: 1.0e-6  
+
+  # Training duration
+  epochs: 100
+
+  # Gradient settings
+  clip_grad: 1.0  
+  accum_iter: 1  
+
+  # Mixed precision
+  use_amp: true  
+
+distributed:
+  backend: "nccl"
+  init_method: "env://"
+  world_size: -1  
+  rank: -1  
+  dist_url: "env://"
+
+logging:
+  print_freq: 20  # Print frequency (iterations)
+  log_freq: 20  # Log frequency (iterations)
+  save_freq: 5  # Checkpoint save frequency (epochs)
+
+  use_wandb: false
+  wandb_project: "fmri_finetune"
+  wandb_entity: null  # Your wandb username/team
+
+validation:
+  val_freq: 1  # Validation frequency (epochs)
+  save_best: true  # Save best model based on validation metric
+
