@@ -1,3 +1,9 @@
+
+# ---------------------------------------------------------------
+# References:
+# MAE: https://github.com/facebookresearch/mae
+# ---------------------------------------------------------------
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
