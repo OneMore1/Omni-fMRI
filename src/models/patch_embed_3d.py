@@ -1,3 +1,8 @@
+# ---------------------------------------------------------------
+# References:
+# APT: https://github.com/rccchoudhury/apt
+# ---------------------------------------------------------------
+
 from typing import Union, Tuple, List, Optional, Callable
 import torch
 import torch.nn as nn
