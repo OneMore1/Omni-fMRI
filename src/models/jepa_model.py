@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------
+# References:
+# JEPA: https://github.com/facebookresearch/jepa
+# LeJEPA: https://github.com/galilai-group/lejepa
+# ---------------------------------------------------------------
+
+
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
