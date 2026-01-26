@@ -1,3 +1,8 @@
+# ---------------------------------------------------------------
+# References:
+# APT: https://github.com/rccchoudhury/apt
+# ---------------------------------------------------------------
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
