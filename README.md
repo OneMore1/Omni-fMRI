@@ -48,7 +48,7 @@ The codebase is organized into modular components for easy navigation and extens
 
 ### Preprocessing Pipeline
 
-We provide the end-to-end data preparation pipeline under ```data_preparation/```. Volumes were resampled with cubic spline interpolation to a $96\times96\times96$ grid at 2 mm isotropic resolution in MNI space. Time series with TR outside 0.7–0.8 s were voxel-wise resampled to 0.72 s with cubic splines, and signals were globally z-scored within the brain mask. We followed the preprocessing settings in [Swift](https://github.com/Transconnectome/SwiFT).
+fMRI data were resampled with cubic spline interpolation to a $96\times96\times96$ grid at 2 mm isotropic resolution in MNI space. Time series with TR outside 0.7–0.8 s were voxel-wise resampled to 0.72 s with cubic splines, and signals were globally z-scored within the brain mask. We followed the preprocessing settings in [Swift](https://github.com/Transconnectome/SwiFT).
 
 ## Training
 
