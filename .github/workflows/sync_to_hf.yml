@@ -10,20 +10,12 @@ jobs:
   sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          lfs: true  
+      - name: Checkout repository
+        uses: actions/checkout@v6
 
-      - name: Push to hub
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}  # 引用刚才设置的 Secret
-          HF_USERNAME: OneMore1
-          HF_SPACE_NAME: Omni-fMRI
-        run: |
-          curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/huggingface/xet-core/refs/heads/main/git_xet/install.sh | sh
-          git xet install
-          git config --global user.email "your_email@example.com"
-          git config --global user.name "Your Name"
-          git remote add space https://oauth2:$HF_TOKEN@huggingface.co/$HF_USERNAME/$HF_SPACE_NAME
-          git push --force space main
+      - name: Sync to HuggingFace
+        uses: nateraw/huggingface-sync-action@v0.0.5
+        with:
+          github_repo_id: 'OneMore1/Omni-fMRI'
+          huggingface_repo_id: 'OneMore1/Omni-fMRI'
+          hf_token: ${{ secrets.HF_TOKEN }}
