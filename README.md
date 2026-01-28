@@ -7,6 +7,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-23xx.xxxxx-b31b1b.svg?style=flat-square)](https://arxiv.org/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/OneMore1/ICML2026Brain)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/OneMore1/Omni-fMRI)
+[![Docker Hub](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/r/您的用户名/镜像名)
 
 </div>
 
@@ -140,7 +141,11 @@ sh scripts/finetune.sh
 
 #### Model Checkpoints
 
-Our pre-trained model weights can be found in the checkpoints directory:  `./checkpoints/best_model.pth`
+Our pre-trained model weights can be found in Huggingface.
+
+#### Model Docker
+
+Docker can be found in Dockerhub.
 
 
 
