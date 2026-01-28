@@ -2,6 +2,13 @@
 
 # Omni-fMRI: A Universal Atlas-Free fMRI Foundation Model
 
+<div align="center">
+[![arXiv](https://img.shields.io/badge/arXiv-23xx.xxxxx-b31b1b.svg?style=flat-square)](https://arxiv.org/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/OneMore1/ICML2026Brain)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/OneMore1/Omni-fMRI)
+</div>
+
+
 This repository contains the official implementation of Omni-fMRI: A Universal Atlas-Free fMRI Foundation Model, which introduces a dynamic patching mechanism that significantly reduces computational costs while preserving informative spatial structures.
 
 <p align="center">
