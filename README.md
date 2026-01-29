@@ -138,6 +138,9 @@ Our pre-trained model weights can be found in Huggingface.
 
 Docker can be found in Dockerhub.
 
+#### Logs
+To strictly adhere to the double-blind policy and prevent potential de-anonymization, the raw training logs will be provided following a thorough manual review to ensure no identifying information is inadvertently leaked.
+
 
 
 
