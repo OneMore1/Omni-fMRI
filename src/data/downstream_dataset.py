@@ -50,7 +50,7 @@ class fMRITaskDataset(fMRIDataset):
             
             if match:
                 subject_id_with_zeros = match.group(1)
-                subject_id = subject_id_with_zeros.lstrip('0') # 去除前缀0
+                subject_id = subject_id_with_zeros.lstrip('0')
                 
                 return subject_id
                 
@@ -357,7 +357,7 @@ class EmoFMRIDataset(Dataset):
             self.labels_cache[sub_key] = df.iloc[:, 0].values
 
 
-        print("标签加载完成。")
+        
 
     def _apply_global_zscore(self, data):
 
