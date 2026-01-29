@@ -10,7 +10,7 @@ class fMRIDataset(Dataset):
     def __init__(self, 
                  data_root, datasets, split_suffixes, crop_length=40, downstream=False):
         """
-        初始化 Dataset
+        Dataset
         """
         self.file_paths = []
         self.crop_length = crop_length
