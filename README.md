@@ -25,9 +25,9 @@ This repository contains the official implementation of Omni-fMRI: A Universal A
 Setting up the environment requires Python 3.10 and CUDA-compatible PyTorch for GPU acceleration:
 
 ```
-conda create -n omnifmri python=3.10
+conda create -n omnifmri python=3.11
 
-pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu124
 
 pip install -r requirements.txt
 ```
