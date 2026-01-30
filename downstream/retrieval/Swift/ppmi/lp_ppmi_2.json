@@ -1,0 +1,33 @@
+{
+  "best_metric": "f1_weighted",
+  "best_val": 0.5499377657873489,
+  "label_map": null,
+  "mode": "linear_probe",
+  "out_dir": 
+  "seed": 10,
+  "task": {
+    "num_classes": 3,
+    "task_type": "classification"
+  },
+  "test": {
+    "loss": 0.9134093728269401,
+    "metrics": {
+      "acc": 0.5784209966659546,
+      "f1_weighted": 0.5684912017859264
+    }
+  },
+  "train": {
+    "loss": 0.7877602852599589,
+    "metrics": {
+      "acc": 0.635649561882019,
+      "f1_weighted": 0.6321495948076999
+    }
+  },
+  "valid": {
+    "loss": 0.9845552909187972,
+    "metrics": {
+      "acc": 0.5645833611488342,
+      "f1_weighted": 0.5499377657873489
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "best_metric": "pearson",
+  "best_val": 0.7540301084518433,
+  "label_map": null,
+  "label_zscore": {
+    "mean": 36.371089935302734,
+    "scope": "train+valid+test",
+    "std": 21.256240844726562
+  },
+  "mode": "linear_probe",
+  "out_dir":
+  "seed": 10,
+  "task": {
+    "num_classes": 1,
+    "task_type": "regression"
+  },
+  "test": {
+    "loss": 0.6943866856038924,
+    "metrics": {
+      "mse": 0.6943867206573486,
+      "pearson": 0.6986300945281982,
+      "r2": 0.37454479932785034
+    }
+  },
+  "train": {
+    "loss": 0.5815573019955298,
+    "metrics": {
+      "mse": 0.5815573334693909,
+      "pearson": 0.6469998955726624,
+      "r2": 0.3914826512336731
+    }
+  },
+  "valid": {
+    "loss": 0.5839549607013576,
+    "metrics": {
+      "mse": 0.583954930305481,
+      "pearson": 0.7540301084518433,
+      "r2": 0.4585827589035034
+    }
+  }
+}

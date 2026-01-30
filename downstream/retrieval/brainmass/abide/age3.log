@@ -1,0 +1,73 @@
+Loading labels from ******* for task: regression...
+Scanning directory: ******* ...
+Dataset (train) ready. Matched 609 subjects.
+Loading labels from ******* for task: regression...
+Scanning directory: ******* ...
+Dataset (val) ready. Matched 87 subjects.
+Loading labels from ******* for task: regression...
+Scanning directory: ******* ...
+Dataset (test) ready. Matched 175 subjects.
+Loading pretrained weights from: *******
+Task: Regression (Age). Scaling with Mean=17.111, Std=7.7705
+Start Finetuning (regression) for 50 epochs...
+Epoch [1/50] Loss: 1.0280 | Val MSE: 0.6890 | MAE: 0.6441 | R: 0.1653 | R2: -0.0064 | test MSE: 0.9063 | MAE: 0.7301 | R: 0.1008 | R2: 0.0040
+>>> Best model saved.
+Epoch [2/50] Loss: 0.9812 | Val MSE: 0.6886 | MAE: 0.6360 | R: 0.0959 | R2: -0.0057 | test MSE: 0.9080 | MAE: 0.7258 | R: 0.1017 | R2: 0.0022
+Epoch [3/50] Loss: 1.0374 | Val MSE: 0.6907 | MAE: 0.6388 | R: 0.0363 | R2: -0.0089 | test MSE: 0.9071 | MAE: 0.7271 | R: 0.1461 | R2: 0.0031
+Epoch [4/50] Loss: 0.9651 | Val MSE: 0.7202 | MAE: 0.6746 | R: -0.0104 | R2: -0.0519 | test MSE: 0.9145 | MAE: 0.7612 | R: 0.1872 | R2: -0.0050
+Epoch [5/50] Loss: 1.0087 | Val MSE: 0.6888 | MAE: 0.6347 | R: 0.1178 | R2: -0.0060 | test MSE: 0.9092 | MAE: 0.7256 | R: 0.0986 | R2: 0.0008
+Epoch [6/50] Loss: 1.0077 | Val MSE: 0.7109 | MAE: 0.6632 | R: -0.0576 | R2: -0.0382 | test MSE: 0.9090 | MAE: 0.7491 | R: 0.1949 | R2: 0.0011
+Epoch [7/50] Loss: 0.9852 | Val MSE: 0.6993 | MAE: 0.6490 | R: -0.0509 | R2: -0.0213 | test MSE: 0.9036 | MAE: 0.7336 | R: 0.1978 | R2: 0.0070
+Epoch [8/50] Loss: 0.9983 | Val MSE: 0.6927 | MAE: 0.6409 | R: -0.0008 | R2: -0.0117 | test MSE: 0.9024 | MAE: 0.7272 | R: 0.2733 | R2: 0.0083
+Epoch [9/50] Loss: 0.9798 | Val MSE: 0.7004 | MAE: 0.6556 | R: 0.0660 | R2: -0.0229 | test MSE: 0.9009 | MAE: 0.7391 | R: 0.2293 | R2: 0.0099
+Epoch [10/50] Loss: 0.9763 | Val MSE: 0.6951 | MAE: 0.6519 | R: 0.1120 | R2: -0.0152 | test MSE: 0.8932 | MAE: 0.7331 | R: 0.2950 | R2: 0.0184
+Epoch [11/50] Loss: 0.9633 | Val MSE: 0.6836 | MAE: 0.6393 | R: 0.2320 | R2: 0.0015 | test MSE: 0.8911 | MAE: 0.7248 | R: 0.3487 | R2: 0.0207
+>>> Best model saved.
+Epoch [12/50] Loss: 0.9555 | Val MSE: 0.7205 | MAE: 0.6837 | R: 0.2006 | R2: -0.0523 | test MSE: 0.8813 | MAE: 0.7580 | R: 0.3303 | R2: 0.0315
+Epoch [13/50] Loss: 0.9201 | Val MSE: 0.6608 | MAE: 0.6340 | R: 0.2734 | R2: 0.0348 | test MSE: 0.8397 | MAE: 0.7032 | R: 0.4009 | R2: 0.0772
+>>> Best model saved.
+Epoch [14/50] Loss: 0.8476 | Val MSE: 0.6195 | MAE: 0.6198 | R: 0.3438 | R2: 0.0952 | test MSE: 0.7318 | MAE: 0.6475 | R: 0.5011 | R2: 0.1958
+>>> Best model saved.
+Epoch [15/50] Loss: 0.7844 | Val MSE: 0.7046 | MAE: 0.6756 | R: 0.3641 | R2: -0.0291 | test MSE: 0.6608 | MAE: 0.6396 | R: 0.5575 | R2: 0.2739
+>>> Best model saved.
+Epoch [16/50] Loss: 0.7321 | Val MSE: 0.5288 | MAE: 0.5395 | R: 0.5204 | R2: 0.2276 | test MSE: 0.7461 | MAE: 0.6090 | R: 0.5241 | R2: 0.1801
+>>> Best model saved.
+Epoch [17/50] Loss: 0.6739 | Val MSE: 0.5000 | MAE: 0.5547 | R: 0.5232 | R2: 0.2698 | test MSE: 0.6543 | MAE: 0.5705 | R: 0.5526 | R2: 0.2810
+>>> Best model saved.
+Epoch [18/50] Loss: 0.5825 | Val MSE: 0.6390 | MAE: 0.6618 | R: 0.5109 | R2: 0.0668 | test MSE: 0.6817 | MAE: 0.6466 | R: 0.5473 | R2: 0.2508
+Epoch [19/50] Loss: 0.5124 | Val MSE: 0.4701 | MAE: 0.5319 | R: 0.5721 | R2: 0.3134 | test MSE: 0.6317 | MAE: 0.5459 | R: 0.5572 | R2: 0.3058
+>>> Best model saved.
+Epoch [20/50] Loss: 0.5078 | Val MSE: 0.4365 | MAE: 0.5132 | R: 0.6043 | R2: 0.3625 | test MSE: 0.6487 | MAE: 0.5510 | R: 0.5464 | R2: 0.2872
+>>> Best model saved.
+Epoch [21/50] Loss: 0.4470 | Val MSE: 0.5446 | MAE: 0.5937 | R: 0.5782 | R2: 0.2046 | test MSE: 0.6869 | MAE: 0.6201 | R: 0.5190 | R2: 0.2451
+Epoch [22/50] Loss: 0.4497 | Val MSE: 0.4531 | MAE: 0.4987 | R: 0.5878 | R2: 0.3383 | test MSE: 0.6955 | MAE: 0.5477 | R: 0.5218 | R2: 0.2356
+Epoch [23/50] Loss: 0.3807 | Val MSE: 0.4786 | MAE: 0.5516 | R: 0.5656 | R2: 0.3011 | test MSE: 0.6676 | MAE: 0.5729 | R: 0.5170 | R2: 0.2663
+Epoch [24/50] Loss: 0.3789 | Val MSE: 0.8336 | MAE: 0.7081 | R: 0.5122 | R2: -0.2175 | test MSE: 0.8388 | MAE: 0.6988 | R: 0.5194 | R2: 0.0782
+Epoch [25/50] Loss: 0.3667 | Val MSE: 0.4631 | MAE: 0.5111 | R: 0.5691 | R2: 0.3236 | test MSE: 0.6870 | MAE: 0.5607 | R: 0.5112 | R2: 0.2450
+Epoch [26/50] Loss: 0.3263 | Val MSE: 0.4710 | MAE: 0.5056 | R: 0.5739 | R2: 0.3121 | test MSE: 0.7015 | MAE: 0.5590 | R: 0.5138 | R2: 0.2290
+Epoch [27/50] Loss: 0.2967 | Val MSE: 0.4641 | MAE: 0.4793 | R: 0.6024 | R2: 0.3221 | test MSE: 0.7504 | MAE: 0.5652 | R: 0.5039 | R2: 0.1754
+Epoch [28/50] Loss: 0.2942 | Val MSE: 0.4625 | MAE: 0.4829 | R: 0.5914 | R2: 0.3245 | test MSE: 0.7129 | MAE: 0.5512 | R: 0.5288 | R2: 0.2166
+Epoch [29/50] Loss: 0.2553 | Val MSE: 0.4560 | MAE: 0.5139 | R: 0.5819 | R2: 0.3339 | test MSE: 0.6665 | MAE: 0.5570 | R: 0.5258 | R2: 0.2676
+Epoch [30/50] Loss: 0.2335 | Val MSE: 0.5369 | MAE: 0.5581 | R: 0.5443 | R2: 0.2159 | test MSE: 0.7065 | MAE: 0.5822 | R: 0.5094 | R2: 0.2236
+Epoch [31/50] Loss: 0.2036 | Val MSE: 0.5710 | MAE: 0.5595 | R: 0.5184 | R2: 0.1660 | test MSE: 0.7116 | MAE: 0.5797 | R: 0.5054 | R2: 0.2180
+Epoch [32/50] Loss: 0.1739 | Val MSE: 0.4867 | MAE: 0.5083 | R: 0.5673 | R2: 0.2891 | test MSE: 0.7129 | MAE: 0.5691 | R: 0.4985 | R2: 0.2166
+Epoch [33/50] Loss: 0.1739 | Val MSE: 0.7593 | MAE: 0.6619 | R: 0.5134 | R2: -0.1089 | test MSE: 0.7906 | MAE: 0.6512 | R: 0.5033 | R2: 0.1312
+Epoch [34/50] Loss: 0.2074 | Val MSE: 0.5109 | MAE: 0.5305 | R: 0.5520 | R2: 0.2538 | test MSE: 0.6907 | MAE: 0.5612 | R: 0.5131 | R2: 0.2409
+Epoch [35/50] Loss: 0.1854 | Val MSE: 0.4909 | MAE: 0.5078 | R: 0.5555 | R2: 0.2830 | test MSE: 0.7170 | MAE: 0.5604 | R: 0.5100 | R2: 0.2121
+Epoch [36/50] Loss: 0.1474 | Val MSE: 0.5871 | MAE: 0.5566 | R: 0.5194 | R2: 0.1425 | test MSE: 0.7184 | MAE: 0.5799 | R: 0.5103 | R2: 0.2105
+Epoch [37/50] Loss: 0.1343 | Val MSE: 0.5975 | MAE: 0.5549 | R: 0.5018 | R2: 0.1274 | test MSE: 0.7348 | MAE: 0.5847 | R: 0.4904 | R2: 0.1925
+Epoch [38/50] Loss: 0.1323 | Val MSE: 0.6442 | MAE: 0.6138 | R: 0.5264 | R2: 0.0592 | test MSE: 0.7463 | MAE: 0.6122 | R: 0.4980 | R2: 0.1798
+Epoch [39/50] Loss: 0.1234 | Val MSE: 0.5085 | MAE: 0.5268 | R: 0.5554 | R2: 0.2574 | test MSE: 0.7495 | MAE: 0.5792 | R: 0.4746 | R2: 0.1764
+Epoch [40/50] Loss: 0.1157 | Val MSE: 0.6622 | MAE: 0.6086 | R: 0.5076 | R2: 0.0328 | test MSE: 0.7569 | MAE: 0.6083 | R: 0.4998 | R2: 0.1682
+Epoch [41/50] Loss: 0.1371 | Val MSE: 0.5638 | MAE: 0.5517 | R: 0.5244 | R2: 0.1765 | test MSE: 0.7289 | MAE: 0.5770 | R: 0.5039 | R2: 0.1990
+Epoch [42/50] Loss: 0.1155 | Val MSE: 0.5283 | MAE: 0.5293 | R: 0.5382 | R2: 0.2283 | test MSE: 0.7233 | MAE: 0.5722 | R: 0.4963 | R2: 0.2051
+Epoch [43/50] Loss: 0.1340 | Val MSE: 0.5163 | MAE: 0.5271 | R: 0.5576 | R2: 0.2459 | test MSE: 0.7194 | MAE: 0.5737 | R: 0.5085 | R2: 0.2094
+Epoch [44/50] Loss: 0.1371 | Val MSE: 0.5520 | MAE: 0.5514 | R: 0.4975 | R2: 0.1938 | test MSE: 0.7185 | MAE: 0.5784 | R: 0.4846 | R2: 0.2105
+Epoch [45/50] Loss: 0.1029 | Val MSE: 0.6003 | MAE: 0.5621 | R: 0.5144 | R2: 0.1232 | test MSE: 0.7430 | MAE: 0.5907 | R: 0.5035 | R2: 0.1835
+Epoch [46/50] Loss: 0.0984 | Val MSE: 0.6130 | MAE: 0.5733 | R: 0.5174 | R2: 0.1046 | test MSE: 0.7290 | MAE: 0.5873 | R: 0.5059 | R2: 0.1989
+Epoch [47/50] Loss: 0.0961 | Val MSE: 0.6193 | MAE: 0.5769 | R: 0.5188 | R2: 0.0955 | test MSE: 0.7525 | MAE: 0.6045 | R: 0.4869 | R2: 0.1731
+Epoch [48/50] Loss: 0.0964 | Val MSE: 0.6855 | MAE: 0.6339 | R: 0.4813 | R2: -0.0012 | test MSE: 0.7339 | MAE: 0.6073 | R: 0.5032 | R2: 0.1935
+Epoch [49/50] Loss: 0.1036 | Val MSE: 0.6479 | MAE: 0.5999 | R: 0.4980 | R2: 0.0538 | test MSE: 0.7654 | MAE: 0.6043 | R: 0.4925 | R2: 0.1589
+Epoch [50/50] Loss: 0.0951 | Val MSE: 0.5524 | MAE: 0.5453 | R: 0.5342 | R2: 0.1932 | test MSE: 0.7364 | MAE: 0.5877 | R: 0.4923 | R2: 0.1907
+Finetuning finished. Testing best model...
+Test Result -> MSE: 0.6487 | MAE: 0.5510 | R: 0.5464 | R2: 0.2872

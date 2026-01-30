@@ -1,0 +1,434 @@
+2026-01-22 10:21:59,654 - INFO - Logging configured. Log file saved to: *******
+2026-01-22 10:21:59,654 - INFO - Configuration:
+2026-01-22 10:21:59,654 - INFO - Batch Size: 16, LR: 0.0001, Epochs: 100
+2026-01-22 10:21:59,656 - INFO - Using device: cuda
+2026-01-22 10:21:59,838 - INFO - Loading checkpoint from *******
+2026-01-22 10:21:59,945 - INFO - --- 开始执行 Key 映射转换 ---
+2026-01-22 10:21:59,945 - INFO - 转换示例 (Checkpoint -> Model):
+2026-01-22 10:21:59,945 - INFO -   vit.embeddings.cls_token  ==>  embeddings.cls_token (大致)
+2026-01-22 10:21:59,945 - INFO -   vit.embeddings.signal_embedding_projection.weight  ==>  embeddings.signal_embedding_projection.weight (大致)
+2026-01-22 10:21:59,945 - INFO -   vit.embeddings.signal_embedding_projection.bias  ==>  embeddings.signal_embedding_projection.bias (大致)
+2026-01-22 10:21:59,950 - INFO - 
+==============================
+2026-01-22 10:21:59,950 - INFO - 加载结果报告
+2026-01-22 10:21:59,950 - INFO - ==============================
+2026-01-22 10:21:59,950 - INFO - ✅ Encoder 权重全部加载成功！
+2026-01-22 10:21:59,950 - INFO - ✅ 信号投影层 (Signal Projection) 加载成功。
+2026-01-22 10:21:59,950 - INFO - ✅ CLS Token 加载成功。
+2026-01-22 10:22:00,250 - INFO - Loading Datasets...
+2026-01-22 10:22:00,607 - INFO - Train samples: 225, Val samples: 28, Test samples: 78
+2026-01-22 10:22:00,623 - INFO - Starting Fine-tuning...
+2026-01-22 10:22:02,042 - INFO - Epoch [1/100], Step [0], Loss: 1.2064
+2026-01-22 10:22:13,064 - INFO - Epoch [1/100], Step [10], Loss: 0.9679
+2026-01-22 10:22:15,798 - INFO - Epoch 1 Finished. Train Loss: 1.1038 | Train Acc: 0.3839 | Train F1: 0.3260
+2026-01-22 10:22:15,798 - INFO - Running Validation for Epoch 1...
+2026-01-22 10:22:16,470 - INFO - [Val] Loss: 1.1660 | Accuracy: 0.3929 | F1: 0.2216
+2026-01-22 10:22:16,470 - INFO - Running Testing for Epoch 1...
+2026-01-22 10:22:18,670 - INFO - [Test] Loss: 1.1241 | Accuracy: 0.3974 | F1: 0.2261
+2026-01-22 10:22:18,726 - INFO - Saved checkpoint to *******
+2026-01-22 10:22:18,784 - INFO - 🏆 New Best Model (Val Acc: 0.3929, Val F1: 0.2216) saved to *******
+2026-01-22 10:22:19,691 - INFO - Epoch [2/100], Step [0], Loss: 1.0761
+2026-01-22 10:22:30,512 - INFO - Epoch [2/100], Step [10], Loss: 1.1415
+2026-01-22 10:22:33,945 - INFO - Epoch 2 Finished. Train Loss: 1.0458 | Train Acc: 0.4598 | Train F1: 0.3729
+2026-01-22 10:22:33,945 - INFO - Running Validation for Epoch 2...
+2026-01-22 10:22:35,005 - INFO - [Val] Loss: 1.0664 | Accuracy: 0.3929 | F1: 0.3218
+2026-01-22 10:22:35,005 - INFO - Running Testing for Epoch 2...
+2026-01-22 10:22:37,562 - INFO - [Test] Loss: 1.0413 | Accuracy: 0.4872 | F1: 0.3913
+2026-01-22 10:22:37,608 - INFO - Saved checkpoint to *******
+2026-01-22 10:22:38,493 - INFO - Epoch [3/100], Step [0], Loss: 0.9321
+2026-01-22 10:22:47,410 - INFO - Epoch [3/100], Step [10], Loss: 0.8275
+2026-01-22 10:22:52,472 - INFO - Epoch 3 Finished. Train Loss: 0.9819 | Train Acc: 0.5089 | Train F1: 0.4629
+2026-01-22 10:22:52,472 - INFO - Running Validation for Epoch 3...
+2026-01-22 10:22:53,055 - INFO - [Val] Loss: 0.9983 | Accuracy: 0.5000 | F1: 0.4167
+2026-01-22 10:22:53,055 - INFO - Running Testing for Epoch 3...
+2026-01-22 10:22:54,621 - INFO - [Test] Loss: 0.9910 | Accuracy: 0.4744 | F1: 0.3812
+2026-01-22 10:22:54,684 - INFO - Saved checkpoint to *******
+2026-01-22 10:22:54,754 - INFO - 🏆 New Best Model (Val Acc: 0.5000, Val F1: 0.4167) saved to *******
+2026-01-22 10:22:55,638 - INFO - Epoch [4/100], Step [0], Loss: 0.8773
+2026-01-22 10:23:06,053 - INFO - Epoch [4/100], Step [10], Loss: 0.6949
+2026-01-22 10:23:09,781 - INFO - Epoch 4 Finished. Train Loss: 0.8774 | Train Acc: 0.5625 | Train F1: 0.4844
+2026-01-22 10:23:09,781 - INFO - Running Validation for Epoch 4...
+2026-01-22 10:23:10,337 - INFO - [Val] Loss: 1.0493 | Accuracy: 0.4643 | F1: 0.3890
+2026-01-22 10:23:10,337 - INFO - Running Testing for Epoch 4...
+2026-01-22 10:23:11,902 - INFO - [Test] Loss: 0.9815 | Accuracy: 0.5128 | F1: 0.4651
+2026-01-22 10:23:11,954 - INFO - Saved checkpoint to *******
+2026-01-22 10:23:12,824 - INFO - Epoch [5/100], Step [0], Loss: 0.9422
+2026-01-22 10:23:24,034 - INFO - Epoch [5/100], Step [10], Loss: 0.7180
+2026-01-22 10:23:26,685 - INFO - Epoch 5 Finished. Train Loss: 0.7733 | Train Acc: 0.6339 | Train F1: 0.5960
+2026-01-22 10:23:26,685 - INFO - Running Validation for Epoch 5...
+2026-01-22 10:23:27,231 - INFO - [Val] Loss: 1.2445 | Accuracy: 0.4643 | F1: 0.3776
+2026-01-22 10:23:27,231 - INFO - Running Testing for Epoch 5...
+2026-01-22 10:23:28,702 - INFO - [Test] Loss: 1.1007 | Accuracy: 0.5000 | F1: 0.3984
+2026-01-22 10:23:28,756 - INFO - Saved checkpoint to *******
+2026-01-22 10:23:29,628 - INFO - Epoch [6/100], Step [0], Loss: 0.6146
+2026-01-22 10:23:40,907 - INFO - Epoch [6/100], Step [10], Loss: 0.5627
+2026-01-22 10:23:43,578 - INFO - Epoch 6 Finished. Train Loss: 0.6251 | Train Acc: 0.7500 | Train F1: 0.7365
+2026-01-22 10:23:43,578 - INFO - Running Validation for Epoch 6...
+2026-01-22 10:23:44,146 - INFO - [Val] Loss: 1.4035 | Accuracy: 0.4643 | F1: 0.4484
+2026-01-22 10:23:44,147 - INFO - Running Testing for Epoch 6...
+2026-01-22 10:23:45,671 - INFO - [Test] Loss: 1.1180 | Accuracy: 0.5000 | F1: 0.4728
+2026-01-22 10:23:45,729 - INFO - Saved checkpoint to *******
+2026-01-22 10:23:46,607 - INFO - Epoch [7/100], Step [0], Loss: 0.5506
+2026-01-22 10:23:57,840 - INFO - Epoch [7/100], Step [10], Loss: 0.5833
+2026-01-22 10:24:00,472 - INFO - Epoch 7 Finished. Train Loss: 0.5607 | Train Acc: 0.7589 | Train F1: 0.7518
+2026-01-22 10:24:00,472 - INFO - Running Validation for Epoch 7...
+2026-01-22 10:24:01,027 - INFO - [Val] Loss: 1.5717 | Accuracy: 0.4643 | F1: 0.4345
+2026-01-22 10:24:01,027 - INFO - Running Testing for Epoch 7...
+2026-01-22 10:24:02,527 - INFO - [Test] Loss: 1.3652 | Accuracy: 0.4744 | F1: 0.4808
+2026-01-22 10:24:02,583 - INFO - Saved checkpoint to *******
+2026-01-22 10:24:03,882 - INFO - Epoch [8/100], Step [0], Loss: 0.5055
+2026-01-22 10:24:14,761 - INFO - Epoch [8/100], Step [10], Loss: 1.3394
+2026-01-22 10:24:17,399 - INFO - Epoch 8 Finished. Train Loss: 0.6780 | Train Acc: 0.6964 | Train F1: 0.6955
+2026-01-22 10:24:17,399 - INFO - Running Validation for Epoch 8...
+2026-01-22 10:24:18,117 - INFO - [Val] Loss: 1.6866 | Accuracy: 0.3929 | F1: 0.2274
+2026-01-22 10:24:18,118 - INFO - Running Testing for Epoch 8...
+2026-01-22 10:24:20,901 - INFO - [Test] Loss: 1.3799 | Accuracy: 0.4872 | F1: 0.3967
+2026-01-22 10:24:20,946 - INFO - Saved checkpoint to *******
+2026-01-22 10:24:22,648 - INFO - Epoch [9/100], Step [0], Loss: 0.9598
+2026-01-22 10:24:31,400 - INFO - Epoch [9/100], Step [10], Loss: 0.6260
+2026-01-22 10:24:35,304 - INFO - Epoch 9 Finished. Train Loss: 0.5939 | Train Acc: 0.7455 | Train F1: 0.7396
+2026-01-22 10:24:35,304 - INFO - Running Validation for Epoch 9...
+2026-01-22 10:24:36,311 - INFO - [Val] Loss: 1.4264 | Accuracy: 0.3571 | F1: 0.2311
+2026-01-22 10:24:36,312 - INFO - Running Testing for Epoch 9...
+2026-01-22 10:24:38,513 - INFO - [Test] Loss: 1.2089 | Accuracy: 0.4744 | F1: 0.3925
+2026-01-22 10:24:38,570 - INFO - Saved checkpoint to *******
+2026-01-22 10:24:39,440 - INFO - Epoch [10/100], Step [0], Loss: 0.3782
+2026-01-22 10:24:48,350 - INFO - Epoch [10/100], Step [10], Loss: 0.3587
+2026-01-22 10:24:53,307 - INFO - Epoch 10 Finished. Train Loss: 0.3712 | Train Acc: 0.8884 | Train F1: 0.8880
+2026-01-22 10:24:53,308 - INFO - Running Validation for Epoch 10...
+2026-01-22 10:24:53,850 - INFO - [Val] Loss: 1.3331 | Accuracy: 0.5357 | F1: 0.5148
+2026-01-22 10:24:53,850 - INFO - Running Testing for Epoch 10...
+2026-01-22 10:24:55,318 - INFO - [Test] Loss: 1.0740 | Accuracy: 0.6026 | F1: 0.5947
+2026-01-22 10:24:55,377 - INFO - Saved checkpoint to *******
+2026-01-22 10:24:55,426 - INFO - 🏆 New Best Model (Val Acc: 0.5357, Val F1: 0.5148) saved to *******
+2026-01-22 10:24:56,294 - INFO - Epoch [11/100], Step [0], Loss: 0.3729
+2026-01-22 10:25:07,518 - INFO - Epoch [11/100], Step [10], Loss: 0.0835
+2026-01-22 10:25:10,146 - INFO - Epoch 11 Finished. Train Loss: 0.1706 | Train Acc: 0.9554 | Train F1: 0.9553
+2026-01-22 10:25:10,146 - INFO - Running Validation for Epoch 11...
+2026-01-22 10:25:10,678 - INFO - [Val] Loss: 1.7363 | Accuracy: 0.5357 | F1: 0.5351
+2026-01-22 10:25:10,678 - INFO - Running Testing for Epoch 11...
+2026-01-22 10:25:12,154 - INFO - [Test] Loss: 1.1540 | Accuracy: 0.5641 | F1: 0.5654
+2026-01-22 10:25:12,202 - INFO - Saved checkpoint to *******
+2026-01-22 10:25:13,368 - INFO - Epoch [12/100], Step [0], Loss: 0.0996
+2026-01-22 10:25:24,620 - INFO - Epoch [12/100], Step [10], Loss: 0.0850
+2026-01-22 10:25:27,593 - INFO - Epoch 12 Finished. Train Loss: 0.0821 | Train Acc: 0.9866 | Train F1: 0.9866
+2026-01-22 10:25:27,593 - INFO - Running Validation for Epoch 12...
+2026-01-22 10:25:28,131 - INFO - [Val] Loss: 1.9516 | Accuracy: 0.5000 | F1: 0.5037
+2026-01-22 10:25:28,131 - INFO - Running Testing for Epoch 12...
+2026-01-22 10:25:29,789 - INFO - [Test] Loss: 1.3392 | Accuracy: 0.5256 | F1: 0.5356
+2026-01-22 10:25:29,839 - INFO - Saved checkpoint to *******
+2026-01-22 10:25:30,706 - INFO - Epoch [13/100], Step [0], Loss: 0.0663
+2026-01-22 10:25:41,896 - INFO - Epoch [13/100], Step [10], Loss: 0.0222
+2026-01-22 10:25:44,525 - INFO - Epoch 13 Finished. Train Loss: 0.0298 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:25:44,525 - INFO - Running Validation for Epoch 13...
+2026-01-22 10:25:45,069 - INFO - [Val] Loss: 2.1844 | Accuracy: 0.5000 | F1: 0.4871
+2026-01-22 10:25:45,069 - INFO - Running Testing for Epoch 13...
+2026-01-22 10:25:47,108 - INFO - [Test] Loss: 1.3359 | Accuracy: 0.5641 | F1: 0.5632
+2026-01-22 10:25:47,169 - INFO - Saved checkpoint to *******
+2026-01-22 10:25:48,037 - INFO - Epoch [14/100], Step [0], Loss: 0.0129
+2026-01-22 10:25:56,758 - INFO - Epoch [14/100], Step [10], Loss: 0.0087
+2026-01-22 10:25:59,385 - INFO - Epoch 14 Finished. Train Loss: 0.0128 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:25:59,385 - INFO - Running Validation for Epoch 14...
+2026-01-22 10:25:59,933 - INFO - [Val] Loss: 2.4539 | Accuracy: 0.5000 | F1: 0.4918
+2026-01-22 10:25:59,933 - INFO - Running Testing for Epoch 14...
+2026-01-22 10:26:01,848 - INFO - [Test] Loss: 1.4473 | Accuracy: 0.5641 | F1: 0.5537
+2026-01-22 10:26:01,902 - INFO - Saved checkpoint to *******
+2026-01-22 10:26:03,168 - INFO - Epoch [15/100], Step [0], Loss: 0.0046
+2026-01-22 10:26:11,903 - INFO - Epoch [15/100], Step [10], Loss: 0.0057
+2026-01-22 10:26:15,401 - INFO - Epoch 15 Finished. Train Loss: 0.0063 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:26:15,401 - INFO - Running Validation for Epoch 15...
+2026-01-22 10:26:15,945 - INFO - [Val] Loss: 2.3121 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:26:15,945 - INFO - Running Testing for Epoch 15...
+2026-01-22 10:26:17,460 - INFO - [Test] Loss: 1.5090 | Accuracy: 0.5513 | F1: 0.5485
+2026-01-22 10:26:17,510 - INFO - Saved checkpoint to *******
+2026-01-22 10:26:18,379 - INFO - Epoch [16/100], Step [0], Loss: 0.0073
+2026-01-22 10:26:27,770 - INFO - Epoch [16/100], Step [10], Loss: 0.0047
+2026-01-22 10:26:30,643 - INFO - Epoch 16 Finished. Train Loss: 0.0045 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:26:30,643 - INFO - Running Validation for Epoch 16...
+2026-01-22 10:26:31,188 - INFO - [Val] Loss: 2.3414 | Accuracy: 0.5000 | F1: 0.4871
+2026-01-22 10:26:31,188 - INFO - Running Testing for Epoch 16...
+2026-01-22 10:26:32,698 - INFO - [Test] Loss: 1.5377 | Accuracy: 0.5641 | F1: 0.5644
+2026-01-22 10:26:32,760 - INFO - Saved checkpoint to *******
+2026-01-22 10:26:33,633 - INFO - Epoch [17/100], Step [0], Loss: 0.0023
+2026-01-22 10:26:43,120 - INFO - Epoch [17/100], Step [10], Loss: 0.0025
+2026-01-22 10:26:45,968 - INFO - Epoch 17 Finished. Train Loss: 0.0033 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:26:45,968 - INFO - Running Validation for Epoch 17...
+2026-01-22 10:26:46,534 - INFO - [Val] Loss: 2.4721 | Accuracy: 0.5000 | F1: 0.4867
+2026-01-22 10:26:46,534 - INFO - Running Testing for Epoch 17...
+2026-01-22 10:26:48,123 - INFO - [Test] Loss: 1.5735 | Accuracy: 0.5256 | F1: 0.5186
+2026-01-22 10:26:48,184 - INFO - Saved checkpoint to *******
+2026-01-22 10:26:49,578 - INFO - Epoch [18/100], Step [0], Loss: 0.0021
+2026-01-22 10:26:58,557 - INFO - Epoch [18/100], Step [10], Loss: 0.0028
+2026-01-22 10:27:01,858 - INFO - Epoch 18 Finished. Train Loss: 0.0028 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:27:01,859 - INFO - Running Validation for Epoch 18...
+2026-01-22 10:27:02,412 - INFO - [Val] Loss: 2.4562 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:27:02,412 - INFO - Running Testing for Epoch 18...
+2026-01-22 10:27:03,906 - INFO - [Test] Loss: 1.5599 | Accuracy: 0.5641 | F1: 0.5619
+2026-01-22 10:27:03,964 - INFO - Saved checkpoint to *******
+2026-01-22 10:27:04,989 - INFO - Epoch [19/100], Step [0], Loss: 0.0028
+2026-01-22 10:27:13,725 - INFO - Epoch [19/100], Step [10], Loss: 0.0020
+2026-01-22 10:27:16,363 - INFO - Epoch 19 Finished. Train Loss: 0.0025 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:27:16,364 - INFO - Running Validation for Epoch 19...
+2026-01-22 10:27:16,903 - INFO - [Val] Loss: 2.4709 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:27:16,903 - INFO - Running Testing for Epoch 19...
+2026-01-22 10:27:18,666 - INFO - [Test] Loss: 1.5756 | Accuracy: 0.5513 | F1: 0.5483
+2026-01-22 10:27:18,717 - INFO - Saved checkpoint to *******
+2026-01-22 10:27:20,164 - INFO - Epoch [20/100], Step [0], Loss: 0.0023
+2026-01-22 10:27:28,896 - INFO - Epoch [20/100], Step [10], Loss: 0.0021
+2026-01-22 10:27:32,480 - INFO - Epoch 20 Finished. Train Loss: 0.0022 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:27:32,480 - INFO - Running Validation for Epoch 20...
+2026-01-22 10:27:33,038 - INFO - [Val] Loss: 2.5436 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:27:33,039 - INFO - Running Testing for Epoch 20...
+2026-01-22 10:27:34,554 - INFO - [Test] Loss: 1.5891 | Accuracy: 0.5385 | F1: 0.5305
+2026-01-22 10:27:34,602 - INFO - Saved checkpoint to *******
+2026-01-22 10:27:35,478 - INFO - Epoch [21/100], Step [0], Loss: 0.0018
+2026-01-22 10:27:45,145 - INFO - Epoch [21/100], Step [10], Loss: 0.0018
+2026-01-22 10:27:47,765 - INFO - Epoch 21 Finished. Train Loss: 0.0020 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:27:47,765 - INFO - Running Validation for Epoch 21...
+2026-01-22 10:27:48,305 - INFO - [Val] Loss: 2.6186 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:27:48,306 - INFO - Running Testing for Epoch 21...
+2026-01-22 10:27:49,786 - INFO - [Test] Loss: 1.6438 | Accuracy: 0.5641 | F1: 0.5590
+2026-01-22 10:27:49,838 - INFO - Saved checkpoint to *******
+2026-01-22 10:27:50,709 - INFO - Epoch [22/100], Step [0], Loss: 0.0017
+2026-01-22 10:28:00,319 - INFO - Epoch [22/100], Step [10], Loss: 0.0023
+2026-01-22 10:28:03,134 - INFO - Epoch 22 Finished. Train Loss: 0.0018 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:28:03,135 - INFO - Running Validation for Epoch 22...
+2026-01-22 10:28:03,695 - INFO - [Val] Loss: 2.5997 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:28:03,695 - INFO - Running Testing for Epoch 22...
+2026-01-22 10:28:05,382 - INFO - [Test] Loss: 1.6487 | Accuracy: 0.5513 | F1: 0.5449
+2026-01-22 10:28:05,436 - INFO - Saved checkpoint to *******
+2026-01-22 10:28:06,549 - INFO - Epoch [23/100], Step [0], Loss: 0.0022
+2026-01-22 10:28:15,714 - INFO - Epoch [23/100], Step [10], Loss: 0.0013
+2026-01-22 10:28:18,787 - INFO - Epoch 23 Finished. Train Loss: 0.0017 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:28:18,788 - INFO - Running Validation for Epoch 23...
+2026-01-22 10:28:19,367 - INFO - [Val] Loss: 2.5957 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:28:19,368 - INFO - Running Testing for Epoch 23...
+2026-01-22 10:28:20,895 - INFO - [Test] Loss: 1.6422 | Accuracy: 0.5897 | F1: 0.5879
+2026-01-22 10:28:20,949 - INFO - Saved checkpoint to *******
+2026-01-22 10:28:21,840 - INFO - Epoch [24/100], Step [0], Loss: 0.0011
+2026-01-22 10:28:31,488 - INFO - Epoch [24/100], Step [10], Loss: 0.0018
+2026-01-22 10:28:34,118 - INFO - Epoch 24 Finished. Train Loss: 0.0015 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:28:34,118 - INFO - Running Validation for Epoch 24...
+2026-01-22 10:28:34,668 - INFO - [Val] Loss: 2.6383 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:28:34,668 - INFO - Running Testing for Epoch 24...
+2026-01-22 10:28:36,234 - INFO - [Test] Loss: 1.6470 | Accuracy: 0.5769 | F1: 0.5728
+2026-01-22 10:28:36,293 - INFO - Saved checkpoint to *******
+2026-01-22 10:28:36,345 - INFO - 🏆 New Best Model (Val Acc: 0.5714, Val F1: 0.5633) saved to *******
+2026-01-22 10:28:37,217 - INFO - Epoch [25/100], Step [0], Loss: 0.0012
+2026-01-22 10:28:46,838 - INFO - Epoch [25/100], Step [10], Loss: 0.0015
+2026-01-22 10:28:49,463 - INFO - Epoch 25 Finished. Train Loss: 0.0014 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:28:49,463 - INFO - Running Validation for Epoch 25...
+2026-01-22 10:28:50,002 - INFO - [Val] Loss: 2.6502 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:28:50,002 - INFO - Running Testing for Epoch 25...
+2026-01-22 10:28:51,494 - INFO - [Test] Loss: 1.6742 | Accuracy: 0.5897 | F1: 0.5864
+2026-01-22 10:28:51,548 - INFO - Saved checkpoint to *******
+2026-01-22 10:28:52,421 - INFO - Epoch [26/100], Step [0], Loss: 0.0016
+2026-01-22 10:29:02,114 - INFO - Epoch [26/100], Step [10], Loss: 0.0014
+2026-01-22 10:29:04,742 - INFO - Epoch 26 Finished. Train Loss: 0.0013 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:29:04,742 - INFO - Running Validation for Epoch 26...
+2026-01-22 10:29:05,299 - INFO - [Val] Loss: 2.6532 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:29:05,299 - INFO - Running Testing for Epoch 26...
+2026-01-22 10:29:06,850 - INFO - [Test] Loss: 1.6622 | Accuracy: 0.5897 | F1: 0.5864
+2026-01-22 10:29:06,906 - INFO - Saved checkpoint to *******
+2026-01-22 10:29:07,786 - INFO - Epoch [27/100], Step [0], Loss: 0.0011
+2026-01-22 10:29:17,492 - INFO - Epoch [27/100], Step [10], Loss: 0.0013
+2026-01-22 10:29:20,117 - INFO - Epoch 27 Finished. Train Loss: 0.0012 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:29:20,117 - INFO - Running Validation for Epoch 27...
+2026-01-22 10:29:20,665 - INFO - [Val] Loss: 2.7162 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:29:20,665 - INFO - Running Testing for Epoch 27...
+2026-01-22 10:29:22,195 - INFO - [Test] Loss: 1.7003 | Accuracy: 0.5769 | F1: 0.5721
+2026-01-22 10:29:22,251 - INFO - Saved checkpoint to *******
+2026-01-22 10:29:23,127 - INFO - Epoch [28/100], Step [0], Loss: 0.0013
+2026-01-22 10:29:32,783 - INFO - Epoch [28/100], Step [10], Loss: 0.0014
+2026-01-22 10:29:35,401 - INFO - Epoch 28 Finished. Train Loss: 0.0012 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:29:35,401 - INFO - Running Validation for Epoch 28...
+2026-01-22 10:29:35,943 - INFO - [Val] Loss: 2.7596 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:29:35,944 - INFO - Running Testing for Epoch 28...
+2026-01-22 10:29:37,442 - INFO - [Test] Loss: 1.6845 | Accuracy: 0.5897 | F1: 0.5856
+2026-01-22 10:29:37,502 - INFO - Saved checkpoint to *******
+2026-01-22 10:29:38,375 - INFO - Epoch [29/100], Step [0], Loss: 0.0010
+2026-01-22 10:29:48,044 - INFO - Epoch [29/100], Step [10], Loss: 0.0012
+2026-01-22 10:29:50,664 - INFO - Epoch 29 Finished. Train Loss: 0.0011 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:29:50,664 - INFO - Running Validation for Epoch 29...
+2026-01-22 10:29:51,196 - INFO - [Val] Loss: 2.7647 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:29:51,197 - INFO - Running Testing for Epoch 29...
+2026-01-22 10:29:52,673 - INFO - [Test] Loss: 1.7136 | Accuracy: 0.5769 | F1: 0.5743
+2026-01-22 10:29:52,727 - INFO - Saved checkpoint to *******
+2026-01-22 10:29:53,593 - INFO - Epoch [30/100], Step [0], Loss: 0.0014
+2026-01-22 10:30:02,796 - INFO - Epoch [30/100], Step [10], Loss: 0.0012
+2026-01-22 10:30:05,441 - INFO - Epoch 30 Finished. Train Loss: 0.0010 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:30:05,441 - INFO - Running Validation for Epoch 30...
+2026-01-22 10:30:05,984 - INFO - [Val] Loss: 2.7682 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:30:05,984 - INFO - Running Testing for Epoch 30...
+2026-01-22 10:30:07,488 - INFO - [Test] Loss: 1.7397 | Accuracy: 0.5769 | F1: 0.5743
+2026-01-22 10:30:07,539 - INFO - Saved checkpoint to *******
+2026-01-22 10:30:08,409 - INFO - Epoch [31/100], Step [0], Loss: 0.0013
+2026-01-22 10:30:19,652 - INFO - Epoch [31/100], Step [10], Loss: 0.0010
+2026-01-22 10:30:22,289 - INFO - Epoch 31 Finished. Train Loss: 0.0010 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:30:22,289 - INFO - Running Validation for Epoch 31...
+2026-01-22 10:30:22,839 - INFO - [Val] Loss: 2.8217 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:30:22,839 - INFO - Running Testing for Epoch 31...
+2026-01-22 10:30:25,374 - INFO - [Test] Loss: 1.7226 | Accuracy: 0.5769 | F1: 0.5743
+2026-01-22 10:30:25,421 - INFO - Saved checkpoint to *******
+2026-01-22 10:30:27,082 - INFO - Epoch [32/100], Step [0], Loss: 0.0011
+2026-01-22 10:30:37,402 - INFO - Epoch [32/100], Step [10], Loss: 0.0011
+2026-01-22 10:30:41,672 - INFO - Epoch 32 Finished. Train Loss: 0.0010 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:30:41,673 - INFO - Running Validation for Epoch 32...
+2026-01-22 10:30:42,230 - INFO - [Val] Loss: 2.8025 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:30:42,230 - INFO - Running Testing for Epoch 32...
+2026-01-22 10:30:43,727 - INFO - [Test] Loss: 1.7402 | Accuracy: 0.5769 | F1: 0.5728
+2026-01-22 10:30:43,772 - INFO - Saved checkpoint to *******
+2026-01-22 10:30:44,649 - INFO - Epoch [33/100], Step [0], Loss: 0.0010
+2026-01-22 10:30:55,918 - INFO - Epoch [33/100], Step [10], Loss: 0.0008
+2026-01-22 10:30:58,550 - INFO - Epoch 33 Finished. Train Loss: 0.0009 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:30:58,550 - INFO - Running Validation for Epoch 33...
+2026-01-22 10:30:59,530 - INFO - [Val] Loss: 2.8305 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:30:59,530 - INFO - Running Testing for Epoch 33...
+2026-01-22 10:31:01,350 - INFO - [Test] Loss: 1.7534 | Accuracy: 0.5769 | F1: 0.5735
+2026-01-22 10:31:01,397 - INFO - Saved checkpoint to *******
+2026-01-22 10:31:03,093 - INFO - Epoch [34/100], Step [0], Loss: 0.0012
+2026-01-22 10:31:13,648 - INFO - Epoch [34/100], Step [10], Loss: 0.0007
+2026-01-22 10:31:17,757 - INFO - Epoch 34 Finished. Train Loss: 0.0009 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:31:17,758 - INFO - Running Validation for Epoch 34...
+2026-01-22 10:31:18,310 - INFO - [Val] Loss: 2.8257 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:31:18,310 - INFO - Running Testing for Epoch 34...
+2026-01-22 10:31:19,781 - INFO - [Test] Loss: 1.7358 | Accuracy: 0.5769 | F1: 0.5728
+2026-01-22 10:31:19,843 - INFO - Saved checkpoint to *******
+2026-01-22 10:31:20,714 - INFO - Epoch [35/100], Step [0], Loss: 0.0008
+2026-01-22 10:31:31,949 - INFO - Epoch [35/100], Step [10], Loss: 0.0010
+2026-01-22 10:31:34,569 - INFO - Epoch 35 Finished. Train Loss: 0.0008 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:31:34,569 - INFO - Running Validation for Epoch 35...
+2026-01-22 10:31:35,298 - INFO - [Val] Loss: 2.8636 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:31:35,299 - INFO - Running Testing for Epoch 35...
+2026-01-22 10:31:37,927 - INFO - [Test] Loss: 1.7442 | Accuracy: 0.5897 | F1: 0.5864
+2026-01-22 10:31:37,979 - INFO - Saved checkpoint to *******
+2026-01-22 10:31:39,693 - INFO - Epoch [36/100], Step [0], Loss: 0.0009
+2026-01-22 10:31:48,630 - INFO - Epoch [36/100], Step [10], Loss: 0.0008
+2026-01-22 10:31:53,146 - INFO - Epoch 36 Finished. Train Loss: 0.0008 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:31:53,146 - INFO - Running Validation for Epoch 36...
+2026-01-22 10:31:54,169 - INFO - [Val] Loss: 2.8454 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:31:54,169 - INFO - Running Testing for Epoch 36...
+2026-01-22 10:31:55,771 - INFO - [Test] Loss: 1.8122 | Accuracy: 0.5641 | F1: 0.5605
+2026-01-22 10:31:55,819 - INFO - Saved checkpoint to *******
+2026-01-22 10:31:56,691 - INFO - Epoch [37/100], Step [0], Loss: 0.0006
+2026-01-22 10:32:07,150 - INFO - Epoch [37/100], Step [10], Loss: 0.0008
+2026-01-22 10:32:10,686 - INFO - Epoch 37 Finished. Train Loss: 0.0007 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:32:10,686 - INFO - Running Validation for Epoch 37...
+2026-01-22 10:32:11,245 - INFO - [Val] Loss: 2.8808 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:32:11,245 - INFO - Running Testing for Epoch 37...
+2026-01-22 10:32:12,737 - INFO - [Test] Loss: 1.8072 | Accuracy: 0.5641 | F1: 0.5605
+2026-01-22 10:32:12,806 - INFO - Saved checkpoint to *******
+2026-01-22 10:32:13,683 - INFO - Epoch [38/100], Step [0], Loss: 0.0005
+2026-01-22 10:32:24,940 - INFO - Epoch [38/100], Step [10], Loss: 0.0006
+2026-01-22 10:32:27,596 - INFO - Epoch 38 Finished. Train Loss: 0.0007 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:32:27,596 - INFO - Running Validation for Epoch 38...
+2026-01-22 10:32:28,162 - INFO - [Val] Loss: 2.8922 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:32:28,162 - INFO - Running Testing for Epoch 38...
+2026-01-22 10:32:29,710 - INFO - [Test] Loss: 1.8208 | Accuracy: 0.5769 | F1: 0.5743
+2026-01-22 10:32:29,766 - INFO - Saved checkpoint to *******
+2026-01-22 10:32:30,645 - INFO - Epoch [39/100], Step [0], Loss: 0.0008
+2026-01-22 10:32:41,911 - INFO - Epoch [39/100], Step [10], Loss: 0.0007
+2026-01-22 10:32:44,519 - INFO - Epoch 39 Finished. Train Loss: 0.0007 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:32:44,519 - INFO - Running Validation for Epoch 39...
+2026-01-22 10:32:45,052 - INFO - [Val] Loss: 2.8945 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:32:45,052 - INFO - Running Testing for Epoch 39...
+2026-01-22 10:32:46,524 - INFO - [Test] Loss: 1.8319 | Accuracy: 0.5769 | F1: 0.5728
+2026-01-22 10:32:46,573 - INFO - Saved checkpoint to *******
+2026-01-22 10:32:48,141 - INFO - Epoch [40/100], Step [0], Loss: 0.0007
+2026-01-22 10:32:58,708 - INFO - Epoch [40/100], Step [10], Loss: 0.0006
+2026-01-22 10:33:01,330 - INFO - Epoch 40 Finished. Train Loss: 0.0007 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:33:01,331 - INFO - Running Validation for Epoch 40...
+2026-01-22 10:33:01,913 - INFO - [Val] Loss: 2.9360 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:33:01,913 - INFO - Running Testing for Epoch 40...
+2026-01-22 10:33:04,689 - INFO - [Test] Loss: 1.8403 | Accuracy: 0.5769 | F1: 0.5743
+2026-01-22 10:33:04,755 - INFO - Saved checkpoint to *******
+2026-01-22 10:33:06,465 - INFO - Epoch [41/100], Step [0], Loss: 0.0006
+2026-01-22 10:33:15,369 - INFO - Epoch [41/100], Step [10], Loss: 0.0005
+2026-01-22 10:33:19,795 - INFO - Epoch 41 Finished. Train Loss: 0.0006 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:33:19,795 - INFO - Running Validation for Epoch 41...
+2026-01-22 10:33:20,725 - INFO - [Val] Loss: 2.9570 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:33:20,726 - INFO - Running Testing for Epoch 41...
+2026-01-22 10:33:22,481 - INFO - [Test] Loss: 1.8217 | Accuracy: 0.5769 | F1: 0.5721
+2026-01-22 10:33:22,531 - INFO - Saved checkpoint to *******
+2026-01-22 10:33:23,403 - INFO - Epoch [42/100], Step [0], Loss: 0.0006
+2026-01-22 10:33:34,076 - INFO - Epoch [42/100], Step [10], Loss: 0.0007
+2026-01-22 10:33:37,357 - INFO - Epoch 42 Finished. Train Loss: 0.0006 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:33:37,358 - INFO - Running Validation for Epoch 42...
+2026-01-22 10:33:37,900 - INFO - [Val] Loss: 2.9719 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:33:37,900 - INFO - Running Testing for Epoch 42...
+2026-01-22 10:33:39,390 - INFO - [Test] Loss: 1.8313 | Accuracy: 0.5769 | F1: 0.5735
+2026-01-22 10:33:39,444 - INFO - Saved checkpoint to *******
+2026-01-22 10:33:40,328 - INFO - Epoch [43/100], Step [0], Loss: 0.0006
+2026-01-22 10:33:51,600 - INFO - Epoch [43/100], Step [10], Loss: 0.0005
+2026-01-22 10:33:54,226 - INFO - Epoch 43 Finished. Train Loss: 0.0006 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:33:54,226 - INFO - Running Validation for Epoch 43...
+2026-01-22 10:33:54,908 - INFO - [Val] Loss: 2.9628 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:33:54,908 - INFO - Running Testing for Epoch 43...
+2026-01-22 10:33:57,676 - INFO - [Test] Loss: 1.8189 | Accuracy: 0.5897 | F1: 0.5856
+2026-01-22 10:33:57,729 - INFO - Saved checkpoint to *******
+2026-01-22 10:33:59,423 - INFO - Epoch [44/100], Step [0], Loss: 0.0006
+2026-01-22 10:34:09,738 - INFO - Epoch [44/100], Step [10], Loss: 0.0006
+2026-01-22 10:34:13,319 - INFO - Epoch 44 Finished. Train Loss: 0.0006 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:34:13,319 - INFO - Running Validation for Epoch 44...
+2026-01-22 10:34:13,867 - INFO - [Val] Loss: 2.9712 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:34:13,867 - INFO - Running Testing for Epoch 44...
+2026-01-22 10:34:15,352 - INFO - [Test] Loss: 1.8620 | Accuracy: 0.5897 | F1: 0.5869
+2026-01-22 10:34:15,415 - INFO - Saved checkpoint to *******
+2026-01-22 10:34:16,289 - INFO - Epoch [45/100], Step [0], Loss: 0.0007
+2026-01-22 10:34:27,609 - INFO - Epoch [45/100], Step [10], Loss: 0.0005
+2026-01-22 10:34:30,548 - INFO - Epoch 45 Finished. Train Loss: 0.0005 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:34:30,549 - INFO - Running Validation for Epoch 45...
+2026-01-22 10:34:31,574 - INFO - [Val] Loss: 2.9785 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:34:31,574 - INFO - Running Testing for Epoch 45...
+2026-01-22 10:34:34,303 - INFO - [Test] Loss: 1.8652 | Accuracy: 0.5769 | F1: 0.5721
+2026-01-22 10:34:34,362 - INFO - Saved checkpoint to *******
+2026-01-22 10:34:35,549 - INFO - Epoch [46/100], Step [0], Loss: 0.0004
+2026-01-22 10:34:46,187 - INFO - Epoch [46/100], Step [10], Loss: 0.0005
+2026-01-22 10:34:49,448 - INFO - Epoch 46 Finished. Train Loss: 0.0005 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:34:49,449 - INFO - Running Validation for Epoch 46...
+2026-01-22 10:34:49,992 - INFO - [Val] Loss: 3.0012 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:34:49,992 - INFO - Running Testing for Epoch 46...
+2026-01-22 10:34:51,478 - INFO - [Test] Loss: 1.9092 | Accuracy: 0.5897 | F1: 0.5869
+2026-01-22 10:34:51,539 - INFO - Saved checkpoint to *******
+2026-01-22 10:34:52,410 - INFO - Epoch [47/100], Step [0], Loss: 0.0006
+2026-01-22 10:35:03,729 - INFO - Epoch [47/100], Step [10], Loss: 0.0006
+2026-01-22 10:35:08,250 - INFO - Epoch 47 Finished. Train Loss: 0.0005 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:35:08,250 - INFO - Running Validation for Epoch 47...
+2026-01-22 10:35:08,798 - INFO - [Val] Loss: 2.9443 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:35:08,798 - INFO - Running Testing for Epoch 47...
+2026-01-22 10:35:10,307 - INFO - [Test] Loss: 1.8942 | Accuracy: 0.5897 | F1: 0.5856
+2026-01-22 10:35:10,357 - INFO - Saved checkpoint to *******
+2026-01-22 10:35:11,233 - INFO - Epoch [48/100], Step [0], Loss: 0.0005
+2026-01-22 10:35:22,534 - INFO - Epoch [48/100], Step [10], Loss: 0.0006
+2026-01-22 10:35:25,160 - INFO - Epoch 48 Finished. Train Loss: 0.0005 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:35:25,160 - INFO - Running Validation for Epoch 48...
+2026-01-22 10:35:25,710 - INFO - [Val] Loss: 3.0243 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:35:25,710 - INFO - Running Testing for Epoch 48...
+2026-01-22 10:35:27,232 - INFO - [Test] Loss: 1.8791 | Accuracy: 0.5769 | F1: 0.5735
+2026-01-22 10:35:27,292 - INFO - Saved checkpoint to *******
+2026-01-22 10:35:28,181 - INFO - Epoch [49/100], Step [0], Loss: 0.0006
+2026-01-22 10:35:39,485 - INFO - Epoch [49/100], Step [10], Loss: 0.0004
+2026-01-22 10:35:42,115 - INFO - Epoch 49 Finished. Train Loss: 0.0005 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:35:42,116 - INFO - Running Validation for Epoch 49...
+2026-01-22 10:35:42,649 - INFO - [Val] Loss: 3.0362 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:35:42,649 - INFO - Running Testing for Epoch 49...
+2026-01-22 10:35:44,690 - INFO - [Test] Loss: 1.9326 | Accuracy: 0.5897 | F1: 0.5869
+2026-01-22 10:35:44,747 - INFO - Saved checkpoint to *******
+2026-01-22 10:35:46,339 - INFO - Epoch [50/100], Step [0], Loss: 0.0004
+2026-01-22 10:35:56,264 - INFO - Epoch [50/100], Step [10], Loss: 0.0004
+2026-01-22 10:35:59,584 - INFO - Epoch 50 Finished. Train Loss: 0.0005 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:35:59,584 - INFO - Running Validation for Epoch 50...
+2026-01-22 10:36:00,650 - INFO - [Val] Loss: 3.0031 | Accuracy: 0.5714 | F1: 0.5633
+2026-01-22 10:36:00,651 - INFO - Running Testing for Epoch 50...
+2026-01-22 10:36:03,281 - INFO - [Test] Loss: 1.8483 | Accuracy: 0.5897 | F1: 0.5869
+2026-01-22 10:36:03,350 - INFO - Saved checkpoint to *******
+2026-01-22 10:36:04,225 - INFO - Epoch [51/100], Step [0], Loss: 0.0005
+2026-01-22 10:36:13,010 - INFO - Epoch [51/100], Step [10], Loss: 0.0004
+2026-01-22 10:36:18,057 - INFO - Epoch 51 Finished. Train Loss: 0.0004 | Train Acc: 1.0000 | Train F1: 1.0000
+2026-01-22 10:36:18,058 - INFO - Running Validation for Epoch 51...
+2026-01-22 10:36:18,620 - INFO - [Val] Loss: 3.0240 | Accuracy: 0.5357 | F1: 0.5266
+2026-01-22 10:36:18,620 - INFO - Running Testing for Epoch 51...
+2026-01-22 10:36:20,166 - INFO - [Test] Loss: 1.8767 | Accuracy: 0.6026 | F1: 0.5994
+2026-01-22 10:36:20,228 - INFO - Saved checkpoint to *******
+2026-01-22 10:36:21,107 - INFO - Epoch [52/100], Step [0], Loss: 0.0004
+2026-01-22 10:36:32,441 - INFO - Epoch [52/100], Step [10], Loss: 0.0003

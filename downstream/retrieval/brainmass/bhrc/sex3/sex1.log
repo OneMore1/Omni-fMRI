@@ -1,0 +1,68 @@
+Loading labels from ******* for task: classification...
+Reading file list from *******
+Dataset ready. Matched 325 samples.
+Loading labels from ******* for task: classification...
+Reading file list from *******
+Dataset ready. Matched 46 samples.
+Loading labels from ******* for task: classification...
+Reading file list from *******
+Dataset ready. Matched 94 samples.
+Loading pretrained weights from: *******
+Task: Classification (Gender)
+Start Finetuning (classification) for 50 epochs...
+Epoch [1/50] Loss: 0.9422 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+>>> Best model saved.
+Epoch [2/50] Loss: 0.7585 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [3/50] Loss: 0.7195 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [4/50] Loss: 0.7643 | Val Acc: 0.4565 | F1: 0.3094 | test Acc: 0.6702 | F1: 0.5648
+>>> Best model saved.
+Epoch [5/50] Loss: 0.7440 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [6/50] Loss: 0.7422 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [7/50] Loss: 0.7101 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [8/50] Loss: 0.6924 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [9/50] Loss: 0.6727 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [10/50] Loss: 0.7181 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [11/50] Loss: 0.7122 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [12/50] Loss: 0.6695 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6489 | F1: 0.5191
+Epoch [13/50] Loss: 0.6625 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6489 | F1: 0.5191
+Epoch [14/50] Loss: 0.6917 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [15/50] Loss: 0.6665 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [16/50] Loss: 0.6609 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [17/50] Loss: 0.6682 | Val Acc: 0.6087 | F1: 0.5658 | test Acc: 0.6596 | F1: 0.6292
+>>> Best model saved.
+Epoch [18/50] Loss: 0.7257 | Val Acc: 0.5652 | F1: 0.5018 | test Acc: 0.6596 | F1: 0.6223
+Epoch [19/50] Loss: 0.6771 | Val Acc: 0.5870 | F1: 0.5879 | test Acc: 0.5957 | F1: 0.6009
+Epoch [20/50] Loss: 0.6887 | Val Acc: 0.5000 | F1: 0.3930 | test Acc: 0.6596 | F1: 0.5726
+Epoch [21/50] Loss: 0.7109 | Val Acc: 0.5652 | F1: 0.5018 | test Acc: 0.6596 | F1: 0.5850
+Epoch [22/50] Loss: 0.6527 | Val Acc: 0.5435 | F1: 0.5446 | test Acc: 0.5745 | F1: 0.5846
+Epoch [23/50] Loss: 0.6247 | Val Acc: 0.4348 | F1: 0.2635 | test Acc: 0.6596 | F1: 0.5243
+Epoch [24/50] Loss: 0.6469 | Val Acc: 0.4783 | F1: 0.3525 | test Acc: 0.6596 | F1: 0.5585
+Epoch [25/50] Loss: 0.6579 | Val Acc: 0.5870 | F1: 0.5761 | test Acc: 0.5957 | F1: 0.5886
+Epoch [26/50] Loss: 0.6111 | Val Acc: 0.5000 | F1: 0.3930 | test Acc: 0.6702 | F1: 0.5794
+Epoch [27/50] Loss: 0.6073 | Val Acc: 0.5435 | F1: 0.5376 | test Acc: 0.5851 | F1: 0.5914
+Epoch [28/50] Loss: 0.6203 | Val Acc: 0.4565 | F1: 0.3402 | test Acc: 0.6702 | F1: 0.5648
+Epoch [29/50] Loss: 0.6542 | Val Acc: 0.6304 | F1: 0.6202 | test Acc: 0.4894 | F1: 0.4926
+>>> Best model saved.
+Epoch [30/50] Loss: 0.6471 | Val Acc: 0.4783 | F1: 0.4022 | test Acc: 0.6596 | F1: 0.5726
+Epoch [31/50] Loss: 0.6186 | Val Acc: 0.4783 | F1: 0.4211 | test Acc: 0.6702 | F1: 0.6136
+Epoch [32/50] Loss: 0.5782 | Val Acc: 0.5652 | F1: 0.5415 | test Acc: 0.6489 | F1: 0.6208
+Epoch [33/50] Loss: 0.5906 | Val Acc: 0.5217 | F1: 0.5217 | test Acc: 0.5106 | F1: 0.5218
+Epoch [34/50] Loss: 0.5577 | Val Acc: 0.5000 | F1: 0.4668 | test Acc: 0.6489 | F1: 0.6066
+Epoch [35/50] Loss: 0.5147 | Val Acc: 0.5652 | F1: 0.5569 | test Acc: 0.6277 | F1: 0.6147
+Epoch [36/50] Loss: 0.4976 | Val Acc: 0.5000 | F1: 0.5012 | test Acc: 0.5319 | F1: 0.5441
+Epoch [37/50] Loss: 0.4491 | Val Acc: 0.6087 | F1: 0.6057 | test Acc: 0.5957 | F1: 0.5986
+Epoch [38/50] Loss: 0.4031 | Val Acc: 0.5217 | F1: 0.4956 | test Acc: 0.6489 | F1: 0.6208
+Epoch [39/50] Loss: 0.5047 | Val Acc: 0.5000 | F1: 0.4366 | test Acc: 0.6915 | F1: 0.6185
+Epoch [40/50] Loss: 0.4794 | Val Acc: 0.5217 | F1: 0.5217 | test Acc: 0.5319 | F1: 0.5441
+Epoch [41/50] Loss: 0.3906 | Val Acc: 0.5870 | F1: 0.5856 | test Acc: 0.5000 | F1: 0.5076
+Epoch [42/50] Loss: 0.3963 | Val Acc: 0.5000 | F1: 0.4531 | test Acc: 0.6277 | F1: 0.5828
+Epoch [43/50] Loss: 0.5439 | Val Acc: 0.5870 | F1: 0.5856 | test Acc: 0.5426 | F1: 0.5471
+Epoch [44/50] Loss: 0.4037 | Val Acc: 0.5000 | F1: 0.5012 | test Acc: 0.5319 | F1: 0.5438
+Epoch [45/50] Loss: 0.4732 | Val Acc: 0.5870 | F1: 0.5856 | test Acc: 0.5851 | F1: 0.5756
+Epoch [46/50] Loss: 0.3993 | Val Acc: 0.6304 | F1: 0.6207 | test Acc: 0.5957 | F1: 0.5791
+Epoch [47/50] Loss: 0.3933 | Val Acc: 0.5217 | F1: 0.5236 | test Acc: 0.5319 | F1: 0.5401
+Epoch [48/50] Loss: 0.4180 | Val Acc: 0.5217 | F1: 0.5236 | test Acc: 0.5426 | F1: 0.5544
+Epoch [49/50] Loss: 0.3367 | Val Acc: 0.4783 | F1: 0.4683 | test Acc: 0.6170 | F1: 0.5959
+Epoch [50/50] Loss: 0.3188 | Val Acc: 0.5435 | F1: 0.5419 | test Acc: 0.5106 | F1: 0.5231
+Finetuning finished. Testing best model...
+Test Result -> Acc: 0.4894 | F1: 0.4926

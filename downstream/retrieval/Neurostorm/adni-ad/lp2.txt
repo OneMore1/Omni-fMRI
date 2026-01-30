@@ -1,0 +1,199 @@
+Fine-tuning started at 2026-01-25 02:52:05.021825
+================================================================================
+Config: *******
+Output directory: *******
+Task type: classification
+================================================================================
+
+[2026-01-25 03:16:47] Epoch 0 Training - loss: 0.6490 | lr: 0.0000 | acc: 0.6721
+[2026-01-25 03:21:57] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.7244 (0.6427)  f1: 0.5333 (0.5333)
+[2026-01-25 03:21:58] Epoch 0 Validation - acc: 0.6765 | loss: 0.6422
+[2026-01-25 03:21:58] Epoch 0 Test - acc: 0.6667 | loss: 0.6427 | f1: 0.5333
+[2026-01-25 03:21:58] Checkpoint saved at epoch 0
+[2026-01-25 03:21:58] New best validation accuracy: 0.6765
+[2026-01-25 03:25:39] Epoch 1 Training - loss: 0.6310 | lr: 0.0000 | acc: 0.6752
+[2026-01-25 03:26:53] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.7490 (0.6392)  f1: 0.5333 (0.5333)
+[2026-01-25 03:26:53] Epoch 1 Validation - acc: 0.6765 | loss: 0.6345
+[2026-01-25 03:26:53] Epoch 1 Test - acc: 0.6667 | loss: 0.6392 | f1: 0.5333
+[2026-01-25 03:26:53] Checkpoint saved at epoch 1
+[2026-01-25 03:30:09] Epoch 2 Training - loss: 0.6282 | lr: 0.0000 | acc: 0.6732
+[2026-01-25 03:31:28] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.7281 (0.6369)  f1: 0.5333 (0.5333)
+[2026-01-25 03:31:28] Epoch 2 Validation - acc: 0.6765 | loss: 0.6350
+[2026-01-25 03:31:28] Epoch 2 Test - acc: 0.6667 | loss: 0.6369 | f1: 0.5333
+[2026-01-25 03:31:28] Checkpoint saved at epoch 2
+[2026-01-25 03:34:33] Epoch 3 Training - loss: 0.6260 | lr: 0.0000 | acc: 0.6752
+[2026-01-25 03:35:53] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.7615 (0.6348)  f1: 0.5333 (0.5333)
+[2026-01-25 03:35:53] Epoch 3 Validation - acc: 0.6765 | loss: 0.6278
+[2026-01-25 03:35:53] Epoch 3 Test - acc: 0.6667 | loss: 0.6348 | f1: 0.5333
+[2026-01-25 03:35:53] Checkpoint saved at epoch 3
+[2026-01-25 03:39:14] Epoch 4 Training - loss: 0.6198 | lr: 0.0000 | acc: 0.6721
+[2026-01-25 03:40:48] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.7354 (0.6288)  f1: 0.5333 (0.5333)
+[2026-01-25 03:40:48] Epoch 4 Validation - acc: 0.6765 | loss: 0.6231
+[2026-01-25 03:40:48] Epoch 4 Test - acc: 0.6667 | loss: 0.6288 | f1: 0.5333
+[2026-01-25 03:40:48] Checkpoint saved at epoch 4
+[2026-01-25 03:44:03] Epoch 5 Training - loss: 0.6153 | lr: 0.0000 | acc: 0.6732
+[2026-01-25 03:45:24] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.7346 (0.6273)  f1: 0.5333 (0.5333)
+[2026-01-25 03:45:24] Epoch 5 Validation - acc: 0.6765 | loss: 0.6194
+[2026-01-25 03:45:24] Epoch 5 Test - acc: 0.6667 | loss: 0.6273 | f1: 0.5333
+[2026-01-25 03:45:24] Checkpoint saved at epoch 5
+[2026-01-25 03:48:39] Epoch 6 Training - loss: 0.6075 | lr: 0.0000 | acc: 0.6752
+[2026-01-25 03:49:58] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6949 (0.6200)  f1: 0.5333 (0.5333)
+[2026-01-25 03:49:58] Epoch 6 Validation - acc: 0.6765 | loss: 0.6149
+[2026-01-25 03:49:58] Epoch 6 Test - acc: 0.6667 | loss: 0.6200 | f1: 0.5333
+[2026-01-25 03:49:58] Checkpoint saved at epoch 6
+[2026-01-25 03:53:36] Epoch 7 Training - loss: 0.6053 | lr: 0.0000 | acc: 0.6721
+[2026-01-25 03:55:01] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6895 (0.6168)  f1: 0.5333 (0.5333)
+[2026-01-25 03:55:01] Epoch 7 Validation - acc: 0.6765 | loss: 0.6108
+[2026-01-25 03:55:01] Epoch 7 Test - acc: 0.6667 | loss: 0.6168 | f1: 0.5333
+[2026-01-25 03:55:01] Checkpoint saved at epoch 7
+[2026-01-25 03:58:42] Epoch 8 Training - loss: 0.5977 | lr: 0.0000 | acc: 0.6732
+[2026-01-25 04:00:13] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6694 (0.6130)  f1: 0.5333 (0.5333)
+[2026-01-25 04:00:13] Epoch 8 Validation - acc: 0.6765 | loss: 0.6083
+[2026-01-25 04:00:13] Epoch 8 Test - acc: 0.6667 | loss: 0.6130 | f1: 0.5333
+[2026-01-25 04:00:13] Checkpoint saved at epoch 8
+[2026-01-25 04:03:01] Epoch 9 Training - loss: 0.5928 | lr: 0.0000 | acc: 0.6721
+[2026-01-25 04:04:20] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6602 (0.6091)  f1: 0.5333 (0.5333)
+[2026-01-25 04:04:20] Epoch 9 Validation - acc: 0.6765 | loss: 0.6040
+[2026-01-25 04:04:20] Epoch 9 Test - acc: 0.6667 | loss: 0.6091 | f1: 0.5333
+[2026-01-25 04:04:20] Checkpoint saved at epoch 9
+[2026-01-25 04:07:23] Epoch 10 Training - loss: 0.5870 | lr: 0.0000 | acc: 0.6732
+[2026-01-25 04:08:53] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6646 (0.6056)  f1: 0.5333 (0.5333)
+[2026-01-25 04:08:53] Epoch 10 Validation - acc: 0.6765 | loss: 0.6005
+[2026-01-25 04:08:53] Epoch 10 Test - acc: 0.6667 | loss: 0.6056 | f1: 0.5333
+[2026-01-25 04:08:53] Checkpoint saved at epoch 10
+[2026-01-25 04:12:11] Epoch 11 Training - loss: 0.5841 | lr: 0.0000 | acc: 0.6742
+[2026-01-25 04:13:54] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6640 (0.6020)  f1: 0.5333 (0.5333)
+[2026-01-25 04:13:54] Epoch 11 Validation - acc: 0.6765 | loss: 0.5963
+[2026-01-25 04:13:54] Epoch 11 Test - acc: 0.6667 | loss: 0.6020 | f1: 0.5333
+[2026-01-25 04:13:54] Checkpoint saved at epoch 11
+[2026-01-25 04:16:45] Epoch 12 Training - loss: 0.5760 | lr: 0.0000 | acc: 0.6855
+[2026-01-25 04:18:09] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6626 (0.5991)  f1: 0.5333 (0.5333)
+[2026-01-25 04:18:09] Epoch 12 Validation - acc: 0.6765 | loss: 0.5929
+[2026-01-25 04:18:09] Epoch 12 Test - acc: 0.6667 | loss: 0.5991 | f1: 0.5333
+[2026-01-25 04:18:09] Checkpoint saved at epoch 12
+[2026-01-25 04:21:18] Epoch 13 Training - loss: 0.5710 | lr: 0.0000 | acc: 0.6773
+[2026-01-25 04:22:44] Test averaged stats: acc: 0.5000 (0.6771)  loss: 0.6077 (0.5990)  f1: 0.5781 (0.5781)
+[2026-01-25 04:22:44] Epoch 13 Validation - acc: 0.7353 | loss: 0.5960
+[2026-01-25 04:22:44] Epoch 13 Test - acc: 0.6771 | loss: 0.5990 | f1: 0.5781
+[2026-01-25 04:22:44] Checkpoint saved at epoch 13
+[2026-01-25 04:22:44] New best validation accuracy: 0.7353
+[2026-01-25 04:25:39] Epoch 14 Training - loss: 0.5711 | lr: 0.0000 | acc: 0.6875
+[2026-01-25 04:27:04] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6352 (0.5913)  f1: 0.5333 (0.5333)
+[2026-01-25 04:27:04] Epoch 14 Validation - acc: 0.6765 | loss: 0.5852
+[2026-01-25 04:27:04] Epoch 14 Test - acc: 0.6667 | loss: 0.5913 | f1: 0.5333
+[2026-01-25 04:27:04] Checkpoint saved at epoch 14
+[2026-01-25 04:29:54] Epoch 15 Training - loss: 0.5638 | lr: 0.0000 | acc: 0.6988
+[2026-01-25 04:31:21] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6565 (0.5925)  f1: 0.5333 (0.5333)
+[2026-01-25 04:31:21] Epoch 15 Validation - acc: 0.6765 | loss: 0.5846
+[2026-01-25 04:31:21] Epoch 15 Test - acc: 0.6667 | loss: 0.5925 | f1: 0.5333
+[2026-01-25 04:31:21] Checkpoint saved at epoch 15
+[2026-01-25 04:34:05] Epoch 16 Training - loss: 0.5588 | lr: 0.0000 | acc: 0.6967
+[2026-01-25 04:35:37] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6509 (0.5905)  f1: 0.5333 (0.5333)
+[2026-01-25 04:35:37] Epoch 16 Validation - acc: 0.6765 | loss: 0.5822
+[2026-01-25 04:35:37] Epoch 16 Test - acc: 0.6667 | loss: 0.5905 | f1: 0.5333
+[2026-01-25 04:35:37] Checkpoint saved at epoch 16
+[2026-01-25 04:39:31] Epoch 17 Training - loss: 0.5550 | lr: 0.0000 | acc: 0.6967
+[2026-01-25 04:42:42] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6110 (0.5823)  f1: 0.5333 (0.5333)
+[2026-01-25 04:42:42] Epoch 17 Validation - acc: 0.6912 | loss: 0.5762
+[2026-01-25 04:42:42] Epoch 17 Test - acc: 0.6667 | loss: 0.5823 | f1: 0.5333
+[2026-01-25 04:42:42] Checkpoint saved at epoch 17
+[2026-01-25 04:48:06] Epoch 18 Training - loss: 0.5520 | lr: 0.0000 | acc: 0.7111
+[2026-01-25 04:49:47] Test averaged stats: acc: 0.5000 (0.6840)  loss: 0.5896 (0.5789)  f1: 0.5872 (0.5872)
+[2026-01-25 04:49:47] Epoch 18 Validation - acc: 0.7206 | loss: 0.5725
+[2026-01-25 04:49:47] Epoch 18 Test - acc: 0.6840 | loss: 0.5789 | f1: 0.5872
+[2026-01-25 04:49:47] Checkpoint saved at epoch 18
+[2026-01-25 04:54:11] Epoch 19 Training - loss: 0.5448 | lr: 0.0000 | acc: 0.7111
+[2026-01-25 04:59:19] Test averaged stats: acc: 0.5000 (0.6875)  loss: 0.5856 (0.5761)  f1: 0.5893 (0.5893)
+[2026-01-25 04:59:19] Epoch 19 Validation - acc: 0.7279 | loss: 0.5693
+[2026-01-25 04:59:19] Epoch 19 Test - acc: 0.6875 | loss: 0.5761 | f1: 0.5893
+[2026-01-25 04:59:19] Checkpoint saved at epoch 19
+[2026-01-25 05:32:22] Epoch 20 Training - loss: 0.5436 | lr: 0.0000 | acc: 0.7213
+[2026-01-25 05:48:13] Test averaged stats: acc: 0.5000 (0.6667)  loss: 0.6221 (0.5826)  f1: 0.5333 (0.5333)
+[2026-01-25 05:48:14] Epoch 20 Validation - acc: 0.6765 | loss: 0.5744
+[2026-01-25 05:48:14] Epoch 20 Test - acc: 0.6667 | loss: 0.5826 | f1: 0.5333
+[2026-01-25 05:48:14] Checkpoint saved at epoch 20
+[2026-01-25 05:56:29] Epoch 21 Training - loss: 0.5421 | lr: 0.0000 | acc: 0.7111
+[2026-01-25 06:00:20] Test averaged stats: acc: 0.6250 (0.7014)  loss: 0.5543 (0.5716)  f1: 0.6244 (0.6244)
+[2026-01-25 06:00:20] Epoch 21 Validation - acc: 0.7353 | loss: 0.5656
+[2026-01-25 06:00:20] Epoch 21 Test - acc: 0.7014 | loss: 0.5716 | f1: 0.6244
+[2026-01-25 06:00:20] Checkpoint saved at epoch 21
+[2026-01-25 06:18:55] Epoch 22 Training - loss: 0.5353 | lr: 0.0000 | acc: 0.7254
+[2026-01-25 06:36:00] Test averaged stats: acc: 0.5000 (0.6840)  loss: 0.5843 (0.5722)  f1: 0.5720 (0.5720)
+[2026-01-25 06:36:00] Epoch 22 Validation - acc: 0.7059 | loss: 0.5649
+[2026-01-25 06:36:00] Epoch 22 Test - acc: 0.6840 | loss: 0.5722 | f1: 0.5720
+[2026-01-25 06:36:00] Checkpoint saved at epoch 22
+[2026-01-25 06:59:33] Epoch 23 Training - loss: 0.5327 | lr: 0.0000 | acc: 0.7090
+[2026-01-25 07:01:35] Test averaged stats: acc: 0.7500 (0.7083)  loss: 0.5357 (0.5668)  f1: 0.6404 (0.6404)
+[2026-01-25 07:01:35] Epoch 23 Validation - acc: 0.7353 | loss: 0.5604
+[2026-01-25 07:01:35] Epoch 23 Test - acc: 0.7083 | loss: 0.5668 | f1: 0.6404
+[2026-01-25 07:01:35] Checkpoint saved at epoch 23
+[2026-01-25 07:05:52] Epoch 24 Training - loss: 0.5323 | lr: 0.0000 | acc: 0.7490
+[2026-01-25 07:07:25] Test averaged stats: acc: 0.6250 (0.7014)  loss: 0.5422 (0.5640)  f1: 0.6244 (0.6244)
+[2026-01-25 07:07:25] Epoch 24 Validation - acc: 0.7353 | loss: 0.5576
+[2026-01-25 07:07:25] Epoch 24 Test - acc: 0.7014 | loss: 0.5640 | f1: 0.6244
+[2026-01-25 07:07:25] Checkpoint saved at epoch 24
+[2026-01-25 07:10:50] Epoch 25 Training - loss: 0.5281 | lr: 0.0000 | acc: 0.7418
+[2026-01-25 07:12:15] Test averaged stats: acc: 0.7500 (0.7083)  loss: 0.5271 (0.5620)  f1: 0.6369 (0.6369)
+[2026-01-25 07:12:15] Epoch 25 Validation - acc: 0.7353 | loss: 0.5558
+[2026-01-25 07:12:15] Epoch 25 Test - acc: 0.7083 | loss: 0.5620 | f1: 0.6369
+[2026-01-25 07:12:15] Checkpoint saved at epoch 25
+[2026-01-25 07:16:08] Epoch 26 Training - loss: 0.5252 | lr: 0.0000 | acc: 0.7398
+[2026-01-25 07:18:30] Test averaged stats: acc: 0.7500 (0.7049)  loss: 0.5175 (0.5595)  f1: 0.6413 (0.6413)
+[2026-01-25 07:18:30] Epoch 26 Validation - acc: 0.7353 | loss: 0.5537
+[2026-01-25 07:18:30] Epoch 26 Test - acc: 0.7049 | loss: 0.5595 | f1: 0.6413
+[2026-01-25 07:18:30] Checkpoint saved at epoch 26
+[2026-01-25 07:25:36] Epoch 27 Training - loss: 0.5208 | lr: 0.0000 | acc: 0.7326
+[2026-01-25 07:29:28] Test averaged stats: acc: 0.7500 (0.7118)  loss: 0.5056 (0.5577)  f1: 0.6560 (0.6560)
+[2026-01-25 07:29:28] Epoch 27 Validation - acc: 0.7353 | loss: 0.5516
+[2026-01-25 07:29:28] Epoch 27 Test - acc: 0.7118 | loss: 0.5577 | f1: 0.6560
+[2026-01-25 07:29:28] Checkpoint saved at epoch 27
+[2026-01-25 08:10:23] Epoch 28 Training - loss: 0.5173 | lr: 0.0000 | acc: 0.7480
+[2026-01-25 10:02:38] Test averaged stats: acc: 0.7500 (0.7083)  loss: 0.5153 (0.5553)  f1: 0.6369 (0.6369)
+[2026-01-25 10:02:38] Epoch 28 Validation - acc: 0.7353 | loss: 0.5492
+[2026-01-25 10:02:38] Epoch 28 Test - acc: 0.7083 | loss: 0.5553 | f1: 0.6369
+[2026-01-25 10:02:38] Checkpoint saved at epoch 28
+[2026-01-25 10:44:44] Epoch 29 Training - loss: 0.5149 | lr: 0.0000 | acc: 0.7674
+[2026-01-25 10:50:04] Test averaged stats: acc: 0.7500 (0.7083)  loss: 0.5234 (0.5554)  f1: 0.6369 (0.6369)
+[2026-01-25 10:50:04] Epoch 29 Validation - acc: 0.7353 | loss: 0.5498
+[2026-01-25 10:50:04] Epoch 29 Test - acc: 0.7083 | loss: 0.5554 | f1: 0.6369
+[2026-01-25 10:50:04] Checkpoint saved at epoch 29
+[2026-01-25 11:07:03] Epoch 30 Training - loss: 0.5102 | lr: 0.0000 | acc: 0.7541
+[2026-01-25 11:30:50] Test averaged stats: acc: 0.7500 (0.7083)  loss: 0.4943 (0.5505)  f1: 0.6503 (0.6503)
+[2026-01-25 11:30:50] Epoch 30 Validation - acc: 0.7353 | loss: 0.5450
+[2026-01-25 11:30:50] Epoch 30 Test - acc: 0.7083 | loss: 0.5505 | f1: 0.6503
+[2026-01-25 11:30:51] Checkpoint saved at epoch 30
+[2026-01-25 12:20:16] Epoch 31 Training - loss: 0.5059 | lr: 0.0000 | acc: 0.7439
+[2026-01-25 12:32:20] Test averaged stats: acc: 0.7500 (0.7118)  loss: 0.4947 (0.5488)  f1: 0.6430 (0.6430)
+[2026-01-25 12:32:20] Epoch 31 Validation - acc: 0.7353 | loss: 0.5431
+[2026-01-25 12:32:20] Epoch 31 Test - acc: 0.7118 | loss: 0.5488 | f1: 0.6430
+[2026-01-25 12:32:20] Checkpoint saved at epoch 31
+[2026-01-25 13:17:10] Epoch 32 Training - loss: 0.5046 | lr: 0.0000 | acc: 0.7602
+[2026-01-25 13:25:48] Test averaged stats: acc: 0.7500 (0.7257)  loss: 0.4752 (0.5467)  f1: 0.6780 (0.6780)
+[2026-01-25 13:25:48] Epoch 32 Validation - acc: 0.7206 | loss: 0.5407
+[2026-01-25 13:25:48] Epoch 32 Test - acc: 0.7257 | loss: 0.5467 | f1: 0.6780
+[2026-01-25 13:25:48] Checkpoint saved at epoch 32
+[2026-01-25 13:53:06] Epoch 33 Training - loss: 0.5006 | lr: 0.0000 | acc: 0.7746
+[2026-01-25 14:10:14] Test averaged stats: acc: 0.7500 (0.7118)  loss: 0.4903 (0.5459)  f1: 0.6430 (0.6430)
+[2026-01-25 14:10:14] Epoch 33 Validation - acc: 0.7353 | loss: 0.5409
+[2026-01-25 14:10:14] Epoch 33 Test - acc: 0.7118 | loss: 0.5459 | f1: 0.6430
+[2026-01-25 14:10:14] Checkpoint saved at epoch 33
+[2026-01-25 14:43:33] Epoch 34 Training - loss: 0.5000 | lr: 0.0000 | acc: 0.7510
+[2026-01-25 14:58:05] Test averaged stats: acc: 0.7500 (0.7083)  loss: 0.4777 (0.5436)  f1: 0.6471 (0.6471)
+[2026-01-25 14:58:05] Epoch 34 Validation - acc: 0.7353 | loss: 0.5386
+[2026-01-25 14:58:05] Epoch 34 Test - acc: 0.7083 | loss: 0.5436 | f1: 0.6471
+[2026-01-25 14:58:05] Checkpoint saved at epoch 34
+[2026-01-25 15:04:58] Epoch 35 Training - loss: 0.4969 | lr: 0.0000 | acc: 0.7623
+[2026-01-25 15:15:12] Test averaged stats: acc: 0.7500 (0.7083)  loss: 0.4700 (0.5416)  f1: 0.6503 (0.6503)
+[2026-01-25 15:15:12] Epoch 35 Validation - acc: 0.7353 | loss: 0.5366
+[2026-01-25 15:15:12] Epoch 35 Test - acc: 0.7083 | loss: 0.5416 | f1: 0.6503
+[2026-01-25 15:15:12] Checkpoint saved at epoch 35
+[2026-01-25 15:44:12] Epoch 36 Training - loss: 0.4964 | lr: 0.0000 | acc: 0.7736
+[2026-01-25 16:01:59] Test averaged stats: acc: 0.7500 (0.7257)  loss: 0.4529 (0.5399)  f1: 0.6780 (0.6780)
+[2026-01-25 16:01:59] Epoch 36 Validation - acc: 0.7132 | loss: 0.5352
+[2026-01-25 16:01:59] Epoch 36 Test - acc: 0.7257 | loss: 0.5399 | f1: 0.6780
+[2026-01-25 16:01:59] Checkpoint saved at epoch 36
+[2026-01-25 16:34:39] Epoch 37 Training - loss: 0.4908 | lr: 0.0000 | acc: 0.7633
+[2026-01-25 16:48:07] Test averaged stats: acc: 0.7500 (0.7118)  loss: 0.4996 (0.5497)  f1: 0.6394 (0.6394)
+[2026-01-25 16:48:07] Epoch 37 Validation - acc: 0.7353 | loss: 0.5450
+[2026-01-25 16:48:07] Epoch 37 Test - acc: 0.7118 | loss: 0.5497 | f1: 0.6394
+[2026-01-25 16:48:07] Checkpoint saved at epoch 37

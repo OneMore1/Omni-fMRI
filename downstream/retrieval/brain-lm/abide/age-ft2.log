@@ -1,0 +1,12 @@
+2026-01-22 12:22:07,781 - INFO - Logging configured. Log file saved to: *******
+2026-01-22 12:22:07,785 - INFO - Random seed set to: 45
+2026-01-22 12:22:07,785 - INFO - Manual Normalization Stats -> Mean: 17.111, Std: 7.7705
+2026-01-22 12:22:07,786 - INFO - Using device: cuda
+2026-01-22 12:22:07,965 - INFO - Loading checkpoint from *******
+2026-01-22 12:22:08,082 - INFO - --- Key Mapping ---
+2026-01-22 12:22:08,086 - INFO - ✅ Encoder weights loaded successfully.
+2026-01-22 12:22:08,302 - INFO - Loading Datasets...
+2026-01-22 12:22:08,498 - INFO - Starting Regression Fine-tuning...
+2026-01-22 12:22:10,264 - INFO - Epoch [1/100], Step [0], Loss: 1.3293
+2026-01-22 12:22:19,749 - INFO - Epoch [1/100], Step [10], Loss: 0.8338
+2026-01-22 12:22:29,248 - INFO - Epoch [1/100], Step [20], Loss: 0.6771

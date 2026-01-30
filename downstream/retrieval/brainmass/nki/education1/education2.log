@@ -1,0 +1,71 @@
+Loading labels from ******* for task: classification...
+Reading file list from *******
+Dataset ready. Matched 225 samples.
+Loading labels from ******* for task: classification...
+Reading file list from *******
+Dataset ready. Matched 28 samples.
+Loading labels from ******* for task: classification...
+Reading file list from *******
+Dataset ready. Matched 78 samples.
+Loading pretrained weights from: *******
+Task: Classification (Gender)
+Start Finetuning (classification) for 50 epochs...
+Epoch [1/50] Loss: 1.1343 | Val Acc: 0.4643 | F1: 0.3535
+>>> Best model saved.
+Epoch [2/50] Loss: 1.0864 | Val Acc: 0.3929 | F1: 0.2274
+Epoch [3/50] Loss: 1.0681 | Val Acc: 0.3929 | F1: 0.2216
+Epoch [4/50] Loss: 1.0904 | Val Acc: 0.3929 | F1: 0.2216
+Epoch [5/50] Loss: 1.0666 | Val Acc: 0.3929 | F1: 0.2216
+Epoch [6/50] Loss: 1.0696 | Val Acc: 0.3929 | F1: 0.2216
+Epoch [7/50] Loss: 1.0627 | Val Acc: 0.3929 | F1: 0.2216
+Epoch [8/50] Loss: 1.0615 | Val Acc: 0.3929 | F1: 0.2216
+Epoch [9/50] Loss: 1.0318 | Val Acc: 0.3929 | F1: 0.2216
+Epoch [10/50] Loss: 1.0444 | Val Acc: 0.3929 | F1: 0.2216
+Epoch [11/50] Loss: 1.0282 | Val Acc: 0.4643 | F1: 0.3500
+Epoch [12/50] Loss: 1.0323 | Val Acc: 0.5357 | F1: 0.4447
+>>> Best model saved.
+Epoch [13/50] Loss: 1.0156 | Val Acc: 0.4643 | F1: 0.3606
+Epoch [14/50] Loss: 0.9790 | Val Acc: 0.4286 | F1: 0.3415
+Epoch [15/50] Loss: 0.9391 | Val Acc: 0.5000 | F1: 0.4215
+Epoch [16/50] Loss: 0.8982 | Val Acc: 0.5357 | F1: 0.5003
+Epoch [17/50] Loss: 0.9011 | Val Acc: 0.6071 | F1: 0.5927
+>>> Best model saved.
+Epoch [18/50] Loss: 0.8186 | Val Acc: 0.6786 | F1: 0.6468
+>>> Best model saved.
+Epoch [19/50] Loss: 0.8202 | Val Acc: 0.6786 | F1: 0.6491
+Epoch [20/50] Loss: 0.7711 | Val Acc: 0.6429 | F1: 0.6398
+Epoch [21/50] Loss: 0.7781 | Val Acc: 0.6429 | F1: 0.6097
+Epoch [22/50] Loss: 0.7166 | Val Acc: 0.6071 | F1: 0.5996
+Epoch [23/50] Loss: 0.6477 | Val Acc: 0.6429 | F1: 0.6105
+Epoch [24/50] Loss: 0.6240 | Val Acc: 0.7500 | F1: 0.7421
+>>> Best model saved.
+Epoch [25/50] Loss: 0.5777 | Val Acc: 0.5714 | F1: 0.5905
+Epoch [26/50] Loss: 0.5985 | Val Acc: 0.6786 | F1: 0.6857
+Epoch [27/50] Loss: 0.4809 | Val Acc: 0.6786 | F1: 0.6576
+Epoch [28/50] Loss: 0.4446 | Val Acc: 0.6071 | F1: 0.6010
+Epoch [29/50] Loss: 0.4098 | Val Acc: 0.6071 | F1: 0.6034
+Epoch [30/50] Loss: 0.3474 | Val Acc: 0.6071 | F1: 0.5903
+Epoch [31/50] Loss: 0.3478 | Val Acc: 0.5714 | F1: 0.5638
+Epoch [32/50] Loss: 0.3348 | Val Acc: 0.6429 | F1: 0.6559
+Epoch [33/50] Loss: 0.2857 | Val Acc: 0.5714 | F1: 0.5638
+Epoch [34/50] Loss: 0.2348 | Val Acc: 0.6429 | F1: 0.6400
+Epoch [35/50] Loss: 0.2111 | Val Acc: 0.5357 | F1: 0.5517
+Epoch [36/50] Loss: 0.2848 | Val Acc: 0.6071 | F1: 0.6034
+Epoch [37/50] Loss: 0.1500 | Val Acc: 0.6071 | F1: 0.5923
+Epoch [38/50] Loss: 0.1660 | Val Acc: 0.6429 | F1: 0.6675
+Epoch [39/50] Loss: 0.1233 | Val Acc: 0.6071 | F1: 0.5654
+Epoch [40/50] Loss: 0.1193 | Val Acc: 0.6429 | F1: 0.6675
+Epoch [41/50] Loss: 0.0968 | Val Acc: 0.5357 | F1: 0.5202
+Epoch [42/50] Loss: 0.0696 | Val Acc: 0.6071 | F1: 0.6234
+Epoch [43/50] Loss: 0.0620 | Val Acc: 0.5357 | F1: 0.5202
+Epoch [44/50] Loss: 0.0553 | Val Acc: 0.5714 | F1: 0.5638
+Epoch [45/50] Loss: 0.0433 | Val Acc: 0.5714 | F1: 0.5881
+Epoch [46/50] Loss: 0.0345 | Val Acc: 0.5714 | F1: 0.5638
+Epoch [47/50] Loss: 0.0302 | Val Acc: 0.6429 | F1: 0.6493
+Epoch [48/50] Loss: 0.0244 | Val Acc: 0.6071 | F1: 0.6269
+Epoch [49/50] Loss: 0.0177 | Val Acc: 0.6429 | F1: 0.6493
+Epoch [50/50] Loss: 0.0150 | Val Acc: 0.6071 | F1: 0.6118
+Finetuning finished. Testing best model...
+Test Result -> Acc: 0.6410 | F1: 0.6375
+
+batchsize64 lr5e-5

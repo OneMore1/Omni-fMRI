@@ -1,0 +1,177 @@
+2026-01-28 16:00:57,494 - INFO - Logging configured. Log file saved to: xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/logs/finetune_process.log
+2026-01-28 16:00:57,496 - INFO - Random seed set to: 15
+2026-01-28 16:00:57,496 - INFO - Configuration:
+2026-01-28 16:00:57,496 - INFO - Batch Size: 4, LR: 8e-05, Epochs: 10
+2026-01-28 16:00:57,497 - INFO - Using device: cuda:7
+2026-01-28 16:00:57,680 - INFO - Loading checkpoint from *******
+2026-01-28 16:00:58,178 - INFO - --- 开始执行 Key 映射转换 ---
+2026-01-28 16:00:58,179 - INFO - 转换示例 (Checkpoint -> Model):
+2026-01-28 16:00:58,179 - INFO -   vit.embeddings.cls_token  ==>  embeddings.cls_token (大致)
+2026-01-28 16:00:58,179 - INFO -   vit.embeddings.signal_embedding_projection.weight  ==>  embeddings.signal_embedding_projection.weight (大致)
+2026-01-28 16:00:58,179 - INFO -   vit.embeddings.signal_embedding_projection.bias  ==>  embeddings.signal_embedding_projection.bias (大致)
+2026-01-28 16:00:58,183 - INFO - 
+==============================
+2026-01-28 16:00:58,183 - INFO - 加载结果报告
+2026-01-28 16:00:58,183 - INFO - ==============================
+2026-01-28 16:00:58,183 - INFO - ✅ Encoder 权重全部加载成功！
+2026-01-28 16:00:58,183 - INFO - ✅ 信号投影层 (Signal Projection) 加载成功。
+2026-01-28 16:00:58,183 - INFO - ✅ CLS Token 加载成功。
+2026-01-28 16:00:59,434 - INFO - Loading Datasets...
+2026-01-28 16:00:59,516 - INFO - Train samples: 331, Val samples: 47, Test samples: 96
+2026-01-28 16:00:59,540 - INFO - Starting Fine-tuning...
+2026-01-28 16:01:01,372 - INFO - Epoch [1/10], Step [0], Loss: 0.7691
+2026-01-28 16:01:09,539 - INFO - Epoch [1/10], Step [10], Loss: 0.6991
+2026-01-28 16:01:18,147 - INFO - Epoch [1/10], Step [20], Loss: 0.7294
+2026-01-28 16:01:26,447 - INFO - Epoch [1/10], Step [30], Loss: 0.5868
+2026-01-28 16:01:35,130 - INFO - Epoch [1/10], Step [40], Loss: 0.8466
+2026-01-28 16:01:43,122 - INFO - Epoch [1/10], Step [50], Loss: 0.7334
+2026-01-28 16:01:52,247 - INFO - Epoch [1/10], Step [60], Loss: 0.7107
+2026-01-28 16:01:59,994 - INFO - Epoch [1/10], Step [70], Loss: 0.7764
+2026-01-28 16:02:08,059 - INFO - Epoch [1/10], Step [80], Loss: 0.4217
+2026-01-28 16:02:08,827 - INFO - Epoch 1 Finished. Train Loss: 0.7001 | Train Acc: 0.5488 | Train F1: 0.5294
+2026-01-28 16:02:08,827 - INFO - Running Validation for Epoch 1...
+2026-01-28 16:02:12,717 - INFO - [Val] Loss: 0.6732 | Accuracy: 0.5957 | F1: 0.4792
+2026-01-28 16:02:12,717 - INFO - Running Testing for Epoch 1...
+2026-01-28 16:02:20,357 - INFO - [Test] Loss: 0.7139 | Accuracy: 0.5625 | F1: 0.4726
+2026-01-28 16:02:20,513 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_1.pt
+2026-01-28 16:02:20,658 - INFO - 🏆 New Best Model (Val Acc: 0.5957, Val F1: 0.4792) saved to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_best.pt
+2026-01-28 16:02:21,487 - INFO - Epoch [2/10], Step [0], Loss: 0.9493
+2026-01-28 16:02:29,532 - INFO - Epoch [2/10], Step [10], Loss: 0.6433
+2026-01-28 16:02:37,808 - INFO - Epoch [2/10], Step [20], Loss: 0.7468
+2026-01-28 16:02:45,758 - INFO - Epoch [2/10], Step [30], Loss: 0.7575
+2026-01-28 16:02:54,011 - INFO - Epoch [2/10], Step [40], Loss: 0.6101
+2026-01-28 16:03:02,250 - INFO - Epoch [2/10], Step [50], Loss: 0.7305
+2026-01-28 16:03:10,173 - INFO - Epoch [2/10], Step [60], Loss: 0.4743
+2026-01-28 16:03:18,077 - INFO - Epoch [2/10], Step [70], Loss: 0.7372
+2026-01-28 16:03:26,280 - INFO - Epoch [2/10], Step [80], Loss: 0.6041
+2026-01-28 16:03:27,044 - INFO - Epoch 2 Finished. Train Loss: 0.6679 | Train Acc: 0.6128 | Train F1: 0.5944
+2026-01-28 16:03:27,044 - INFO - Running Validation for Epoch 2...
+2026-01-28 16:03:31,527 - INFO - [Val] Loss: 0.6698 | Accuracy: 0.6170 | F1: 0.5996
+2026-01-28 16:03:31,527 - INFO - Running Testing for Epoch 2...
+2026-01-28 16:03:39,666 - INFO - [Test] Loss: 0.6865 | Accuracy: 0.5417 | F1: 0.5086
+2026-01-28 16:03:39,726 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_2.pt
+2026-01-28 16:03:41,495 - INFO - 🏆 New Best Model (Val Acc: 0.6170, Val F1: 0.5996) saved to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_best.pt
+2026-01-28 16:03:42,497 - INFO - Epoch [3/10], Step [0], Loss: 0.6714
+2026-01-28 16:03:51,683 - INFO - Epoch [3/10], Step [10], Loss: 0.4134
+2026-01-28 16:03:59,762 - INFO - Epoch [3/10], Step [20], Loss: 1.1363
+2026-01-28 16:04:07,962 - INFO - Epoch [3/10], Step [30], Loss: 0.6384
+2026-01-28 16:04:16,833 - INFO - Epoch [3/10], Step [40], Loss: 0.9078
+2026-01-28 16:04:23,823 - INFO - Epoch [3/10], Step [50], Loss: 0.7785
+2026-01-28 16:04:31,501 - INFO - Epoch [3/10], Step [60], Loss: 0.6618
+2026-01-28 16:04:39,114 - INFO - Epoch [3/10], Step [70], Loss: 0.5957
+2026-01-28 16:04:48,356 - INFO - Epoch [3/10], Step [80], Loss: 0.7034
+2026-01-28 16:04:49,284 - INFO - Epoch 3 Finished. Train Loss: 0.6733 | Train Acc: 0.6098 | Train F1: 0.5967
+2026-01-28 16:04:49,285 - INFO - Running Validation for Epoch 3...
+2026-01-28 16:04:53,254 - INFO - [Val] Loss: 0.6837 | Accuracy: 0.5745 | F1: 0.5700
+2026-01-28 16:04:53,255 - INFO - Running Testing for Epoch 3...
+2026-01-28 16:05:01,983 - INFO - [Test] Loss: 0.7079 | Accuracy: 0.5312 | F1: 0.5222
+2026-01-28 16:05:02,045 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_3.pt
+2026-01-28 16:05:02,826 - INFO - Epoch [4/10], Step [0], Loss: 0.6797
+2026-01-28 16:05:10,958 - INFO - Epoch [4/10], Step [10], Loss: 0.6685
+2026-01-28 16:05:19,999 - INFO - Epoch [4/10], Step [20], Loss: 0.4195
+2026-01-28 16:05:28,621 - INFO - Epoch [4/10], Step [30], Loss: 0.7698
+2026-01-28 16:05:37,312 - INFO - Epoch [4/10], Step [40], Loss: 1.1980
+2026-01-28 16:05:45,465 - INFO - Epoch [4/10], Step [50], Loss: 0.6508
+2026-01-28 16:05:54,140 - INFO - Epoch [4/10], Step [60], Loss: 0.7614
+2026-01-28 16:06:01,841 - INFO - Epoch [4/10], Step [70], Loss: 0.7362
+2026-01-28 16:06:10,072 - INFO - Epoch [4/10], Step [80], Loss: 0.9639
+2026-01-28 16:06:10,863 - INFO - Epoch 4 Finished. Train Loss: 0.6715 | Train Acc: 0.5915 | Train F1: 0.5884
+2026-01-28 16:06:10,863 - INFO - Running Validation for Epoch 4...
+2026-01-28 16:06:14,994 - INFO - [Val] Loss: 0.7460 | Accuracy: 0.5957 | F1: 0.4448
+2026-01-28 16:06:14,994 - INFO - Running Testing for Epoch 4...
+2026-01-28 16:06:24,254 - INFO - [Test] Loss: 0.8034 | Accuracy: 0.5521 | F1: 0.3928
+2026-01-28 16:06:24,332 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_4.pt
+2026-01-28 16:06:25,112 - INFO - Epoch [5/10], Step [0], Loss: 0.9607
+2026-01-28 16:06:33,911 - INFO - Epoch [5/10], Step [10], Loss: 0.6165
+2026-01-28 16:06:42,614 - INFO - Epoch [5/10], Step [20], Loss: 0.5447
+2026-01-28 16:06:50,352 - INFO - Epoch [5/10], Step [30], Loss: 0.4762
+2026-01-28 16:06:58,587 - INFO - Epoch [5/10], Step [40], Loss: 0.6831
+2026-01-28 16:07:06,577 - INFO - Epoch [5/10], Step [50], Loss: 0.3244
+2026-01-28 16:07:14,240 - INFO - Epoch [5/10], Step [60], Loss: 0.7277
+2026-01-28 16:07:21,999 - INFO - Epoch [5/10], Step [70], Loss: 0.5941
+2026-01-28 16:07:30,550 - INFO - Epoch [5/10], Step [80], Loss: 0.5449
+2026-01-28 16:07:31,424 - INFO - Epoch 5 Finished. Train Loss: 0.6553 | Train Acc: 0.6220 | Train F1: 0.5853
+2026-01-28 16:07:31,424 - INFO - Running Validation for Epoch 5...
+2026-01-28 16:07:35,179 - INFO - [Val] Loss: 0.6675 | Accuracy: 0.5532 | F1: 0.5569
+2026-01-28 16:07:35,179 - INFO - Running Testing for Epoch 5...
+2026-01-28 16:07:43,059 - INFO - [Test] Loss: 0.6960 | Accuracy: 0.5417 | F1: 0.5405
+2026-01-28 16:07:43,135 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_5.pt
+2026-01-28 16:07:43,865 - INFO - Epoch [6/10], Step [0], Loss: 0.5045
+2026-01-28 16:07:52,077 - INFO - Epoch [6/10], Step [10], Loss: 0.7108
+2026-01-28 16:07:59,697 - INFO - Epoch [6/10], Step [20], Loss: 0.5872
+2026-01-28 16:08:08,238 - INFO - Epoch [6/10], Step [30], Loss: 0.4327
+2026-01-28 16:08:16,602 - INFO - Epoch [6/10], Step [40], Loss: 0.6489
+2026-01-28 16:08:25,728 - INFO - Epoch [6/10], Step [50], Loss: 0.8137
+2026-01-28 16:08:33,601 - INFO - Epoch [6/10], Step [60], Loss: 0.8162
+2026-01-28 16:08:40,565 - INFO - Epoch [6/10], Step [70], Loss: 0.5031
+2026-01-28 16:08:48,518 - INFO - Epoch [6/10], Step [80], Loss: 0.6950
+2026-01-28 16:08:49,440 - INFO - Epoch 6 Finished. Train Loss: 0.6336 | Train Acc: 0.6280 | Train F1: 0.6093
+2026-01-28 16:08:49,440 - INFO - Running Validation for Epoch 6...
+2026-01-28 16:08:53,516 - INFO - [Val] Loss: 0.6614 | Accuracy: 0.5532 | F1: 0.5148
+2026-01-28 16:08:53,517 - INFO - Running Testing for Epoch 6...
+2026-01-28 16:09:02,076 - INFO - [Test] Loss: 0.7173 | Accuracy: 0.5208 | F1: 0.4863
+2026-01-28 16:09:02,941 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_6.pt
+2026-01-28 16:09:03,760 - INFO - Epoch [7/10], Step [0], Loss: 0.4584
+2026-01-28 16:09:12,193 - INFO - Epoch [7/10], Step [10], Loss: 0.5254
+2026-01-28 16:09:20,889 - INFO - Epoch [7/10], Step [20], Loss: 0.9045
+2026-01-28 16:09:28,963 - INFO - Epoch [7/10], Step [30], Loss: 0.3434
+2026-01-28 16:09:37,238 - INFO - Epoch [7/10], Step [40], Loss: 0.5182
+2026-01-28 16:09:45,166 - INFO - Epoch [7/10], Step [50], Loss: 0.2896
+2026-01-28 16:09:53,410 - INFO - Epoch [7/10], Step [60], Loss: 0.5466
+2026-01-28 16:10:00,472 - INFO - Epoch [7/10], Step [70], Loss: 0.5353
+2026-01-28 16:10:09,145 - INFO - Epoch [7/10], Step [80], Loss: 0.5364
+2026-01-28 16:10:09,919 - INFO - Epoch 7 Finished. Train Loss: 0.5975 | Train Acc: 0.6951 | Train F1: 0.6826
+2026-01-28 16:10:09,919 - INFO - Running Validation for Epoch 7...
+2026-01-28 16:10:13,989 - INFO - [Val] Loss: 0.6837 | Accuracy: 0.5532 | F1: 0.5148
+2026-01-28 16:10:13,989 - INFO - Running Testing for Epoch 7...
+2026-01-28 16:10:22,929 - INFO - [Test] Loss: 0.7344 | Accuracy: 0.5208 | F1: 0.4863
+2026-01-28 16:10:23,095 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_7.pt
+2026-01-28 16:10:23,952 - INFO - Epoch [8/10], Step [0], Loss: 0.6637
+2026-01-28 16:10:32,778 - INFO - Epoch [8/10], Step [10], Loss: 0.5761
+2026-01-28 16:10:41,143 - INFO - Epoch [8/10], Step [20], Loss: 0.4413
+2026-01-28 16:10:49,133 - INFO - Epoch [8/10], Step [30], Loss: 1.0315
+2026-01-28 16:10:57,767 - INFO - Epoch [8/10], Step [40], Loss: 0.5542
+2026-01-28 16:11:05,843 - INFO - Epoch [8/10], Step [50], Loss: 1.4168
+2026-01-28 16:11:13,833 - INFO - Epoch [8/10], Step [60], Loss: 0.7350
+2026-01-28 16:11:21,384 - INFO - Epoch [8/10], Step [70], Loss: 0.7904
+2026-01-28 16:11:30,124 - INFO - Epoch [8/10], Step [80], Loss: 0.8354
+2026-01-28 16:11:31,208 - INFO - Epoch 8 Finished. Train Loss: 0.5985 | Train Acc: 0.6494 | Train F1: 0.6372
+2026-01-28 16:11:31,209 - INFO - Running Validation for Epoch 8...
+2026-01-28 16:11:35,402 - INFO - [Val] Loss: 0.7323 | Accuracy: 0.4894 | F1: 0.3967
+2026-01-28 16:11:35,403 - INFO - Running Testing for Epoch 8...
+2026-01-28 16:11:44,014 - INFO - [Test] Loss: 0.7894 | Accuracy: 0.4583 | F1: 0.3312
+2026-01-28 16:11:44,073 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_8.pt
+2026-01-28 16:11:44,932 - INFO - Epoch [9/10], Step [0], Loss: 0.7792
+2026-01-28 16:11:53,216 - INFO - Epoch [9/10], Step [10], Loss: 0.3195
+2026-01-28 16:12:01,458 - INFO - Epoch [9/10], Step [20], Loss: 0.8103
+2026-01-28 16:12:10,212 - INFO - Epoch [9/10], Step [30], Loss: 0.4252
+2026-01-28 16:12:18,582 - INFO - Epoch [9/10], Step [40], Loss: 0.3569
+2026-01-28 16:12:27,644 - INFO - Epoch [9/10], Step [50], Loss: 0.1461
+2026-01-28 16:12:35,101 - INFO - Epoch [9/10], Step [60], Loss: 0.4423
+2026-01-28 16:12:43,756 - INFO - Epoch [9/10], Step [70], Loss: 0.5218
+2026-01-28 16:12:52,013 - INFO - Epoch [9/10], Step [80], Loss: 0.4238
+2026-01-28 16:12:52,673 - INFO - Epoch 9 Finished. Train Loss: 0.5517 | Train Acc: 0.7165 | Train F1: 0.7111
+2026-01-28 16:12:52,673 - INFO - Running Validation for Epoch 9...
+2026-01-28 16:12:56,699 - INFO - [Val] Loss: 0.6718 | Accuracy: 0.6170 | F1: 0.5899
+2026-01-28 16:12:56,699 - INFO - Running Testing for Epoch 9...
+2026-01-28 16:13:05,349 - INFO - [Test] Loss: 0.7746 | Accuracy: 0.5104 | F1: 0.4975
+2026-01-28 16:13:05,404 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_9.pt
+2026-01-28 16:13:06,380 - INFO - Epoch [10/10], Step [0], Loss: 0.5038
+2026-01-28 16:13:15,407 - INFO - Epoch [10/10], Step [10], Loss: 0.3901
+2026-01-28 16:13:23,663 - INFO - Epoch [10/10], Step [20], Loss: 0.5195
+2026-01-28 16:13:31,895 - INFO - Epoch [10/10], Step [30], Loss: 0.2427
+2026-01-28 16:13:39,714 - INFO - Epoch [10/10], Step [40], Loss: 0.1758
+2026-01-28 16:13:48,411 - INFO - Epoch [10/10], Step [50], Loss: 0.4744
+2026-01-28 16:13:55,402 - INFO - Epoch [10/10], Step [60], Loss: 0.5484
+2026-01-28 16:14:03,100 - INFO - Epoch [10/10], Step [70], Loss: 0.3941
+2026-01-28 16:14:11,519 - INFO - Epoch [10/10], Step [80], Loss: 0.5806
+2026-01-28 16:14:12,070 - INFO - Epoch 10 Finished. Train Loss: 0.5698 | Train Acc: 0.6921 | Train F1: 0.6790
+2026-01-28 16:14:12,070 - INFO - Running Validation for Epoch 10...
+2026-01-28 16:14:15,146 - INFO - [Val] Loss: 0.8682 | Accuracy: 0.5319 | F1: 0.5169
+2026-01-28 16:14:15,146 - INFO - Running Testing for Epoch 10...
+2026-01-28 16:14:20,222 - INFO - [Test] Loss: 0.9256 | Accuracy: 0.5417 | F1: 0.5316
+2026-01-28 16:14:20,272 - INFO - Saved checkpoint to xxxxxxxxxxxxxxxxxxxxxxxxxxxxBrainLM-main/output/ppmi3/finetuned_checkpoint_epoch_10.pt
+2026-01-28 16:14:20,272 - INFO - Loading best checkpoint for final test...
+2026-01-28 16:14:21,198 - INFO - Running Testing for Best Checkpoint...
+2026-01-28 16:14:26,180 - INFO - [BestTest] Loss: 0.6865 | Accuracy: 0.5417 | F1: 0.5086
+2026-01-28 16:14:26,180 - INFO - Training Complete.

@@ -1,0 +1,421 @@
+2026-01-22 10:46:36,032 - INFO - Logging configured. Log file saved to: *******
+2026-01-22 10:46:36,032 - INFO - Manual Normalization Stats -> Mean: 45.458, Std: 16.9173
+2026-01-22 10:46:36,033 - INFO - Using device: cuda
+2026-01-22 10:46:36,203 - INFO - Loading checkpoint from *******
+2026-01-22 10:46:36,302 - INFO - --- Key Mapping ---
+2026-01-22 10:46:36,312 - INFO - ✅ Encoder weights loaded successfully.
+2026-01-22 10:46:36,767 - INFO - Loading Datasets...
+2026-01-22 10:46:36,844 - INFO - Starting Regression Fine-tuning...
+2026-01-22 10:46:39,643 - INFO - Epoch [1/100], Step [0], Loss: 0.8173
+2026-01-22 10:46:56,599 - INFO - Epoch [1/100], Step [10], Loss: 1.2507
+2026-01-22 10:47:26,539 - INFO - Epoch [1/100], Step [20], Loss: 0.9514
+2026-01-22 10:47:26,544 - INFO - Epoch 1 Finished. Train Loss: 1.0066 | Train MSE(Norm): 1.0335 | Train R: -0.0088
+2026-01-22 10:47:26,545 - INFO - Running Validation for Epoch 1...
+2026-01-22 10:47:27,545 - INFO - [Val] Loss(Norm): 1.0334 | MSE(Norm): 1.0334 | Pearson R: 0.4802
+2026-01-22 10:47:27,546 - INFO - Running Testing for Epoch 1...
+2026-01-22 10:47:31,990 - INFO - [Test] Loss(Norm): 1.1884 | MSE(Norm): 1.1884 | Pearson R: 0.4762
+2026-01-22 10:47:43,935 - INFO - 🏆 New Best Model (Val MSE: 1.0334, R: 0.4802) saved to *******
+2026-01-22 10:47:44,851 - INFO - Epoch [2/100], Step [0], Loss: 0.9447
+2026-01-22 10:48:09,004 - INFO - Epoch [2/100], Step [10], Loss: 1.0388
+2026-01-22 10:48:25,583 - INFO - Epoch [2/100], Step [20], Loss: 0.6509
+2026-01-22 10:48:25,585 - INFO - Epoch 2 Finished. Train Loss: 0.8792 | Train MSE(Norm): 0.9028 | Train R: 0.2974
+2026-01-22 10:48:25,585 - INFO - Running Validation for Epoch 2...
+2026-01-22 10:48:26,558 - INFO - [Val] Loss(Norm): 0.9245 | MSE(Norm): 0.9245 | Pearson R: 0.4726
+2026-01-22 10:48:26,558 - INFO - Running Testing for Epoch 2...
+2026-01-22 10:48:32,951 - INFO - [Test] Loss(Norm): 1.0458 | MSE(Norm): 1.0458 | Pearson R: 0.5847
+2026-01-22 10:48:36,300 - INFO - 🏆 New Best Model (Val MSE: 0.9245, R: 0.4726) saved to *******
+2026-01-22 10:48:37,223 - INFO - Epoch [3/100], Step [0], Loss: 0.7440
+2026-01-22 10:48:55,979 - INFO - Epoch [3/100], Step [10], Loss: 0.8355
+2026-01-22 10:49:08,836 - INFO - Epoch [3/100], Step [20], Loss: 0.9474
+2026-01-22 10:49:08,838 - INFO - Epoch 3 Finished. Train Loss: 0.6914 | Train MSE(Norm): 0.7099 | Train R: 0.5357
+2026-01-22 10:49:08,839 - INFO - Running Validation for Epoch 3...
+2026-01-22 10:49:09,824 - INFO - [Val] Loss(Norm): 0.8236 | MSE(Norm): 0.8236 | Pearson R: 0.5914
+2026-01-22 10:49:09,825 - INFO - Running Testing for Epoch 3...
+2026-01-22 10:49:16,857 - INFO - [Test] Loss(Norm): 0.9489 | MSE(Norm): 0.9489 | Pearson R: 0.5486
+2026-01-22 10:49:16,957 - INFO - 🏆 New Best Model (Val MSE: 0.8236, R: 0.5914) saved to *******
+2026-01-22 10:49:17,843 - INFO - Epoch [4/100], Step [0], Loss: 0.7382
+2026-01-22 10:49:26,635 - INFO - Epoch [4/100], Step [10], Loss: 0.8920
+2026-01-22 10:49:57,247 - INFO - Epoch [4/100], Step [20], Loss: 0.7257
+2026-01-22 10:49:57,249 - INFO - Epoch 4 Finished. Train Loss: 0.6337 | Train MSE(Norm): 0.6507 | Train R: 0.6008
+2026-01-22 10:49:57,249 - INFO - Running Validation for Epoch 4...
+2026-01-22 10:49:58,233 - INFO - [Val] Loss(Norm): 1.1192 | MSE(Norm): 1.1192 | Pearson R: 0.6155
+2026-01-22 10:49:58,233 - INFO - Running Testing for Epoch 4...
+2026-01-22 10:50:00,194 - INFO - [Test] Loss(Norm): 1.0528 | MSE(Norm): 1.0528 | Pearson R: 0.6172
+2026-01-22 10:50:11,942 - INFO - Epoch [5/100], Step [0], Loss: 0.5939
+2026-01-22 10:50:25,959 - INFO - Epoch [5/100], Step [10], Loss: 0.4145
+2026-01-22 10:50:34,793 - INFO - Epoch [5/100], Step [20], Loss: 0.3604
+2026-01-22 10:50:34,795 - INFO - Epoch 5 Finished. Train Loss: 0.5243 | Train MSE(Norm): 0.5384 | Train R: 0.6813
+2026-01-22 10:50:34,795 - INFO - Running Validation for Epoch 5...
+2026-01-22 10:50:35,788 - INFO - [Val] Loss(Norm): 0.7444 | MSE(Norm): 0.7444 | Pearson R: 0.6218
+2026-01-22 10:50:35,788 - INFO - Running Testing for Epoch 5...
+2026-01-22 10:50:37,738 - INFO - [Test] Loss(Norm): 0.8073 | MSE(Norm): 0.8073 | Pearson R: 0.6232
+2026-01-22 10:50:37,828 - INFO - 🏆 New Best Model (Val MSE: 0.7444, R: 0.6218) saved to *******
+2026-01-22 10:50:38,713 - INFO - Epoch [6/100], Step [0], Loss: 0.4804
+2026-01-22 10:50:47,494 - INFO - Epoch [6/100], Step [10], Loss: 0.2167
+2026-01-22 10:50:56,365 - INFO - Epoch [6/100], Step [20], Loss: 0.3398
+2026-01-22 10:50:56,367 - INFO - Epoch 6 Finished. Train Loss: 0.3735 | Train MSE(Norm): 0.3835 | Train R: 0.7823
+2026-01-22 10:50:56,367 - INFO - Running Validation for Epoch 6...
+2026-01-22 10:50:57,341 - INFO - [Val] Loss(Norm): 0.6928 | MSE(Norm): 0.6928 | Pearson R: 0.5902
+2026-01-22 10:50:57,341 - INFO - Running Testing for Epoch 6...
+2026-01-22 10:50:59,270 - INFO - [Test] Loss(Norm): 0.7897 | MSE(Norm): 0.7897 | Pearson R: 0.6275
+2026-01-22 10:50:59,370 - INFO - 🏆 New Best Model (Val MSE: 0.6928, R: 0.5902) saved to *******
+2026-01-22 10:51:00,250 - INFO - Epoch [7/100], Step [0], Loss: 0.1523
+2026-01-22 10:51:09,088 - INFO - Epoch [7/100], Step [10], Loss: 0.2496
+2026-01-22 10:51:18,017 - INFO - Epoch [7/100], Step [20], Loss: 0.2433
+2026-01-22 10:51:18,022 - INFO - Epoch 7 Finished. Train Loss: 0.2616 | Train MSE(Norm): 0.2687 | Train R: 0.8540
+2026-01-22 10:51:18,022 - INFO - Running Validation for Epoch 7...
+2026-01-22 10:51:19,019 - INFO - [Val] Loss(Norm): 0.6523 | MSE(Norm): 0.6523 | Pearson R: 0.6267
+2026-01-22 10:51:19,019 - INFO - Running Testing for Epoch 7...
+2026-01-22 10:51:20,992 - INFO - [Test] Loss(Norm): 0.7945 | MSE(Norm): 0.7945 | Pearson R: 0.6496
+2026-01-22 10:51:21,129 - INFO - 🏆 New Best Model (Val MSE: 0.6523, R: 0.6267) saved to *******
+2026-01-22 10:51:22,017 - INFO - Epoch [8/100], Step [0], Loss: 0.1636
+2026-01-22 10:51:30,807 - INFO - Epoch [8/100], Step [10], Loss: 0.1599
+2026-01-22 10:51:39,609 - INFO - Epoch [8/100], Step [20], Loss: 0.5686
+2026-01-22 10:51:39,611 - INFO - Epoch 8 Finished. Train Loss: 0.1763 | Train MSE(Norm): 0.1810 | Train R: 0.9046
+2026-01-22 10:51:39,611 - INFO - Running Validation for Epoch 8...
+2026-01-22 10:51:40,556 - INFO - [Val] Loss(Norm): 0.7071 | MSE(Norm): 0.7071 | Pearson R: 0.6244
+2026-01-22 10:51:40,556 - INFO - Running Testing for Epoch 8...
+2026-01-22 10:51:42,482 - INFO - [Test] Loss(Norm): 0.6824 | MSE(Norm): 0.6824 | Pearson R: 0.6844
+2026-01-22 10:51:43,410 - INFO - Epoch [9/100], Step [0], Loss: 0.1213
+2026-01-22 10:51:52,230 - INFO - Epoch [9/100], Step [10], Loss: 0.1286
+2026-01-22 10:52:01,153 - INFO - Epoch [9/100], Step [20], Loss: 0.2281
+2026-01-22 10:52:01,158 - INFO - Epoch 9 Finished. Train Loss: 0.1557 | Train MSE(Norm): 0.1599 | Train R: 0.9168
+2026-01-22 10:52:01,158 - INFO - Running Validation for Epoch 9...
+2026-01-22 10:52:02,138 - INFO - [Val] Loss(Norm): 0.8456 | MSE(Norm): 0.8456 | Pearson R: 0.6280
+2026-01-22 10:52:02,139 - INFO - Running Testing for Epoch 9...
+2026-01-22 10:52:04,097 - INFO - [Test] Loss(Norm): 1.0760 | MSE(Norm): 1.0760 | Pearson R: 0.6557
+2026-01-22 10:52:05,017 - INFO - Epoch [10/100], Step [0], Loss: 0.4583
+2026-01-22 10:52:13,799 - INFO - Epoch [10/100], Step [10], Loss: 0.4057
+2026-01-22 10:52:22,629 - INFO - Epoch [10/100], Step [20], Loss: 0.0331
+2026-01-22 10:52:22,633 - INFO - Epoch 10 Finished. Train Loss: 0.1913 | Train MSE(Norm): 0.1964 | Train R: 0.8973
+2026-01-22 10:52:22,634 - INFO - Running Validation for Epoch 10...
+2026-01-22 10:52:23,600 - INFO - [Val] Loss(Norm): 0.8089 | MSE(Norm): 0.8089 | Pearson R: 0.5298
+2026-01-22 10:52:23,601 - INFO - Running Testing for Epoch 10...
+2026-01-22 10:52:25,542 - INFO - [Test] Loss(Norm): 0.7359 | MSE(Norm): 0.7359 | Pearson R: 0.6625
+2026-01-22 10:52:26,486 - INFO - Epoch [11/100], Step [0], Loss: 0.0791
+2026-01-22 10:52:35,292 - INFO - Epoch [11/100], Step [10], Loss: 0.0769
+2026-01-22 10:52:44,245 - INFO - Epoch [11/100], Step [20], Loss: 0.0704
+2026-01-22 10:52:44,251 - INFO - Epoch 11 Finished. Train Loss: 0.1059 | Train MSE(Norm): 0.1088 | Train R: 0.9437
+2026-01-22 10:52:44,251 - INFO - Running Validation for Epoch 11...
+2026-01-22 10:52:45,244 - INFO - [Val] Loss(Norm): 0.7249 | MSE(Norm): 0.7249 | Pearson R: 0.5866
+2026-01-22 10:52:45,244 - INFO - Running Testing for Epoch 11...
+2026-01-22 10:52:47,270 - INFO - [Test] Loss(Norm): 0.6928 | MSE(Norm): 0.6928 | Pearson R: 0.6757
+2026-01-22 10:52:48,197 - INFO - Epoch [12/100], Step [0], Loss: 0.0578
+2026-01-22 10:52:56,993 - INFO - Epoch [12/100], Step [10], Loss: 0.0619
+2026-01-22 10:53:05,778 - INFO - Epoch [12/100], Step [20], Loss: 0.0827
+2026-01-22 10:53:05,782 - INFO - Epoch 12 Finished. Train Loss: 0.0697 | Train MSE(Norm): 0.0716 | Train R: 0.9632
+2026-01-22 10:53:05,782 - INFO - Running Validation for Epoch 12...
+2026-01-22 10:53:06,766 - INFO - [Val] Loss(Norm): 0.7736 | MSE(Norm): 0.7736 | Pearson R: 0.5542
+2026-01-22 10:53:06,766 - INFO - Running Testing for Epoch 12...
+2026-01-22 10:53:08,709 - INFO - [Test] Loss(Norm): 0.6496 | MSE(Norm): 0.6496 | Pearson R: 0.7032
+2026-01-22 10:53:09,637 - INFO - Epoch [13/100], Step [0], Loss: 0.0478
+2026-01-22 10:53:18,428 - INFO - Epoch [13/100], Step [10], Loss: 0.0542
+2026-01-22 10:53:27,312 - INFO - Epoch [13/100], Step [20], Loss: 0.0357
+2026-01-22 10:53:27,316 - INFO - Epoch 13 Finished. Train Loss: 0.0330 | Train MSE(Norm): 0.0339 | Train R: 0.9830
+2026-01-22 10:53:27,316 - INFO - Running Validation for Epoch 13...
+2026-01-22 10:53:28,343 - INFO - [Val] Loss(Norm): 0.7224 | MSE(Norm): 0.7224 | Pearson R: 0.5786
+2026-01-22 10:53:28,344 - INFO - Running Testing for Epoch 13...
+2026-01-22 10:53:30,337 - INFO - [Test] Loss(Norm): 0.6708 | MSE(Norm): 0.6708 | Pearson R: 0.7048
+2026-01-22 10:53:31,270 - INFO - Epoch [14/100], Step [0], Loss: 0.0372
+2026-01-22 10:53:40,053 - INFO - Epoch [14/100], Step [10], Loss: 0.0220
+2026-01-22 10:53:48,827 - INFO - Epoch [14/100], Step [20], Loss: 0.0264
+2026-01-22 10:53:48,829 - INFO - Epoch 14 Finished. Train Loss: 0.0240 | Train MSE(Norm): 0.0247 | Train R: 0.9878
+2026-01-22 10:53:48,829 - INFO - Running Validation for Epoch 14...
+2026-01-22 10:53:49,866 - INFO - [Val] Loss(Norm): 0.7347 | MSE(Norm): 0.7347 | Pearson R: 0.5756
+2026-01-22 10:53:49,866 - INFO - Running Testing for Epoch 14...
+2026-01-22 10:53:51,850 - INFO - [Test] Loss(Norm): 0.6611 | MSE(Norm): 0.6611 | Pearson R: 0.7007
+2026-01-22 10:53:52,770 - INFO - Epoch [15/100], Step [0], Loss: 0.0085
+2026-01-22 10:54:01,568 - INFO - Epoch [15/100], Step [10], Loss: 0.0180
+2026-01-22 10:54:10,458 - INFO - Epoch [15/100], Step [20], Loss: 0.0278
+2026-01-22 10:54:10,462 - INFO - Epoch 15 Finished. Train Loss: 0.0200 | Train MSE(Norm): 0.0205 | Train R: 0.9897
+2026-01-22 10:54:10,463 - INFO - Running Validation for Epoch 15...
+2026-01-22 10:54:11,460 - INFO - [Val] Loss(Norm): 0.7300 | MSE(Norm): 0.7300 | Pearson R: 0.5743
+2026-01-22 10:54:11,460 - INFO - Running Testing for Epoch 15...
+2026-01-22 10:54:13,456 - INFO - [Test] Loss(Norm): 0.6811 | MSE(Norm): 0.6811 | Pearson R: 0.6841
+2026-01-22 10:54:14,391 - INFO - Epoch [16/100], Step [0], Loss: 0.0179
+2026-01-22 10:54:23,263 - INFO - Epoch [16/100], Step [10], Loss: 0.0129
+2026-01-22 10:54:32,031 - INFO - Epoch [16/100], Step [20], Loss: 0.0346
+2026-01-22 10:54:32,035 - INFO - Epoch 16 Finished. Train Loss: 0.0176 | Train MSE(Norm): 0.0181 | Train R: 0.9909
+2026-01-22 10:54:32,035 - INFO - Running Validation for Epoch 16...
+2026-01-22 10:54:32,969 - INFO - [Val] Loss(Norm): 0.7616 | MSE(Norm): 0.7616 | Pearson R: 0.5642
+2026-01-22 10:54:32,970 - INFO - Running Testing for Epoch 16...
+2026-01-22 10:54:34,895 - INFO - [Test] Loss(Norm): 0.7070 | MSE(Norm): 0.7070 | Pearson R: 0.6788
+2026-01-22 10:54:35,817 - INFO - Epoch [17/100], Step [0], Loss: 0.0133
+2026-01-22 10:54:44,614 - INFO - Epoch [17/100], Step [10], Loss: 0.0321
+2026-01-22 10:54:53,491 - INFO - Epoch [17/100], Step [20], Loss: 0.0150
+2026-01-22 10:54:53,496 - INFO - Epoch 17 Finished. Train Loss: 0.0161 | Train MSE(Norm): 0.0166 | Train R: 0.9918
+2026-01-22 10:54:53,496 - INFO - Running Validation for Epoch 17...
+2026-01-22 10:54:54,511 - INFO - [Val] Loss(Norm): 0.7149 | MSE(Norm): 0.7149 | Pearson R: 0.5989
+2026-01-22 10:54:54,511 - INFO - Running Testing for Epoch 17...
+2026-01-22 10:54:56,546 - INFO - [Test] Loss(Norm): 0.6536 | MSE(Norm): 0.6536 | Pearson R: 0.6980
+2026-01-22 10:54:57,477 - INFO - Epoch [18/100], Step [0], Loss: 0.0168
+2026-01-22 10:55:06,302 - INFO - Epoch [18/100], Step [10], Loss: 0.0158
+2026-01-22 10:55:15,094 - INFO - Epoch [18/100], Step [20], Loss: 0.0111
+2026-01-22 10:55:15,098 - INFO - Epoch 18 Finished. Train Loss: 0.0200 | Train MSE(Norm): 0.0206 | Train R: 0.9895
+2026-01-22 10:55:15,098 - INFO - Running Validation for Epoch 18...
+2026-01-22 10:55:16,028 - INFO - [Val] Loss(Norm): 0.7402 | MSE(Norm): 0.7402 | Pearson R: 0.5688
+2026-01-22 10:55:16,028 - INFO - Running Testing for Epoch 18...
+2026-01-22 10:55:17,908 - INFO - [Test] Loss(Norm): 0.7247 | MSE(Norm): 0.7247 | Pearson R: 0.6760
+2026-01-22 10:55:18,846 - INFO - Epoch [19/100], Step [0], Loss: 0.0212
+2026-01-22 10:55:27,566 - INFO - Epoch [19/100], Step [10], Loss: 0.0193
+2026-01-22 10:55:36,410 - INFO - Epoch [19/100], Step [20], Loss: 0.0070
+2026-01-22 10:55:36,412 - INFO - Epoch 19 Finished. Train Loss: 0.0153 | Train MSE(Norm): 0.0157 | Train R: 0.9921
+2026-01-22 10:55:36,412 - INFO - Running Validation for Epoch 19...
+2026-01-22 10:55:37,394 - INFO - [Val] Loss(Norm): 0.6973 | MSE(Norm): 0.6973 | Pearson R: 0.5934
+2026-01-22 10:55:37,395 - INFO - Running Testing for Epoch 19...
+2026-01-22 10:55:39,356 - INFO - [Test] Loss(Norm): 0.7280 | MSE(Norm): 0.7280 | Pearson R: 0.6846
+2026-01-22 10:55:40,285 - INFO - Epoch [20/100], Step [0], Loss: 0.0297
+2026-01-22 10:55:49,068 - INFO - Epoch [20/100], Step [10], Loss: 0.0161
+2026-01-22 10:55:57,806 - INFO - Epoch [20/100], Step [20], Loss: 0.0125
+2026-01-22 10:55:57,810 - INFO - Epoch 20 Finished. Train Loss: 0.0165 | Train MSE(Norm): 0.0170 | Train R: 0.9915
+2026-01-22 10:55:57,810 - INFO - Running Validation for Epoch 20...
+2026-01-22 10:55:58,748 - INFO - [Val] Loss(Norm): 0.7313 | MSE(Norm): 0.7313 | Pearson R: 0.5842
+2026-01-22 10:55:58,748 - INFO - Running Testing for Epoch 20...
+2026-01-22 10:56:00,624 - INFO - [Test] Loss(Norm): 0.6960 | MSE(Norm): 0.6960 | Pearson R: 0.6741
+2026-01-22 10:56:01,544 - INFO - Epoch [21/100], Step [0], Loss: 0.0218
+2026-01-22 10:56:10,238 - INFO - Epoch [21/100], Step [10], Loss: 0.0100
+2026-01-22 10:56:19,028 - INFO - Epoch [21/100], Step [20], Loss: 0.0106
+2026-01-22 10:56:19,032 - INFO - Epoch 21 Finished. Train Loss: 0.0130 | Train MSE(Norm): 0.0134 | Train R: 0.9933
+2026-01-22 10:56:19,032 - INFO - Running Validation for Epoch 21...
+2026-01-22 10:56:20,017 - INFO - [Val] Loss(Norm): 0.7313 | MSE(Norm): 0.7313 | Pearson R: 0.5796
+2026-01-22 10:56:20,018 - INFO - Running Testing for Epoch 21...
+2026-01-22 10:56:21,999 - INFO - [Test] Loss(Norm): 0.6662 | MSE(Norm): 0.6662 | Pearson R: 0.6911
+2026-01-22 10:56:23,054 - INFO - Epoch [22/100], Step [0], Loss: 0.0093
+2026-01-22 10:56:31,838 - INFO - Epoch [22/100], Step [10], Loss: 0.0103
+2026-01-22 10:56:40,713 - INFO - Epoch [22/100], Step [20], Loss: 0.0088
+2026-01-22 10:56:40,716 - INFO - Epoch 22 Finished. Train Loss: 0.0104 | Train MSE(Norm): 0.0107 | Train R: 0.9947
+2026-01-22 10:56:40,717 - INFO - Running Validation for Epoch 22...
+2026-01-22 10:56:41,683 - INFO - [Val] Loss(Norm): 0.7353 | MSE(Norm): 0.7353 | Pearson R: 0.5899
+2026-01-22 10:56:41,683 - INFO - Running Testing for Epoch 22...
+2026-01-22 10:56:43,621 - INFO - [Test] Loss(Norm): 0.6800 | MSE(Norm): 0.6800 | Pearson R: 0.6821
+2026-01-22 10:56:44,550 - INFO - Epoch [23/100], Step [0], Loss: 0.0091
+2026-01-22 10:56:53,372 - INFO - Epoch [23/100], Step [10], Loss: 0.0068
+2026-01-22 10:57:02,164 - INFO - Epoch [23/100], Step [20], Loss: 0.0064
+2026-01-22 10:57:02,166 - INFO - Epoch 23 Finished. Train Loss: 0.0100 | Train MSE(Norm): 0.0103 | Train R: 0.9949
+2026-01-22 10:57:02,166 - INFO - Running Validation for Epoch 23...
+2026-01-22 10:57:03,164 - INFO - [Val] Loss(Norm): 0.7062 | MSE(Norm): 0.7062 | Pearson R: 0.5925
+2026-01-22 10:57:03,165 - INFO - Running Testing for Epoch 23...
+2026-01-22 10:57:05,158 - INFO - [Test] Loss(Norm): 0.6747 | MSE(Norm): 0.6747 | Pearson R: 0.6872
+2026-01-22 10:57:06,081 - INFO - Epoch [24/100], Step [0], Loss: 0.0054
+2026-01-22 10:57:14,834 - INFO - Epoch [24/100], Step [10], Loss: 0.0120
+2026-01-22 10:57:23,757 - INFO - Epoch [24/100], Step [20], Loss: 0.0179
+2026-01-22 10:57:23,762 - INFO - Epoch 24 Finished. Train Loss: 0.0094 | Train MSE(Norm): 0.0097 | Train R: 0.9951
+2026-01-22 10:57:23,763 - INFO - Running Validation for Epoch 24...
+2026-01-22 10:57:24,768 - INFO - [Val] Loss(Norm): 0.7454 | MSE(Norm): 0.7454 | Pearson R: 0.5794
+2026-01-22 10:57:24,768 - INFO - Running Testing for Epoch 24...
+2026-01-22 10:57:26,687 - INFO - [Test] Loss(Norm): 0.6914 | MSE(Norm): 0.6914 | Pearson R: 0.6788
+2026-01-22 10:57:27,611 - INFO - Epoch [25/100], Step [0], Loss: 0.0102
+2026-01-22 10:57:36,442 - INFO - Epoch [25/100], Step [10], Loss: 0.0020
+2026-01-22 10:57:45,244 - INFO - Epoch [25/100], Step [20], Loss: 0.0096
+2026-01-22 10:57:45,246 - INFO - Epoch 25 Finished. Train Loss: 0.0082 | Train MSE(Norm): 0.0084 | Train R: 0.9958
+2026-01-22 10:57:45,246 - INFO - Running Validation for Epoch 25...
+2026-01-22 10:57:46,251 - INFO - [Val] Loss(Norm): 0.7260 | MSE(Norm): 0.7260 | Pearson R: 0.5773
+2026-01-22 10:57:46,251 - INFO - Running Testing for Epoch 25...
+2026-01-22 10:57:48,325 - INFO - [Test] Loss(Norm): 0.6907 | MSE(Norm): 0.6907 | Pearson R: 0.6869
+2026-01-22 10:57:49,278 - INFO - Epoch [26/100], Step [0], Loss: 0.0121
+2026-01-22 10:57:58,096 - INFO - Epoch [26/100], Step [10], Loss: 0.0081
+2026-01-22 10:58:06,889 - INFO - Epoch [26/100], Step [20], Loss: 0.0144
+2026-01-22 10:58:06,891 - INFO - Epoch 26 Finished. Train Loss: 0.0096 | Train MSE(Norm): 0.0099 | Train R: 0.9950
+2026-01-22 10:58:06,891 - INFO - Running Validation for Epoch 26...
+2026-01-22 10:58:07,827 - INFO - [Val] Loss(Norm): 0.7573 | MSE(Norm): 0.7573 | Pearson R: 0.5703
+2026-01-22 10:58:07,827 - INFO - Running Testing for Epoch 26...
+2026-01-22 10:58:09,706 - INFO - [Test] Loss(Norm): 0.6900 | MSE(Norm): 0.6900 | Pearson R: 0.6764
+2026-01-22 10:58:10,626 - INFO - Epoch [27/100], Step [0], Loss: 0.0118
+2026-01-22 10:58:19,370 - INFO - Epoch [27/100], Step [10], Loss: 0.0113
+2026-01-22 10:58:28,099 - INFO - Epoch [27/100], Step [20], Loss: 0.0036
+2026-01-22 10:58:28,101 - INFO - Epoch 27 Finished. Train Loss: 0.0095 | Train MSE(Norm): 0.0097 | Train R: 0.9952
+2026-01-22 10:58:28,101 - INFO - Running Validation for Epoch 27...
+2026-01-22 10:58:29,031 - INFO - [Val] Loss(Norm): 0.7339 | MSE(Norm): 0.7339 | Pearson R: 0.5706
+2026-01-22 10:58:29,032 - INFO - Running Testing for Epoch 27...
+2026-01-22 10:58:30,987 - INFO - [Test] Loss(Norm): 0.7104 | MSE(Norm): 0.7104 | Pearson R: 0.6727
+2026-01-22 10:58:31,936 - INFO - Epoch [28/100], Step [0], Loss: 0.0086
+2026-01-22 10:58:40,799 - INFO - Epoch [28/100], Step [10], Loss: 0.0063
+2026-01-22 10:58:49,688 - INFO - Epoch [28/100], Step [20], Loss: 0.0058
+2026-01-22 10:58:49,689 - INFO - Epoch 28 Finished. Train Loss: 0.0089 | Train MSE(Norm): 0.0092 | Train R: 0.9954
+2026-01-22 10:58:49,689 - INFO - Running Validation for Epoch 28...
+2026-01-22 10:58:50,699 - INFO - [Val] Loss(Norm): 0.7201 | MSE(Norm): 0.7201 | Pearson R: 0.5840
+2026-01-22 10:58:50,700 - INFO - Running Testing for Epoch 28...
+2026-01-22 10:58:52,591 - INFO - [Test] Loss(Norm): 0.6837 | MSE(Norm): 0.6837 | Pearson R: 0.6830
+2026-01-22 10:58:53,520 - INFO - Epoch [29/100], Step [0], Loss: 0.0057
+2026-01-22 10:59:02,285 - INFO - Epoch [29/100], Step [10], Loss: 0.0196
+2026-01-22 10:59:11,024 - INFO - Epoch [29/100], Step [20], Loss: 0.0176
+2026-01-22 10:59:11,028 - INFO - Epoch 29 Finished. Train Loss: 0.0108 | Train MSE(Norm): 0.0111 | Train R: 0.9945
+2026-01-22 10:59:11,029 - INFO - Running Validation for Epoch 29...
+2026-01-22 10:59:11,998 - INFO - [Val] Loss(Norm): 0.7209 | MSE(Norm): 0.7209 | Pearson R: 0.5751
+2026-01-22 10:59:11,999 - INFO - Running Testing for Epoch 29...
+2026-01-22 10:59:14,030 - INFO - [Test] Loss(Norm): 0.7327 | MSE(Norm): 0.7327 | Pearson R: 0.6862
+2026-01-22 10:59:14,978 - INFO - Epoch [30/100], Step [0], Loss: 0.0215
+2026-01-22 10:59:23,853 - INFO - Epoch [30/100], Step [10], Loss: 0.0062
+2026-01-22 10:59:32,647 - INFO - Epoch [30/100], Step [20], Loss: 0.0064
+2026-01-22 10:59:32,651 - INFO - Epoch 30 Finished. Train Loss: 0.0146 | Train MSE(Norm): 0.0150 | Train R: 0.9926
+2026-01-22 10:59:32,651 - INFO - Running Validation for Epoch 30...
+2026-01-22 10:59:33,585 - INFO - [Val] Loss(Norm): 0.7397 | MSE(Norm): 0.7397 | Pearson R: 0.5657
+2026-01-22 10:59:33,585 - INFO - Running Testing for Epoch 30...
+2026-01-22 10:59:35,462 - INFO - [Test] Loss(Norm): 0.7115 | MSE(Norm): 0.7115 | Pearson R: 0.6736
+2026-01-22 10:59:36,395 - INFO - Epoch [31/100], Step [0], Loss: 0.0146
+2026-01-22 10:59:45,113 - INFO - Epoch [31/100], Step [10], Loss: 0.0157
+2026-01-22 10:59:53,842 - INFO - Epoch [31/100], Step [20], Loss: 0.0084
+2026-01-22 10:59:53,846 - INFO - Epoch 31 Finished. Train Loss: 0.0138 | Train MSE(Norm): 0.0142 | Train R: 0.9929
+2026-01-22 10:59:53,846 - INFO - Running Validation for Epoch 31...
+2026-01-22 10:59:54,790 - INFO - [Val] Loss(Norm): 0.7457 | MSE(Norm): 0.7457 | Pearson R: 0.5722
+2026-01-22 10:59:54,790 - INFO - Running Testing for Epoch 31...
+2026-01-22 10:59:56,799 - INFO - [Test] Loss(Norm): 0.6781 | MSE(Norm): 0.6781 | Pearson R: 0.6846
+2026-01-22 10:59:57,733 - INFO - Epoch [32/100], Step [0], Loss: 0.0091
+2026-01-22 11:00:06,645 - INFO - Epoch [32/100], Step [10], Loss: 0.0088
+2026-01-22 11:00:15,483 - INFO - Epoch [32/100], Step [20], Loss: 0.0112
+2026-01-22 11:00:15,485 - INFO - Epoch 32 Finished. Train Loss: 0.0084 | Train MSE(Norm): 0.0087 | Train R: 0.9957
+2026-01-22 11:00:15,485 - INFO - Running Validation for Epoch 32...
+2026-01-22 11:00:16,465 - INFO - [Val] Loss(Norm): 0.7457 | MSE(Norm): 0.7457 | Pearson R: 0.5769
+2026-01-22 11:00:16,465 - INFO - Running Testing for Epoch 32...
+2026-01-22 11:00:18,410 - INFO - [Test] Loss(Norm): 0.6723 | MSE(Norm): 0.6723 | Pearson R: 0.6886
+2026-01-22 11:00:19,344 - INFO - Epoch [33/100], Step [0], Loss: 0.0096
+2026-01-22 11:00:28,160 - INFO - Epoch [33/100], Step [10], Loss: 0.0057
+2026-01-22 11:00:36,974 - INFO - Epoch [33/100], Step [20], Loss: 0.0116
+2026-01-22 11:00:36,978 - INFO - Epoch 33 Finished. Train Loss: 0.0092 | Train MSE(Norm): 0.0094 | Train R: 0.9953
+2026-01-22 11:00:36,978 - INFO - Running Validation for Epoch 33...
+2026-01-22 11:00:37,944 - INFO - [Val] Loss(Norm): 0.7186 | MSE(Norm): 0.7186 | Pearson R: 0.5805
+2026-01-22 11:00:37,944 - INFO - Running Testing for Epoch 33...
+2026-01-22 11:00:39,892 - INFO - [Test] Loss(Norm): 0.7097 | MSE(Norm): 0.7097 | Pearson R: 0.6680
+2026-01-22 11:00:40,823 - INFO - Epoch [34/100], Step [0], Loss: 0.0091
+2026-01-22 11:00:49,875 - INFO - Epoch [34/100], Step [10], Loss: 0.0142
+2026-01-22 11:01:05,265 - INFO - Epoch [34/100], Step [20], Loss: 0.0096
+2026-01-22 11:01:05,271 - INFO - Epoch 34 Finished. Train Loss: 0.0100 | Train MSE(Norm): 0.0103 | Train R: 0.9949
+2026-01-22 11:01:05,271 - INFO - Running Validation for Epoch 34...
+2026-01-22 11:01:07,934 - INFO - [Val] Loss(Norm): 0.7504 | MSE(Norm): 0.7504 | Pearson R: 0.5585
+2026-01-22 11:01:07,934 - INFO - Running Testing for Epoch 34...
+2026-01-22 11:01:14,110 - INFO - [Test] Loss(Norm): 0.6658 | MSE(Norm): 0.6658 | Pearson R: 0.6937
+2026-01-22 11:01:15,506 - INFO - Epoch [35/100], Step [0], Loss: 0.0092
+2026-01-22 11:01:29,919 - INFO - Epoch [35/100], Step [10], Loss: 0.0121
+2026-01-22 11:01:42,058 - INFO - Epoch [35/100], Step [20], Loss: 0.0066
+2026-01-22 11:01:42,064 - INFO - Epoch 35 Finished. Train Loss: 0.0102 | Train MSE(Norm): 0.0105 | Train R: 0.9947
+2026-01-22 11:01:42,064 - INFO - Running Validation for Epoch 35...
+2026-01-22 11:01:44,028 - INFO - [Val] Loss(Norm): 0.7243 | MSE(Norm): 0.7243 | Pearson R: 0.5789
+2026-01-22 11:01:44,030 - INFO - Running Testing for Epoch 35...
+2026-01-22 11:01:47,833 - INFO - [Test] Loss(Norm): 0.6851 | MSE(Norm): 0.6851 | Pearson R: 0.6820
+2026-01-22 11:01:49,099 - INFO - Epoch [36/100], Step [0], Loss: 0.0042
+2026-01-22 11:02:00,504 - INFO - Epoch [36/100], Step [10], Loss: 0.0043
+2026-01-22 11:02:10,998 - INFO - Epoch [36/100], Step [20], Loss: 0.0061
+2026-01-22 11:02:11,003 - INFO - Epoch 36 Finished. Train Loss: 0.0093 | Train MSE(Norm): 0.0095 | Train R: 0.9953
+2026-01-22 11:02:11,004 - INFO - Running Validation for Epoch 36...
+2026-01-22 11:02:11,945 - INFO - [Val] Loss(Norm): 0.7304 | MSE(Norm): 0.7304 | Pearson R: 0.5736
+2026-01-22 11:02:11,945 - INFO - Running Testing for Epoch 36...
+2026-01-22 11:02:13,875 - INFO - [Test] Loss(Norm): 0.6720 | MSE(Norm): 0.6720 | Pearson R: 0.6921
+2026-01-22 11:02:14,799 - INFO - Epoch [37/100], Step [0], Loss: 0.0049
+2026-01-22 11:02:23,545 - INFO - Epoch [37/100], Step [10], Loss: 0.0139
+2026-01-22 11:02:32,325 - INFO - Epoch [37/100], Step [20], Loss: 0.0043
+2026-01-22 11:02:32,327 - INFO - Epoch 37 Finished. Train Loss: 0.0074 | Train MSE(Norm): 0.0076 | Train R: 0.9962
+2026-01-22 11:02:32,328 - INFO - Running Validation for Epoch 37...
+2026-01-22 11:02:33,264 - INFO - [Val] Loss(Norm): 0.7106 | MSE(Norm): 0.7106 | Pearson R: 0.5841
+2026-01-22 11:02:33,264 - INFO - Running Testing for Epoch 37...
+2026-01-22 11:02:35,139 - INFO - [Test] Loss(Norm): 0.7013 | MSE(Norm): 0.7013 | Pearson R: 0.6770
+2026-01-22 11:02:36,066 - INFO - Epoch [38/100], Step [0], Loss: 0.0081
+2026-01-22 11:02:44,744 - INFO - Epoch [38/100], Step [10], Loss: 0.0191
+2026-01-22 11:02:53,476 - INFO - Epoch [38/100], Step [20], Loss: 0.0061
+2026-01-22 11:02:53,480 - INFO - Epoch 38 Finished. Train Loss: 0.0114 | Train MSE(Norm): 0.0118 | Train R: 0.9942
+2026-01-22 11:02:53,481 - INFO - Running Validation for Epoch 38...
+2026-01-22 11:02:54,423 - INFO - [Val] Loss(Norm): 0.7579 | MSE(Norm): 0.7579 | Pearson R: 0.5746
+2026-01-22 11:02:54,423 - INFO - Running Testing for Epoch 38...
+2026-01-22 11:02:56,310 - INFO - [Test] Loss(Norm): 0.6864 | MSE(Norm): 0.6864 | Pearson R: 0.6794
+2026-01-22 11:02:57,228 - INFO - Epoch [39/100], Step [0], Loss: 0.0232
+2026-01-22 11:03:06,015 - INFO - Epoch [39/100], Step [10], Loss: 0.0071
+2026-01-22 11:03:14,891 - INFO - Epoch [39/100], Step [20], Loss: 0.0072
+2026-01-22 11:03:14,895 - INFO - Epoch 39 Finished. Train Loss: 0.0119 | Train MSE(Norm): 0.0122 | Train R: 0.9939
+2026-01-22 11:03:14,895 - INFO - Running Validation for Epoch 39...
+2026-01-22 11:03:15,881 - INFO - [Val] Loss(Norm): 0.6738 | MSE(Norm): 0.6738 | Pearson R: 0.6084
+2026-01-22 11:03:15,882 - INFO - Running Testing for Epoch 39...
+2026-01-22 11:03:17,846 - INFO - [Test] Loss(Norm): 0.6983 | MSE(Norm): 0.6983 | Pearson R: 0.6880
+2026-01-22 11:03:18,763 - INFO - Epoch [40/100], Step [0], Loss: 0.0107
+2026-01-22 11:03:27,570 - INFO - Epoch [40/100], Step [10], Loss: 0.0044
+2026-01-22 11:03:36,449 - INFO - Epoch [40/100], Step [20], Loss: 0.0103
+2026-01-22 11:03:36,453 - INFO - Epoch 40 Finished. Train Loss: 0.0136 | Train MSE(Norm): 0.0139 | Train R: 0.9929
+2026-01-22 11:03:36,454 - INFO - Running Validation for Epoch 40...
+2026-01-22 11:03:37,424 - INFO - [Val] Loss(Norm): 0.7236 | MSE(Norm): 0.7236 | Pearson R: 0.5725
+2026-01-22 11:03:37,424 - INFO - Running Testing for Epoch 40...
+2026-01-22 11:03:39,360 - INFO - [Test] Loss(Norm): 0.6907 | MSE(Norm): 0.6907 | Pearson R: 0.6808
+2026-01-22 11:03:40,294 - INFO - Epoch [41/100], Step [0], Loss: 0.0086
+2026-01-22 11:03:49,091 - INFO - Epoch [41/100], Step [10], Loss: 0.0153
+2026-01-22 11:03:57,926 - INFO - Epoch [41/100], Step [20], Loss: 0.0062
+2026-01-22 11:03:57,929 - INFO - Epoch 41 Finished. Train Loss: 0.0104 | Train MSE(Norm): 0.0107 | Train R: 0.9946
+2026-01-22 11:03:57,929 - INFO - Running Validation for Epoch 41...
+2026-01-22 11:03:58,922 - INFO - [Val] Loss(Norm): 0.7496 | MSE(Norm): 0.7496 | Pearson R: 0.5588
+2026-01-22 11:03:58,922 - INFO - Running Testing for Epoch 41...
+2026-01-22 11:04:00,906 - INFO - [Test] Loss(Norm): 0.6950 | MSE(Norm): 0.6950 | Pearson R: 0.6836
+2026-01-22 11:04:01,859 - INFO - Epoch [42/100], Step [0], Loss: 0.0112
+2026-01-22 11:04:10,632 - INFO - Epoch [42/100], Step [10], Loss: 0.0221
+2026-01-22 11:04:19,443 - INFO - Epoch [42/100], Step [20], Loss: 0.0079
+2026-01-22 11:04:19,448 - INFO - Epoch 42 Finished. Train Loss: 0.0099 | Train MSE(Norm): 0.0102 | Train R: 0.9950
+2026-01-22 11:04:19,448 - INFO - Running Validation for Epoch 42...
+2026-01-22 11:04:20,392 - INFO - [Val] Loss(Norm): 0.7535 | MSE(Norm): 0.7535 | Pearson R: 0.5670
+2026-01-22 11:04:20,392 - INFO - Running Testing for Epoch 42...
+2026-01-22 11:04:22,253 - INFO - [Test] Loss(Norm): 0.6695 | MSE(Norm): 0.6695 | Pearson R: 0.6893
+2026-01-22 11:04:23,168 - INFO - Epoch [43/100], Step [0], Loss: 0.0066
+2026-01-22 11:04:31,848 - INFO - Epoch [43/100], Step [10], Loss: 0.0174
+2026-01-22 11:04:40,623 - INFO - Epoch [43/100], Step [20], Loss: 0.0075
+2026-01-22 11:04:40,624 - INFO - Epoch 43 Finished. Train Loss: 0.0126 | Train MSE(Norm): 0.0130 | Train R: 0.9934
+2026-01-22 11:04:40,624 - INFO - Running Validation for Epoch 43...
+2026-01-22 11:04:41,565 - INFO - [Val] Loss(Norm): 0.7253 | MSE(Norm): 0.7253 | Pearson R: 0.5719
+2026-01-22 11:04:41,565 - INFO - Running Testing for Epoch 43...
+2026-01-22 11:04:43,460 - INFO - [Test] Loss(Norm): 0.7142 | MSE(Norm): 0.7142 | Pearson R: 0.6802
+2026-01-22 11:04:44,379 - INFO - Epoch [44/100], Step [0], Loss: 0.0088
+2026-01-22 11:04:53,093 - INFO - Epoch [44/100], Step [10], Loss: 0.0055
+2026-01-22 11:05:01,807 - INFO - Epoch [44/100], Step [20], Loss: 0.0170
+2026-01-22 11:05:01,808 - INFO - Epoch 44 Finished. Train Loss: 0.0106 | Train MSE(Norm): 0.0109 | Train R: 0.9946
+2026-01-22 11:05:01,808 - INFO - Running Validation for Epoch 44...
+2026-01-22 11:05:02,753 - INFO - [Val] Loss(Norm): 0.7260 | MSE(Norm): 0.7260 | Pearson R: 0.5764
+2026-01-22 11:05:02,753 - INFO - Running Testing for Epoch 44...
+2026-01-22 11:05:04,629 - INFO - [Test] Loss(Norm): 0.6944 | MSE(Norm): 0.6944 | Pearson R: 0.6750
+2026-01-22 11:05:05,544 - INFO - Epoch [45/100], Step [0], Loss: 0.0132
+2026-01-22 11:05:14,215 - INFO - Epoch [45/100], Step [10], Loss: 0.0075
+2026-01-22 11:05:22,972 - INFO - Epoch [45/100], Step [20], Loss: 0.0249
+2026-01-22 11:05:22,974 - INFO - Epoch 45 Finished. Train Loss: 0.0104 | Train MSE(Norm): 0.0107 | Train R: 0.9947
+2026-01-22 11:05:22,974 - INFO - Running Validation for Epoch 45...
+2026-01-22 11:05:23,911 - INFO - [Val] Loss(Norm): 0.6942 | MSE(Norm): 0.6942 | Pearson R: 0.5941
+2026-01-22 11:05:23,912 - INFO - Running Testing for Epoch 45...
+2026-01-22 11:05:25,807 - INFO - [Test] Loss(Norm): 0.6982 | MSE(Norm): 0.6982 | Pearson R: 0.6796
+2026-01-22 11:05:26,727 - INFO - Epoch [46/100], Step [0], Loss: 0.0056
+2026-01-22 11:05:35,420 - INFO - Epoch [46/100], Step [10], Loss: 0.0041
+2026-01-22 11:05:44,120 - INFO - Epoch [46/100], Step [20], Loss: 0.0207
+2026-01-22 11:05:44,122 - INFO - Epoch 46 Finished. Train Loss: 0.0085 | Train MSE(Norm): 0.0087 | Train R: 0.9956
+2026-01-22 11:05:44,122 - INFO - Running Validation for Epoch 46...
+2026-01-22 11:05:45,059 - INFO - [Val] Loss(Norm): 0.7338 | MSE(Norm): 0.7338 | Pearson R: 0.5699
+2026-01-22 11:05:45,059 - INFO - Running Testing for Epoch 46...
+2026-01-22 11:05:46,954 - INFO - [Test] Loss(Norm): 0.6916 | MSE(Norm): 0.6916 | Pearson R: 0.6760
+2026-01-22 11:05:47,879 - INFO - Epoch [47/100], Step [0], Loss: 0.0051
+2026-01-22 11:05:56,528 - INFO - Epoch [47/100], Step [10], Loss: 0.0075
+2026-01-22 11:06:05,247 - INFO - Epoch [47/100], Step [20], Loss: 0.0098
+2026-01-22 11:06:05,249 - INFO - Epoch 47 Finished. Train Loss: 0.0082 | Train MSE(Norm): 0.0085 | Train R: 0.9958
+2026-01-22 11:06:05,249 - INFO - Running Validation for Epoch 47...
+2026-01-22 11:06:06,181 - INFO - [Val] Loss(Norm): 0.7131 | MSE(Norm): 0.7131 | Pearson R: 0.5793
+2026-01-22 11:06:06,181 - INFO - Running Testing for Epoch 47...
+2026-01-22 11:06:08,038 - INFO - [Test] Loss(Norm): 0.7106 | MSE(Norm): 0.7106 | Pearson R: 0.6711
+2026-01-22 11:06:08,955 - INFO - Epoch [48/100], Step [0], Loss: 0.0103
+2026-01-22 11:06:17,615 - INFO - Epoch [48/100], Step [10], Loss: 0.0130
+2026-01-22 11:06:26,277 - INFO - Epoch [48/100], Step [20], Loss: 0.0092
+2026-01-22 11:06:26,279 - INFO - Epoch 48 Finished. Train Loss: 0.0093 | Train MSE(Norm): 0.0095 | Train R: 0.9952
+2026-01-22 11:06:26,279 - INFO - Running Validation for Epoch 48...
+2026-01-22 11:06:27,204 - INFO - [Val] Loss(Norm): 0.7374 | MSE(Norm): 0.7374 | Pearson R: 0.5670
+2026-01-22 11:06:27,205 - INFO - Running Testing for Epoch 48...
+2026-01-22 11:06:29,077 - INFO - [Test] Loss(Norm): 0.6825 | MSE(Norm): 0.6825 | Pearson R: 0.6829
+2026-01-22 11:06:29,994 - INFO - Epoch [49/100], Step [0], Loss: 0.0072
+2026-01-22 11:06:38,654 - INFO - Epoch [49/100], Step [10], Loss: 0.0097
+2026-01-22 11:06:47,443 - INFO - Epoch [49/100], Step [20], Loss: 0.0061
+2026-01-22 11:06:47,445 - INFO - Epoch 49 Finished. Train Loss: 0.0087 | Train MSE(Norm): 0.0089 | Train R: 0.9956
+2026-01-22 11:06:47,445 - INFO - Running Validation for Epoch 49...
+2026-01-22 11:06:48,375 - INFO - [Val] Loss(Norm): 0.7084 | MSE(Norm): 0.7084 | Pearson R: 0.5898
+2026-01-22 11:06:48,375 - INFO - Running Testing for Epoch 49...
+2026-01-22 11:06:50,254 - INFO - [Test] Loss(Norm): 0.6833 | MSE(Norm): 0.6833 | Pearson R: 0.6827
+2026-01-22 11:06:51,168 - INFO - Epoch [50/100], Step [0], Loss: 0.0075
+2026-01-22 11:06:59,875 - INFO - Epoch [50/100], Step [10], Loss: 0.0179
+2026-01-22 11:07:08,545 - INFO - Epoch [50/100], Step [20], Loss: 0.0033
+2026-01-22 11:07:08,550 - INFO - Epoch 50 Finished. Train Loss: 0.0079 | Train MSE(Norm): 0.0081 | Train R: 0.9959
+2026-01-22 11:07:08,550 - INFO - Running Validation for Epoch 50...
+2026-01-22 11:07:09,482 - INFO - [Val] Loss(Norm): 0.7292 | MSE(Norm): 0.7292 | Pearson R: 0.5767
+2026-01-22 11:07:09,482 - INFO - Running Testing for Epoch 50...
+2026-01-22 11:07:11,357 - INFO - [Test] Loss(Norm): 0.7006 | MSE(Norm): 0.7006 | Pearson R: 0.6714
+2026-01-22 11:07:12,270 - INFO - Epoch [51/100], Step [0], Loss: 0.0107
+2026-01-22 11:07:20,960 - INFO - Epoch [51/100], Step [10], Loss: 0.0029
+2026-01-22 11:07:29,736 - INFO - Epoch [51/100], Step [20], Loss: 0.0097
+2026-01-22 11:07:29,740 - INFO - Epoch 51 Finished. Train Loss: 0.0092 | Train MSE(Norm): 0.0094 | Train R: 0.9953
+2026-01-22 11:07:29,741 - INFO - Running Validation for Epoch 51...
+2026-01-22 11:07:30,682 - INFO - [Val] Loss(Norm): 0.7319 | MSE(Norm): 0.7319 | Pearson R: 0.5800
+2026-01-22 11:07:30,683 - INFO - Running Testing for Epoch 51...
