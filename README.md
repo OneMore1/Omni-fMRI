@@ -147,7 +147,7 @@ Our pre-trained model weights can be found in Huggingface.
 Docker can be found in Dockerhub.
 
 #### Citation
-Discussions are welcome. The source material is available in the repository (link coming soon). 
+Discussions are welcome. The paper **Omni-fMRI** is available in the repository (link coming soon). 
 
 
 
