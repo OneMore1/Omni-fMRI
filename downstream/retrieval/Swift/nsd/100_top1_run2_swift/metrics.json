@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-01-28T08:25:51",
+  "seed": 44,
+  "subjects": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "repeat_T": 20,
+  "num_queries": 200,
+  "N": 100,
+  "K": 1,
+  "S": 10,
+  "hits": 38,
+  "total_trials": 2000,
+  "hit_rate": 0.019,
+  "shared515": {
+    "shared_trial_ids_count": 515,
+    "shared515_image_ids_set_size": 1057,
+    "note": "shared515_indices.npy are trial ids (0-based). We mapped them via masterordering+subjectim to 73k image ids and filter retrieval using the 73k-id set."
+  },
+  "model_args": {
+    "backbone": "swin4d_ver7",
+    "swift_root": "/vePFS-0x0d/home/yewh/NSD_retraival/Swift_xjf_NSD",
+    "swift_ckpt": "/vePFS-0x0d/home/yewh/NSD_retraival/Swift_xjf_NSD/SwiFT/pretrained_models/contrastive_pretrained.ckpt",
+    "pooling": "mean(dim=[2,3,4,5])",
+    "projection": "Linear(C,768)"
+  },
+  "files": {
+  }
+}

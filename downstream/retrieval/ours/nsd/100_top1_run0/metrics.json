@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-01-19T13:40:27",
+  "seed": 42,
+  "subjects": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "repeat_T": 40,
+  "num_queries": 200,
+  "N": 100,
+  "K": 1,
+  "S": 10,
+  "hits": 131,
+  "total_trials": 2000,
+  "hit_rate": 0.0655,
+  "shared515": {
+    "shared_trial_ids_count": 515,
+    "shared515_image_ids_set_size": 1057,
+    "note": "shared515_indices.npy are trial ids (0-based). We mapped them via masterordering+subjectim to 73k image ids and filter retrieval using the 73k-id set."
+  },
+  "model_args": {
+    "img_size": "96,96,96",
+    "patch_size": 4,
+    "embed_dim": 768,
+    "depth": 12,
+    "num_heads": 12,
+    "mlp_ratio": 4.0,
+    "fusion_mode": "none",
+    "gate_attention": "none",
+    "method": "std",
+    "thresholds": "0.23"
+  },
+  "files": {
+  }
+}
