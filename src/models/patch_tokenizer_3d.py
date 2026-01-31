@@ -70,6 +70,19 @@ class PatchTokenizer3D(nn.Module):
         else:
             raise ValueError(f"Method {self.method} unknown")
 
+    def _generate_coordinate_grid(self, grid_size, patch_size, device):
+        D, H, W = grid_size
+        pd, ph, pw = patch_size
+
+        z_grid = torch.arange(D, device=device) * pd
+        y_grid = torch.arange(H, device=device) * ph
+        x_grid = torch.arange(W, device=device) * pw
+        
+        grid_z, grid_y, grid_x = torch.meshgrid(z_grid, y_grid, x_grid, indexing='ij')
+        
+        # Stack -> (D, H, W, 3)
+        coords = torch.stack([grid_z, grid_y, grid_x], dim=-1)
+        return coords
 
     def forward(self, images):
         B, C, D, H, W = images.shape
