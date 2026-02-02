@@ -4,10 +4,10 @@
 
 <div align="center">
   
-[![arXiv](https://img.shields.io/badge/arXiv-23xx.xxxxx-b31b1b.svg?style=flat-square)](https://arxiv.org/xx)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)]([https://github.com/xx](https://github.com/OneMore1/Omni-fMRI))
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)]([https://huggingface.co/xx](https://huggingface.co/OneMore1/Omni-fMRI))
-[![Docker Hub](https://img.shields.io/badge/docker-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white)]([https://hub.docker.com/r/xx](https://hub.docker.com/r/onemore1/onmi-fmri))
+[![arXiv](https://img.shields.io/badge/arXiv-2601.23090-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2601.23090)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/OneMore1/Omni-fMRI)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/OneMore1/Omni-fMRI)
+[![Docker Pulls](https://img.shields.io/docker/pulls/onemore1/onmi-fmri?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/r/onemore1/onmi-fmri)
 
 </div>
 
