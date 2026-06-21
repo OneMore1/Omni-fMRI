@@ -17,8 +17,8 @@
         <span>Omni-fMRI</span>
       </a>
       <nav class="site-nav" aria-label="Project navigation">
-        <a href="#quickstart">Quick Start</a>
         <a href="#abstract">Abstract</a>
+        <a href="#quickstart">Quick Start</a>
         <a href="#method">Method</a>
         <a href="#results">Results</a>
         <a href="#datasets">Datasets</a>
@@ -74,6 +74,46 @@
         <div class="stat">
           <span class="stat-value">16</span>
           <span class="stat-label">downstream tasks</span>
+        </div>
+      </section>
+
+      <section id="abstract" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Abstract</p>
+          <h2>Voxel-level pretraining without an atlas bottleneck.</h2>
+        </div>
+        <p class="lead">
+          Self-supervised fMRI foundation models have improved transfer, but
+          most still compress dense voxel signals into predefined ROI
+          parcellations. Omni-fMRI removes that atlas dependency by operating
+          directly on voxel-level time series while using dynamic patching to
+          keep large-scale pretraining tractable.
+        </p>
+        <div class="abstract-grid">
+          <article>
+            <h3>Atlas-free inputs</h3>
+            <p>
+              The encoder works on voxel-level fMRI volumes rather than
+              predefined regional summaries, preserving fine-grained spatial
+              information and avoiding atlas-induced bias.
+            </p>
+          </article>
+          <article>
+            <h3>Dynamic patching</h3>
+            <p>
+              Background regions are pruned, simple foreground regions are
+              merged into larger patches, and complex regions keep finer
+              resolution for efficient global modeling.
+            </p>
+          </article>
+          <article>
+            <h3>Reproducible benchmark</h3>
+            <p>
+              The paper standardizes datasets, splits, and tasks for
+              resting-state and task-based fMRI evaluation across diagnosis,
+              demography, retrieval, emotion, and state prediction.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -170,46 +210,6 @@ huggingface-cli download OneMore1/Omni-fMRI checkpoint.pth \
               </div>
             </div>
           </aside>
-        </div>
-      </section>
-
-      <section id="abstract" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Abstract</p>
-          <h2>Voxel-level pretraining without an atlas bottleneck.</h2>
-        </div>
-        <p class="lead">
-          Self-supervised fMRI foundation models have improved transfer, but
-          most still compress dense voxel signals into predefined ROI
-          parcellations. Omni-fMRI removes that atlas dependency by operating
-          directly on voxel-level time series while using dynamic patching to
-          keep large-scale pretraining tractable.
-        </p>
-        <div class="abstract-grid">
-          <article>
-            <h3>Atlas-free inputs</h3>
-            <p>
-              The encoder works on voxel-level fMRI volumes rather than
-              predefined regional summaries, preserving fine-grained spatial
-              information and avoiding atlas-induced bias.
-            </p>
-          </article>
-          <article>
-            <h3>Dynamic patching</h3>
-            <p>
-              Background regions are pruned, simple foreground regions are
-              merged into larger patches, and complex regions keep finer
-              resolution for efficient global modeling.
-            </p>
-          </article>
-          <article>
-            <h3>Reproducible benchmark</h3>
-            <p>
-              The paper standardizes datasets, splits, and tasks for
-              resting-state and task-based fMRI evaluation across diagnosis,
-              demography, retrieval, emotion, and state prediction.
-            </p>
-          </article>
         </div>
       </section>
 
@@ -319,8 +319,8 @@ huggingface-cli download OneMore1/Omni-fMRI checkpoint.pth \
             <p>
               Values are copied from Table 3. Accuracy/F1 use higher-is-better
               metrics; age regression reports MSE lower-is-better and Pearson R
-              higher-is-better. Starred Omni-fMRI values denote large effect size
-              in the paper.
+              higher-is-better. Red cells mark the single best value in each
+              column; stars follow the paper's reported effect-size markers.
             </p>
           </div>
           <div class="table-wrap" aria-label="Table 3 first panel">
@@ -346,7 +346,7 @@ huggingface-cli download OneMore1/Omni-fMRI checkpoint.pth \
                 <tr><th>BrainMass</th><td>0.695 +/- 0.038</td><td>0.500 +/- 0.044</td><td>0.600 +/- 0.062</td><td>0.620 +/- 0.036</td><td>0.704 +/- 0.080</td><td>0.626 +/- 0.062</td><td>57.92 +/- 1.19</td><td>57.86 +/- 1.18</td><td>67.65 +/- 1.02</td><td>66.93 +/- 1.78</td></tr>
                 <tr><th>SwiFT</th><td>0.524 +/- 0.010</td><td>0.704 +/- 0.011</td><td>0.127 +/- 0.004</td><td>0.946 +/- 0.002</td><td class="best">0.164 +/- 0.08*</td><td class="best">0.926 +/- 0.003*</td><td>66.67 +/- 3.51</td><td>68.69 +/- 0.44</td><td>90.75 +/- 4.38</td><td>90.76 +/- 4.37</td></tr>
                 <tr><th>NeuroSTORM</th><td>0.537 +/- 0.016</td><td>0.648 +/- 0.013</td><td>0.152 +/- 0.033</td><td>0.835 +/- 0.035</td><td>0.194 +/- 0.019</td><td>0.892 +/- 0.010</td><td>76.51 +/- 1.88</td><td>76.24 +/- 1.70</td><td>94.17 +/- 2.65</td><td>94.17 +/- 2.15</td></tr>
-                <tr class="omni-row"><th>Omni-fMRI</th><td>0.427 +/- 0.006*</td><td>0.734 +/- 0.002*</td><td>0.088 +/- 0.004*</td><td>0.959 +/- 0.003*</td><td>0.182 +/- 0.019</td><td>0.909 +/- 0.005</td><td>77.01 +/- 0.55</td><td>76.91 +/- 0.54</td><td>95.54 +/- 0.36</td><td>95.05 +/- 0.41</td></tr>
+                <tr class="omni-row"><th>Omni-fMRI</th><td class="best">0.427 +/- 0.006*</td><td class="best">0.734 +/- 0.002*</td><td class="best">0.088 +/- 0.004*</td><td class="best">0.959 +/- 0.003*</td><td>0.182 +/- 0.019</td><td>0.909 +/- 0.005</td><td class="best">77.01 +/- 0.55</td><td class="best">76.91 +/- 0.54</td><td class="best">95.54 +/- 0.36</td><td class="best">95.05 +/- 0.41</td></tr>
               </tbody>
             </table>
           </div>
@@ -373,7 +373,7 @@ huggingface-cli download OneMore1/Omni-fMRI checkpoint.pth \
                 <tr><th>BrainMass</th><td>62.76 +/- 1.50</td><td>61.05 +/- 1.22</td><td>58.68 +/- 4.21</td><td>51.95 +/- 2.23</td><td>62.39 +/- 0.60</td><td>61.35 +/- 0.60</td><td>73.45 +/- 3.91</td><td>62.10 +/- 0.70</td><td>62.36 +/- 1.24</td><td>61.98 +/- 0.88</td></tr>
                 <tr><th>SwiFT</th><td>70.21 +/- 0.02</td><td>69.56 +/- 0.02</td><td>61.55 +/- 2.52</td><td>58.23 +/- 4.20</td><td>65.38 +/- 1.29</td><td>72.54 +/- 0.16</td><td>74.90 +/- 1.88</td><td>80.76 +/- 0.33</td><td>78.54 +/- 4.87</td><td>79.08 +/- 3.85</td></tr>
                 <tr><th>NeuroSTORM</th><td>73.02 +/- 2.19</td><td>72.49 +/- 1.96</td><td>68.25 +/- 1.18</td><td>65.18 +/- 2.55</td><td>66.67 +/- 1.06</td><td>62.17 +/- 8.93</td><td>84.26 +/- 0.80</td><td>83.91 +/- 0.75</td><td>89.35 +/- 4.72</td><td>89.34 +/- 4.49</td></tr>
-                <tr class="omni-row"><th>Omni-fMRI</th><td>75.86 +/- 1.35*</td><td>75.96 +/- 1.31*</td><td>72.57 +/- 0.98*</td><td>70.19 +/- 0.84*</td><td>72.92 +/- 1.64*</td><td>72.87 +/- 1.74</td><td>88.77 +/- 0.71*</td><td>88.60 +/- 0.72*</td><td>92.05 +/- 2.85</td><td>91.64 +/- 2.25</td></tr>
+                <tr class="omni-row"><th>Omni-fMRI</th><td class="best">75.86 +/- 1.35*</td><td class="best">75.96 +/- 1.31*</td><td class="best">72.57 +/- 0.98*</td><td class="best">70.19 +/- 0.84*</td><td class="best">72.92 +/- 1.64*</td><td class="best">72.87 +/- 1.74</td><td class="best">88.77 +/- 0.71*</td><td class="best">88.60 +/- 0.72*</td><td class="best">92.05 +/- 2.85</td><td class="best">91.64 +/- 2.25</td></tr>
               </tbody>
             </table>
           </div>

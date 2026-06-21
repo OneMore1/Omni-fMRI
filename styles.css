@@ -602,7 +602,7 @@ h3 {
   border-bottom: 0;
 }
 
-.data-table tbody tr:nth-child(even):not(.group-row):not(.omni-row) {
+.data-table tbody tr:nth-child(even):not(.group-row) {
   background: #fbfcfd;
 }
 
@@ -621,8 +621,6 @@ h3 {
 
 .omni-row th,
 .omni-row td {
-  color: #a83f4f;
-  background: #fff5f6;
   font-weight: 800;
 }
 
