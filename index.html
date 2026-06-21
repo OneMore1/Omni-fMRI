@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Omni-fMRI is an atlas-free voxel-level fMRI foundation model with dynamic patching for scalable pretraining and broad benchmark transfer."
+    />
+    <title>Omni-fMRI | Atlas-Free fMRI Foundation Model</title>
+    <link rel="stylesheet" href="styles.css?v=20260621" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Omni-fMRI home">
+        <span class="brand-mark">OF</span>
+        <span>Omni-fMRI</span>
+      </a>
+      <nav class="site-nav" aria-label="Project navigation">
+        <a href="#quickstart">Quick Start</a>
+        <a href="#abstract">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#datasets">Datasets</a>
+        <a href="#resources">Resources</a>
+        <a href="#figures">Figures</a>
+      </nav>
+      <a class="paper-link" href="assets/omni-fmri-paper.pdf">Paper</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">ICML 2026</p>
+          <h1 id="hero-title">Omni-fMRI</h1>
+          <p class="hero-subtitle">
+            A universal atlas-free fMRI foundation model.
+          </p>
+          <p class="hero-copy">
+            Omni-fMRI learns directly from voxel-level BOLD signals, replacing
+            atlas-dependent regional summaries with dynamic patch tokenization
+            and global self-attention over informative brain regions.
+          </p>
+          <p class="authors">
+            Mo Wang, Wenhao Ye, Junfeng Xia, Junxiang Zhang, Xuanye Pan,
+            Minghao Xu, Haotian Deng, Hongkai Wen, Quanying Liu
+            <span>SUSTech, University of Warwick, Shenzhen University</span>
+          </p>
+          <div class="hero-actions" aria-label="Project links">
+            <a class="button primary" href="assets/omni-fmri-paper.pdf">Paper</a>
+            <a class="button" href="https://github.com/OneMore1/Omni-fMRI" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="button" href="https://huggingface.co/OneMore1/Omni-fMRI" target="_blank" rel="noreferrer">Checkpoint</a>
+            <a class="button" href="https://hub.docker.com/r/onemore1/onmi-fmri" target="_blank" rel="noreferrer">Docker</a>
+            <a class="button" href="#quickstart">Quick Start</a>
+            <a class="button" href="#datasets">Data</a>
+            <a class="button" href="#citation">BibTeX</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Project scale">
+        <div class="stat">
+          <span class="stat-value">49,497</span>
+          <span class="stat-label">pretraining sessions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">9</span>
+          <span class="stat-label">pretraining datasets</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">11</span>
+          <span class="stat-label">benchmark datasets</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">16</span>
+          <span class="stat-label">downstream tasks</span>
+        </div>
+      </section>
+
+      <section id="quickstart" class="section quickstart-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Quick Start</p>
+          <h2>Process a raw fMRI volume and extract Omni-fMRI features.</h2>
+          <p>
+            The checkpoint is hosted on Hugging Face; keep the downloaded file
+            at <code>pretrain_checkpoint/checkpoint.pth</code>. The smoke-test
+            script and notebook below create a tiny synthetic NIfTI first, so a
+            new user can verify the full preprocessing-to-feature path before
+            preparing ADNI, HCP, ABIDE, or other benchmark data.
+          </p>
+        </div>
+        <div class="quickstart-layout">
+          <div class="quickstart-main">
+            <article class="code-card">
+              <span class="code-kicker">1. Install</span>
+              <h3>Clone the repository and fetch the HF checkpoint.</h3>
+              <pre class="code-block"><code>git clone https://github.com/OneMore1/Omni-fMRI.git
+cd Omni-fMRI
+conda create -n omnifmri python=3.11 -y
+conda activate omnifmri
+pip install -r requirements.txt
+pip install -U huggingface_hub
+
+mkdir -p pretrain_checkpoint
+huggingface-cli download OneMore1/Omni-fMRI checkpoint.pth \
+  --local-dir pretrain_checkpoint</code></pre>
+            </article>
+            <article class="code-card">
+              <span class="code-kicker">2. Preprocess</span>
+              <h3>Convert raw NIfTI files into 96 x 96 x 96 x 40 NPZ segments.</h3>
+              <pre class="code-block"><code>python data_preparation/preprocessing.py \
+  --input_dir examples/raw_nifti \
+  --output_dir outputs/demo_npz \
+  --pattern .nii.gz \
+  --target_shape 96 96 96 \
+  --segment_length 40</code></pre>
+            </article>
+            <article class="code-card">
+              <span class="code-kicker">3. Extract</span>
+              <h3>Run the frozen encoder and save feature tokens.</h3>
+              <pre class="code-block"><code>python extract_feat.py outputs/demo_npz \
+  --checkpoint pretrain_checkpoint/checkpoint.pth \
+  --output-dir outputs/demo_tokens \
+  --device cuda:0 \
+  --overwrite</code></pre>
+            </article>
+          </div>
+          <aside class="quickstart-side" aria-label="Quick Start validation and artifacts">
+            <div class="quickstart-panel">
+              <span class="resource-kicker">Smoke test</span>
+              <h3>Validated server path</h3>
+              <p>
+                Tested on <code>volcengine2</code> with the released checkpoint:
+                synthetic NIfTI -> official preprocessing -> official feature
+                extraction.
+              </p>
+              <div class="table-wrap compact-table" aria-label="Quick Start expected feature outputs">
+                <table class="data-table output-table">
+                  <thead>
+                    <tr>
+                      <th>Saved array</th>
+                      <th>Shape</th>
+                      <th>Dtype</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><code>cls_token</code></td><td>(768,)</td><td>float32</td></tr>
+                    <tr><td><code>patch_tokens</code></td><td>(880, 768)</td><td>float32</td></tr>
+                    <tr><td><code>patch_coords</code></td><td>(880, 3)</td><td>int64</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="quickstart-panel">
+              <span class="resource-kicker">Try it</span>
+              <h3>Runnable starter assets</h3>
+              <div class="artifact-grid">
+                <a class="artifact-card" href="notebooks/01_quick_start_feature_extraction.ipynb">
+                  <strong>Notebook</strong>
+                  <span>End-to-end cells for install, synthetic NIfTI, preprocessing, and extraction.</span>
+                </a>
+                <a class="artifact-card" href="quickstart/quickstart_smoke.py">
+                  <strong>Smoke script</strong>
+                  <span>One-command validation for a server or fresh environment.</span>
+                </a>
+                <a class="artifact-card" href="https://huggingface.co/OneMore1/Omni-fMRI" target="_blank" rel="noreferrer">
+                  <strong>HF checkpoint</strong>
+                  <span>Download <code>checkpoint.pth</code> from the model repository.</span>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="abstract" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Abstract</p>
+          <h2>Voxel-level pretraining without an atlas bottleneck.</h2>
+        </div>
+        <p class="lead">
+          Self-supervised fMRI foundation models have improved transfer, but
+          most still compress dense voxel signals into predefined ROI
+          parcellations. Omni-fMRI removes that atlas dependency by operating
+          directly on voxel-level time series while using dynamic patching to
+          keep large-scale pretraining tractable.
+        </p>
+        <div class="abstract-grid">
+          <article>
+            <h3>Atlas-free inputs</h3>
+            <p>
+              The encoder works on voxel-level fMRI volumes rather than
+              predefined regional summaries, preserving fine-grained spatial
+              information and avoiding atlas-induced bias.
+            </p>
+          </article>
+          <article>
+            <h3>Dynamic patching</h3>
+            <p>
+              Background regions are pruned, simple foreground regions are
+              merged into larger patches, and complex regions keep finer
+              resolution for efficient global modeling.
+            </p>
+          </article>
+          <article>
+            <h3>Reproducible benchmark</h3>
+            <p>
+              The paper standardizes datasets, splits, and tasks for
+              resting-state and task-based fMRI evaluation across diagnosis,
+              demography, retrieval, emotion, and state prediction.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="method" class="figure-section">
+        <div class="figure-copy">
+          <p class="eyebrow">Method</p>
+          <h2>Dynamic patches make voxel-level ViT pretraining practical.</h2>
+          <p>
+            Instead of forcing a dense regular grid into a hierarchical
+            backbone, Omni-fMRI tokenizes the volume according to local
+            spatiotemporal complexity. This reduces the encoder sequence from
+            roughly 14K tokens to about 4.3K tokens while keeping global
+            self-attention over informative brain tissue.
+          </p>
+          <div class="steps">
+            <div class="step">
+              <span class="step-number">1</span>
+              <div>
+                <h3>Allocate content-adaptive patches</h3>
+                <p>Prune non-brain background and assign patch scale by local signal variability.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-number">2</span>
+              <div>
+                <h3>Project mixed-scale tokens</h3>
+                <p>Use dual-path multi-scale embedding with ZeroMLP for stable coarse-to-fine learning.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-number">3</span>
+              <div>
+                <h3>Reconstruct by scale</h3>
+                <p>Route masked-autoencoding targets to scale-aware prediction heads.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="figure-frame wide" data-image="assets/figure2.png" data-title="Omni-fMRI pretraining framework">
+          <img src="assets/figure2.png" alt="Omni-fMRI dynamic patching pretraining framework" />
+        </button>
+      </section>
+
+      <section id="results" class="section tinted">
+        <div class="section-heading compact">
+          <p class="eyebrow">Results</p>
+          <h2>Strong transfer across resting-state and task-based fMRI.</h2>
+        </div>
+        <div class="result-grid">
+          <article>
+            <span class="metric">95.54%</span>
+            <h3>HCP sex classification ACC</h3>
+            <p>
+              Omni-fMRI leads the benchmark table while also achieving 95.05
+              F1 on HCP sex classification.
+            </p>
+          </article>
+          <article>
+            <span class="metric">88.77%</span>
+            <h3>ADNI AD diagnosis ACC</h3>
+            <p>
+              The model reaches the best reported ADNI Alzheimer's disease
+              diagnosis accuracy in the paper's main comparison.
+            </p>
+          </article>
+          <article>
+            <span class="metric">23.08%</span>
+            <h3>Top-10 image retrieval</h3>
+            <p>
+              On 100-way image retrieval, Omni-fMRI improves over NeuroSTORM,
+              SwiFT, and TFF in Top-10, Top-5, and Top-1 accuracy.
+            </p>
+          </article>
+          <article>
+            <span class="metric">45.29%</span>
+            <h3>HCP task accuracy at 10% data</h3>
+            <p>
+              Few-shot evaluation shows the model preserves strong task
+              classification performance under severe data reduction.
+            </p>
+          </article>
+        </div>
+        <div class="claim-grid">
+          <article>
+            <p class="claim-label">Benchmark summary</p>
+            <h3>Linear probing stays competitive.</h3>
+            <p>
+              With a frozen encoder and a lightweight linear head, Omni-fMRI
+              often surpasses fine-tuned baselines and shows a smaller ADNI AD
+              degradation than NeuroSTORM LP.
+            </p>
+          </article>
+          <article>
+            <p class="claim-label">Efficiency summary</p>
+            <h3>Scalability is part of the method.</h3>
+            <p>
+              The paper reports a 157M-parameter model pretrained for 35
+              epochs in about 32 hours on 4 NVIDIA A10G GPUs, enabled by
+              dynamic token reduction.
+            </p>
+          </article>
+        </div>
+        <div id="table3" class="results-table-block">
+          <div class="section-heading compact">
+            <p class="eyebrow">Table 3</p>
+            <h2>Main demography and disease diagnosis results.</h2>
+            <p>
+              Values are copied from Table 3. Accuracy/F1 use higher-is-better
+              metrics; age regression reports MSE lower-is-better and Pearson R
+              higher-is-better. Starred Omni-fMRI values denote large effect size
+              in the paper.
+            </p>
+          </div>
+          <div class="table-wrap" aria-label="Table 3 first panel">
+            <table class="data-table result-table">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>ABIDE MSE</th>
+                  <th>ABIDE R</th>
+                  <th>NKI age MSE</th>
+                  <th>NKI age R</th>
+                  <th>SALD MSE</th>
+                  <th>SALD R</th>
+                  <th>ABCD ACC</th>
+                  <th>ABCD F1</th>
+                  <th>HCP ACC</th>
+                  <th>HCP F1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th>Brain-LM</th><td>0.907 +/- 0.007</td><td>0.239 +/- 0.023</td><td>0.503 +/- 0.015</td><td>0.678 +/- 0.014</td><td>0.677 +/- 0.055</td><td>0.634 +/- 0.061</td><td>59.24 +/- 1.03</td><td>58.74 +/- 0.70</td><td>62.71 +/- 4.43</td><td>61.74 +/- 4.72</td></tr>
+                <tr><th>Brain-JEPA</th><td>0.982 +/- 0.066</td><td>0.166 +/- 0.017</td><td>1.030 +/- 0.080</td><td>0.330 +/- 0.030</td><td>1.130 +/- 0.108</td><td>0.299 +/- 0.060</td><td>-</td><td>-</td><td>69.97 +/- 2.73</td><td>69.17 +/- 3.55</td></tr>
+                <tr><th>BrainMass</th><td>0.695 +/- 0.038</td><td>0.500 +/- 0.044</td><td>0.600 +/- 0.062</td><td>0.620 +/- 0.036</td><td>0.704 +/- 0.080</td><td>0.626 +/- 0.062</td><td>57.92 +/- 1.19</td><td>57.86 +/- 1.18</td><td>67.65 +/- 1.02</td><td>66.93 +/- 1.78</td></tr>
+                <tr><th>SwiFT</th><td>0.524 +/- 0.010</td><td>0.704 +/- 0.011</td><td>0.127 +/- 0.004</td><td>0.946 +/- 0.002</td><td class="best">0.164 +/- 0.08*</td><td class="best">0.926 +/- 0.003*</td><td>66.67 +/- 3.51</td><td>68.69 +/- 0.44</td><td>90.75 +/- 4.38</td><td>90.76 +/- 4.37</td></tr>
+                <tr><th>NeuroSTORM</th><td>0.537 +/- 0.016</td><td>0.648 +/- 0.013</td><td>0.152 +/- 0.033</td><td>0.835 +/- 0.035</td><td>0.194 +/- 0.019</td><td>0.892 +/- 0.010</td><td>76.51 +/- 1.88</td><td>76.24 +/- 1.70</td><td>94.17 +/- 2.65</td><td>94.17 +/- 2.15</td></tr>
+                <tr class="omni-row"><th>Omni-fMRI</th><td>0.427 +/- 0.006*</td><td>0.734 +/- 0.002*</td><td>0.088 +/- 0.004*</td><td>0.959 +/- 0.003*</td><td>0.182 +/- 0.019</td><td>0.909 +/- 0.005</td><td>77.01 +/- 0.55</td><td>76.91 +/- 0.54</td><td>95.54 +/- 0.36</td><td>95.05 +/- 0.41</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap" aria-label="Table 3 second panel">
+            <table class="data-table result-table">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>BHRC ACC</th>
+                  <th>BHRC F1</th>
+                  <th>PPMI ACC</th>
+                  <th>PPMI F1</th>
+                  <th>ADNI MCI ACC</th>
+                  <th>ADNI MCI F1</th>
+                  <th>ADNI AD ACC</th>
+                  <th>ADNI AD F1</th>
+                  <th>NKI Edu ACC</th>
+                  <th>NKI Edu F1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th>Brain-LM</th><td>57.09 +/- 1.33</td><td>54.69 +/- 1.03</td><td>54.86 +/- 1.20</td><td>49.03 +/- 2.64</td><td>64.53 +/- 2.01</td><td>61.35 +/- 0.66</td><td>80.96 +/- 0.46</td><td>72.43 +/- 0.64</td><td>60.46 +/- 0.73</td><td>58.93 +/- 0.70</td></tr>
+                <tr><th>Brain-JEPA</th><td>58.16 +/- 6.10</td><td>56.16 +/- 6.05</td><td>47.91 +/- 3.61</td><td>48.60 +/- 2.42</td><td>64.53 +/- 0.60</td><td>55.17 +/- 0.66</td><td>80.23 +/- 0.80</td><td>73.26 +/- 1.03</td><td>49.21 +/- 2.15</td><td>48.73 +/- 1.62</td></tr>
+                <tr><th>BrainMass</th><td>62.76 +/- 1.50</td><td>61.05 +/- 1.22</td><td>58.68 +/- 4.21</td><td>51.95 +/- 2.23</td><td>62.39 +/- 0.60</td><td>61.35 +/- 0.60</td><td>73.45 +/- 3.91</td><td>62.10 +/- 0.70</td><td>62.36 +/- 1.24</td><td>61.98 +/- 0.88</td></tr>
+                <tr><th>SwiFT</th><td>70.21 +/- 0.02</td><td>69.56 +/- 0.02</td><td>61.55 +/- 2.52</td><td>58.23 +/- 4.20</td><td>65.38 +/- 1.29</td><td>72.54 +/- 0.16</td><td>74.90 +/- 1.88</td><td>80.76 +/- 0.33</td><td>78.54 +/- 4.87</td><td>79.08 +/- 3.85</td></tr>
+                <tr><th>NeuroSTORM</th><td>73.02 +/- 2.19</td><td>72.49 +/- 1.96</td><td>68.25 +/- 1.18</td><td>65.18 +/- 2.55</td><td>66.67 +/- 1.06</td><td>62.17 +/- 8.93</td><td>84.26 +/- 0.80</td><td>83.91 +/- 0.75</td><td>89.35 +/- 4.72</td><td>89.34 +/- 4.49</td></tr>
+                <tr class="omni-row"><th>Omni-fMRI</th><td>75.86 +/- 1.35*</td><td>75.96 +/- 1.31*</td><td>72.57 +/- 0.98*</td><td>70.19 +/- 0.84*</td><td>72.92 +/- 1.64*</td><td>72.87 +/- 1.74</td><td>88.77 +/- 0.71*</td><td>88.60 +/- 0.72*</td><td>92.05 +/- 2.85</td><td>91.64 +/- 2.25</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="datasets" class="section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Datasets</p>
+          <h2>Pretraining and downstream benchmark coverage.</h2>
+          <p>
+            Table 2 in the paper groups datasets into pretraining-only data,
+            internal downstream data, and external downstream evaluation data.
+          </p>
+        </div>
+        <div class="table-wrap" aria-label="Table 2 dataset summary">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Dataset</th>
+                <th>Participants</th>
+                <th>Sessions</th>
+                <th>Age</th>
+                <th>Sex (M/F)</th>
+                <th>Downstream task</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group-row"><th colspan="7">Type I: only for pretraining</th></tr>
+              <tr><td>1</td><td>UK Biobank</td><td>38,301</td><td>38,372</td><td>68.37 +/- 7.48</td><td>17879/20493</td><td>-</td></tr>
+              <tr><td>2</td><td>AOMIC (PIOP1)</td><td>168</td><td>672</td><td>22.15 +/- 1.83</td><td>94/67</td><td>-</td></tr>
+              <tr><td>3</td><td>AOMIC (PIOP2)</td><td>180</td><td>720</td><td>21.99 +/- 1.83</td><td>98/81</td><td>-</td></tr>
+              <tr><td>4</td><td>CHCP</td><td>244</td><td>1,224</td><td>18-79 range</td><td>117/127</td><td>-</td></tr>
+              <tr><td>5</td><td>ISYB</td><td>130</td><td>520</td><td>22.52 +/- 2.61</td><td>98/32</td><td>-</td></tr>
+              <tr class="group-row"><th colspan="7">Type II: internal downstream tasks</th></tr>
+              <tr><td>6</td><td>ABCD</td><td>1,680</td><td>6,720</td><td>9.93 +/- 0.63</td><td>813/866</td><td>Sex classification</td></tr>
+              <tr><td>7</td><td>ABIDE</td><td>609</td><td>2,436</td><td>6-58 range</td><td>506/103</td><td>Age regression</td></tr>
+              <tr><td>8</td><td>HCP rest</td><td>606</td><td>2,424</td><td>28.79 +/- 3.53</td><td>321/281</td><td>Sex classification</td></tr>
+              <tr><td>9</td><td>PPMI</td><td>331</td><td>1,324</td><td>35-84 range</td><td>181/150</td><td>Disease classification</td></tr>
+              <tr class="group-row"><th colspan="7">Type III: external downstream tasks</th></tr>
+              <tr><td>10</td><td>ADNI</td><td>497</td><td>1,988</td><td>55-90 range</td><td>-</td><td>Disease classification</td></tr>
+              <tr><td>11</td><td>SALD</td><td>493</td><td>493</td><td>19-80 range</td><td>197/306</td><td>Age regression</td></tr>
+              <tr><td>12</td><td>BHRC</td><td>465</td><td>465</td><td>9.93 +/- 1.79</td><td>272/193</td><td>Sex classification</td></tr>
+              <tr><td>13</td><td>NKI</td><td>717</td><td>717</td><td>7-86 range</td><td>311/406</td><td>Education / age regression</td></tr>
+              <tr><td>14</td><td>NSD</td><td>6</td><td>70,566</td><td>19-32 range</td><td>-</td><td>Image retrieval</td></tr>
+              <tr><td>15</td><td>HCP task</td><td>118</td><td>1,647</td><td>23-36 range</td><td>54/64</td><td>State prediction</td></tr>
+              <tr><td>16</td><td>StudyForrest</td><td>20</td><td>71,980</td><td>26.6 mean</td><td>12/8</td><td>Emotion prediction</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="resources" class="section resource-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Resources</p>
+          <h2>Project links for release, reproduction, and deployment.</h2>
+        </div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://github.com/OneMore1/Omni-fMRI" target="_blank" rel="noreferrer">
+            <span class="resource-kicker">Code</span>
+            <h3>GitHub repository</h3>
+            <p>Training, evaluation, preprocessing, and benchmark scripts.</p>
+          </a>
+          <a class="resource-card" href="https://hub.docker.com/r/onemore1/onmi-fmri" target="_blank" rel="noreferrer">
+            <span class="resource-kicker">Runtime</span>
+            <h3>Docker image</h3>
+            <p>Containerized environment for reproducing Omni-fMRI experiments.</p>
+          </a>
+          <a class="resource-card" href="https://huggingface.co/OneMore1/Omni-fMRI" target="_blank" rel="noreferrer">
+            <span class="resource-kicker">Checkpoint</span>
+            <h3>Hugging Face model</h3>
+            <p>Released Omni-fMRI checkpoint and model repository entry.</p>
+          </a>
+          <a class="resource-card" href="notebooks/01_quick_start_feature_extraction.ipynb">
+            <span class="resource-kicker">Notebook</span>
+            <h3>Feature extraction demo</h3>
+            <p>Runnable walkthrough from synthetic NIfTI to saved feature tokens.</p>
+          </a>
+          <a class="resource-card" href="quickstart/quickstart_smoke.py">
+            <span class="resource-kicker">Smoke</span>
+            <h3>Server validation script</h3>
+            <p>Minimal script for checking preprocessing and extraction end to end.</p>
+          </a>
+          <a class="resource-card" href="https://arxiv.org/abs/2601.23090" target="_blank" rel="noreferrer">
+            <span class="resource-kicker">Paper</span>
+            <h3>arXiv entry</h3>
+            <p>Public paper page for discovery, citation, and external linking.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="figure-section reverse">
+        <div class="figure-copy">
+          <p class="eyebrow">Performance Map</p>
+          <h2>One model leads across heterogeneous fMRI tasks.</h2>
+          <p>
+            Figure 1 summarizes the headline comparison: Omni-fMRI is reported
+            as the top performer across a broad collection of resting-state and
+            task-based benchmarks, including linear probing variants.
+          </p>
+        </div>
+        <button class="figure-frame" data-image="assets/figure1.png" data-title="Omni-fMRI benchmark summary">
+          <img src="assets/figure1.png" alt="Omni-fMRI benchmark performance summary" />
+        </button>
+      </section>
+
+      <section class="section">
+        <div class="split-results">
+          <button class="figure-frame" data-image="assets/figure3.png" data-title="HCP task few-shot classification">
+            <img src="assets/figure3.png" alt="HCP task few-shot classification results" />
+          </button>
+          <button class="figure-frame" data-image="assets/figure4.png" data-title="Data scaling and linear probing">
+            <img src="assets/figure4.png" alt="ADNI data scaling and linear probing results" />
+          </button>
+        </div>
+      </section>
+
+      <section class="section tinted">
+        <div class="section-heading compact">
+          <p class="eyebrow">Interpretability</p>
+          <h2>Voxel representations align with disease-related brain maps.</h2>
+        </div>
+        <div class="method-layout">
+          <button class="figure-frame" data-image="assets/figure5.png" data-title="Alzheimer interpretability map">
+            <img src="assets/figure5.png" alt="Neurosynth, Omni-fMRI, and NeuroSTORM Alzheimer saliency maps" />
+          </button>
+          <div class="steps">
+            <div class="step">
+              <span class="step-number">SSIM</span>
+              <div>
+                <h3>0.5639 vs 0.4636</h3>
+                <p>
+                  Omni-fMRI shows higher similarity to the Neurosynth
+                  Alzheimer reference map than the NeuroSTORM baseline.
+                </p>
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-number">RMSE</span>
+              <div>
+                <h3>0.0562 vs 0.1386</h3>
+                <p>
+                  Lower error supports the paper's claim that the learned
+                  voxel-level representation captures task-relevant patterns.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="figures" class="section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Paper Figures</p>
+          <h2>Original figure crops from the manuscript PDF.</h2>
+        </div>
+        <div class="gallery">
+          <button class="gallery-item" data-image="assets/figure1.png" data-title="Figure 1. Benchmark summary">
+            <img src="assets/figure1.png" alt="Figure 1 benchmark summary" />
+            <span>Figure 1. Benchmark summary</span>
+          </button>
+          <button class="gallery-item" data-image="assets/figure2.png" data-title="Figure 2. Pretraining framework">
+            <img src="assets/figure2.png" alt="Figure 2 pretraining framework" />
+            <span>Figure 2. Pretraining framework</span>
+          </button>
+          <button class="gallery-item" data-image="assets/figure3.png" data-title="Figure 3. HCP task few-shot accuracy">
+            <img src="assets/figure3.png" alt="Figure 3 HCP task few-shot accuracy" />
+            <span>Figure 3. HCP task few-shot accuracy</span>
+          </button>
+          <button class="gallery-item" data-image="assets/figure4.png" data-title="Figure 4. Data scaling and LP">
+            <img src="assets/figure4.png" alt="Figure 4 data scaling and linear probing" />
+            <span>Figure 4. Data scaling and LP</span>
+          </button>
+          <button class="gallery-item" data-image="assets/figure5.png" data-title="Figure 5. Alzheimer interpretability">
+            <img src="assets/figure5.png" alt="Figure 5 Alzheimer interpretability" />
+            <span>Figure 5. Alzheimer interpretability</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="citation" class="section citation-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Citation</p>
+          <h2>BibTeX</h2>
+        </div>
+        <pre><code>@inproceedings{wang2026omnifmri,
+  title = {Omni-fMRI: A Universal Atlas-Free fMRI Foundation Model},
+  author = {Wang, Mo and Ye, Wenhao and Xia, Junfeng and Zhang, Junxiang and Pan, Xuanye and Xu, Minghao and Deng, Haotian and Wen, Hongkai and Liu, Quanying},
+  booktitle = {Proceedings of the International Conference on Machine Learning},
+  year = {2026}
+}</code></pre>
+      </section>
+    </main>
+
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close figure">x</button>
+      <figure>
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
